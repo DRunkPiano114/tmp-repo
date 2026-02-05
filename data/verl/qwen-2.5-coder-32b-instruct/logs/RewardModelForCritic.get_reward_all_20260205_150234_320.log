@@ -1,0 +1,24 @@
+================================================================================
+测试时间: 2026-02-05 15:02:34
+函数名: RewardModelForCritic.get_reward_all
+测试文件: test_code/test_get_reward_all.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/critic-rl/code/test_code/test_get_reward_all.py", line 18, in <module>
+    from ctrl.rl.critic_rm import normalize_code, sanitize, desanitize, RewardModelForCritic
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/critic-rl/code/test_code/../ctrl/rl/critic_rm.py", line 204
+    MAX_REQUESTS = 
+                   ^
+SyntaxError: invalid syntax
+
+================================================================================
+日志结束

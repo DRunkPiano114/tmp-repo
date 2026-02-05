@@ -1,0 +1,21 @@
+================================================================================
+测试时间: 2026-02-05 15:02:22
+函数名: compute_token_on_off_policy_loss
+测试文件: test_code/test_compute_token_on_off_policy_loss.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_token_on_off_policy_loss.py", line 2, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+
+================================================================================
+日志结束

@@ -1,0 +1,60 @@
+2026-02-05 09:35:16,443 - INFO - 📖 加载数据: /Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/scripts/data/verl/algorithm_methods_data_ARES.jsonl
+2026-02-05 09:35:16,443 - INFO - ✅ 加载了 4 个样本
+2026-02-05 09:35:16,443 - INFO - 🔧 初始化 OpenRouter 客户端
+2026-02-05 09:35:16,443 - INFO -    模型: deepseek/deepseek-v3.2
+2026-02-05 09:35:16,443 - INFO -    每个样本生成: 1 个候选
+2026-02-05 09:35:16,484 - INFO - 🚀 开始生成...
+2026-02-05 09:35:16,484 - INFO - 
+2026-02-05 09:35:16,484 - INFO - [1/4] 处理: compute_score
+2026-02-05 09:35:16,484 - INFO -   📤 发送请求 1/1
+2026-02-05 09:35:16,484 - INFO -      模型: deepseek/deepseek-v3.2
+2026-02-05 09:35:16,484 - INFO -      消息数: 2
+2026-02-05 09:35:21,502 - INFO - Retrying request to /chat/completions in 0.459503 seconds
+2026-02-05 09:35:26,969 - INFO - Retrying request to /chat/completions in 0.802312 seconds
+2026-02-05 09:35:32,778 - ERROR -   ❌ 候选 1/1 生成失败: Request timed out.
+2026-02-05 09:35:32,778 - INFO -   📊 成功: 0/1
+2026-02-05 09:35:32,778 - INFO - 
+2026-02-05 09:35:32,778 - INFO - [2/4] 处理: RayPPOTrainer.update_difficulty_and_skip_gid_set
+2026-02-05 09:35:32,778 - INFO -   📤 发送请求 1/1
+2026-02-05 09:35:32,778 - INFO -      模型: deepseek/deepseek-v3.2
+2026-02-05 09:35:32,778 - INFO -      消息数: 2
+2026-02-05 09:35:37,782 - INFO - Retrying request to /chat/completions in 0.495659 seconds
+2026-02-05 09:35:43,283 - INFO - Retrying request to /chat/completions in 0.946200 seconds
+2026-02-05 09:35:49,234 - ERROR -   ❌ 候选 1/1 生成失败: Request timed out.
+2026-02-05 09:35:49,234 - INFO -   📊 成功: 0/1
+2026-02-05 09:35:49,234 - INFO - 
+2026-02-05 09:35:49,234 - INFO - [3/4] 处理: TokenLevelAdaptiveKLController.update
+2026-02-05 09:35:49,234 - INFO -   📤 发送请求 1/1
+2026-02-05 09:35:49,234 - INFO -      模型: deepseek/deepseek-v3.2
+2026-02-05 09:35:49,234 - INFO -      消息数: 2
+2026-02-05 09:35:54,237 - INFO - Retrying request to /chat/completions in 0.439603 seconds
+2026-02-05 09:35:59,683 - INFO - Retrying request to /chat/completions in 0.976781 seconds
+2026-02-05 09:36:05,666 - ERROR -   ❌ 候选 1/1 生成失败: Request timed out.
+2026-02-05 09:36:05,666 - INFO -   📊 成功: 0/1
+2026-02-05 09:36:05,666 - INFO - 
+2026-02-05 09:36:05,666 - INFO - [4/4] 处理: apply_kl_penalty
+2026-02-05 09:36:05,666 - INFO -   📤 发送请求 1/1
+2026-02-05 09:36:05,666 - INFO -      模型: deepseek/deepseek-v3.2
+2026-02-05 09:36:05,666 - INFO -      消息数: 2
+2026-02-05 09:36:10,668 - INFO - Retrying request to /chat/completions in 0.385649 seconds
+2026-02-05 09:36:16,061 - INFO - Retrying request to /chat/completions in 0.825723 seconds
+2026-02-05 09:36:21,895 - ERROR -   ❌ 候选 1/1 生成失败: Request timed out.
+2026-02-05 09:36:21,895 - INFO -   📊 成功: 0/1
+2026-02-05 09:36:21,895 - INFO - 
+2026-02-05 09:36:21,895 - INFO - 💾 保存结果: /Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/scripts/data/verl/deepseek-v3.2/algorithm_methods_data_ARES_output.jsonl
+2026-02-05 09:36:21,897 - INFO - 
+2026-02-05 09:36:21,897 - INFO - ============================================================
+2026-02-05 09:36:21,897 - INFO - 📊 生成统计
+2026-02-05 09:36:21,897 - INFO - ============================================================
+2026-02-05 09:36:21,897 - INFO - 总样本数: 4
+2026-02-05 09:36:21,897 - INFO - 总生成数: 4
+2026-02-05 09:36:21,897 - INFO - ✅ 成功: 0
+2026-02-05 09:36:21,897 - INFO - ❌ 失败: 4
+2026-02-05 09:36:21,897 - INFO - 成功率: 0.0%
+2026-02-05 09:36:21,897 - INFO - 
+2026-02-05 09:36:21,897 - INFO - 🔢 Token 使用统计:
+2026-02-05 09:36:21,897 - INFO -   输入 tokens: 0
+2026-02-05 09:36:21,897 - INFO -   输出 tokens: 0
+2026-02-05 09:36:21,897 - INFO -   总计 tokens: 0
+2026-02-05 09:36:21,897 - INFO -   平均每样本: 0.0 tokens
+2026-02-05 09:36:21,897 - INFO - ============================================================

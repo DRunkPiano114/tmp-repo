@@ -1,0 +1,24 @@
+================================================================================
+测试时间: 2026-02-05 10:24:12
+函数名: RewardModelForCritic.build_revision_messages
+测试文件: test_code/test_build_revision_messages.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/critic-rl/code/test_code/test_build_revision_messages.py", line 16, in <module>
+    from ctrl.rl.critic_rm import sanitize, desanitize, RewardModelForCritic
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/critic-rl/code/test_code/../ctrl/rl/critic_rm.py", line 136
+    (?:\w+)?\n([\s\S]*?)\n
+     ^
+SyntaxError: invalid syntax
+
+================================================================================
+日志结束

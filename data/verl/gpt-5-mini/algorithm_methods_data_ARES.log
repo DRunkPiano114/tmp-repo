@@ -1,0 +1,27 @@
+2026-02-05 09:52:14,125 - INFO - 📖 加载数据: /Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/scripts/data/verl/algorithm_methods_data_ARES.jsonl
+2026-02-05 09:52:14,125 - INFO - ✅ 加载了 4 个样本
+2026-02-05 09:52:14,125 - INFO - 🔧 初始化 OpenRouter 客户端
+2026-02-05 09:52:14,125 - INFO -    模型: openai/gpt-5-mini
+2026-02-05 09:52:14,125 - INFO -    每个样本生成: 1 个候选
+2026-02-05 09:52:14,162 - INFO -    超时时间: 180.0 秒
+2026-02-05 09:52:14,162 - INFO - 🚀 开始生成...
+2026-02-05 09:52:14,162 - INFO - 
+2026-02-05 09:52:14,162 - INFO - [1/4] 处理: compute_score
+2026-02-05 09:52:14,162 - INFO -   📤 发送请求 1/1
+2026-02-05 09:52:14,162 - INFO -      模型: openai/gpt-5-mini
+2026-02-05 09:52:14,162 - INFO -      消息数: 2
+2026-02-05 09:52:20,262 - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-05 09:53:38,658 - INFO -   📥 收到响应
+2026-02-05 09:53:38,658 - INFO -      Response ID: gen-1770256340-ZL2sxKAqk1SAEtCOqiR0
+2026-02-05 09:53:38,659 - INFO -      Model: openai/gpt-5-mini
+2026-02-05 09:53:38,659 - INFO -      Choices: 1
+2026-02-05 09:53:38,659 - INFO -      Usage: input=884, output=5263, total=6147
+2026-02-05 09:53:38,659 - INFO -   ✅ 候选 1/1 生成成功 (长度: 9295)
+2026-02-05 09:53:38,659 - INFO -   📊 成功: 1/1
+2026-02-05 09:53:38,659 - INFO -   🔢 Token 使用: input=884, output=5263, total=6147
+2026-02-05 09:53:38,659 - INFO - 
+2026-02-05 09:53:38,659 - INFO - [2/4] 处理: RayPPOTrainer.update_difficulty_and_skip_gid_set
+2026-02-05 09:53:38,659 - INFO -   📤 发送请求 1/1
+2026-02-05 09:53:38,660 - INFO -      模型: openai/gpt-5-mini
+2026-02-05 09:53:38,660 - INFO -      消息数: 2
+2026-02-05 09:53:39,384 - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"

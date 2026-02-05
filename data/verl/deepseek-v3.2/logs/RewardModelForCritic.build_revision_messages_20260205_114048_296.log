@@ -1,0 +1,35 @@
+================================================================================
+测试时间: 2026-02-05 11:40:48
+函数名: RewardModelForCritic.build_revision_messages
+测试文件: test_code/test_build_revision_messages.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/critic-rl/code/test_code/test_build_revision_messages.py", line 16, in <module>
+    from ctrl.rl.critic_rm import sanitize, desanitize, RewardModelForCritic
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/critic-rl/code/test_code/../ctrl/rl/critic_rm.py", line 25, in <module>
+    from transformers import PreTrainedTokenizer
+  File "/opt/homebrew/lib/python3.11/site-packages/transformers/__init__.py", line 26, in <module>
+    from . import dependency_versions_check
+  File "/opt/homebrew/lib/python3.11/site-packages/transformers/dependency_versions_check.py", line 57, in <module>
+    require_version_core(deps[pkg])
+  File "/opt/homebrew/lib/python3.11/site-packages/transformers/utils/versions.py", line 117, in require_version_core
+    return require_version(requirement, hint)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.11/site-packages/transformers/utils/versions.py", line 111, in require_version
+    _compare_versions(op, got_ver, want_ver, requirement, pkg, hint)
+  File "/opt/homebrew/lib/python3.11/site-packages/transformers/utils/versions.py", line 44, in _compare_versions
+    raise ImportError(
+ImportError: tokenizers>=0.21,<0.22 is required for a normal functioning of this module, but found tokenizers==0.20.3.
+Try: `pip install transformers -U` or `pip install -e '.[dev]'` if you're working with git main
+
+================================================================================
+日志结束

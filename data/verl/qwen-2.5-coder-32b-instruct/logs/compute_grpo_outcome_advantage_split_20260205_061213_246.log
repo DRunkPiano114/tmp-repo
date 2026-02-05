@@ -1,0 +1,21 @@
+================================================================================
+测试时间: 2026-02-05 06:12:13
+函数名: compute_grpo_outcome_advantage_split
+测试文件: test_code/test_compute_grpo_outcome_advantage_split.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_grpo_outcome_advantage_split.py", line 2, in <module>
+    import torch
+ModuleNotFoundError: No module named 'torch'
+
+================================================================================
+日志结束

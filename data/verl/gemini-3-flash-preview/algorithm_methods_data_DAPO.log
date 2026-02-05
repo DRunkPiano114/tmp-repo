@@ -1,0 +1,40 @@
+2026-02-05 09:47:08,797 - INFO - 📖 加载数据: /Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/scripts/data/verl/algorithm_methods_data_DAPO.jsonl
+2026-02-05 09:47:08,798 - INFO - ✅ 加载了 3 个样本
+2026-02-05 09:47:08,798 - INFO - 🔧 初始化 OpenRouter 客户端
+2026-02-05 09:47:08,798 - INFO -    模型: google/gemini-3-flash-preview
+2026-02-05 09:47:08,798 - INFO -    每个样本生成: 1 个候选
+2026-02-05 09:47:08,845 - INFO - 🚀 开始生成...
+2026-02-05 09:47:08,845 - INFO - 
+2026-02-05 09:47:08,845 - INFO - [1/3] 处理: agg_loss
+2026-02-05 09:47:08,845 - INFO -   📤 发送请求 1/1
+2026-02-05 09:47:08,845 - INFO -      模型: google/gemini-3-flash-preview
+2026-02-05 09:47:08,845 - INFO -      消息数: 2
+2026-02-05 09:47:15,802 - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-05 09:47:19,256 - INFO -   📥 收到响应
+2026-02-05 09:47:19,256 - INFO -      Response ID: gen-1770256034-C9uqgDvjbWmaxkCvHK2b
+2026-02-05 09:47:19,256 - INFO -      Model: google/gemini-3-flash-preview
+2026-02-05 09:47:19,256 - INFO -      Choices: 1
+2026-02-05 09:47:19,256 - INFO -      Usage: input=508, output=627, total=1135
+2026-02-05 09:47:19,256 - INFO -   ✅ 候选 1/1 生成成功 (长度: 2270)
+2026-02-05 09:47:19,256 - INFO -   📊 成功: 1/1
+2026-02-05 09:47:19,256 - INFO -   🔢 Token 使用: input=508, output=627, total=1135
+2026-02-05 09:47:19,256 - INFO - 
+2026-02-05 09:47:19,256 - INFO - [2/3] 处理: compute_policy_loss_vanilla
+2026-02-05 09:47:19,256 - INFO -   📤 发送请求 1/1
+2026-02-05 09:47:19,256 - INFO -      模型: google/gemini-3-flash-preview
+2026-02-05 09:47:19,256 - INFO -      消息数: 2
+2026-02-05 09:47:21,993 - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-05 09:47:30,641 - INFO -   📥 收到响应
+2026-02-05 09:47:30,641 - INFO -      Response ID: gen-1770256039-lgFGAekochDvkt4CV08C
+2026-02-05 09:47:30,641 - INFO -      Model: google/gemini-3-flash-preview
+2026-02-05 09:47:30,641 - INFO -      Choices: 1
+2026-02-05 09:47:30,641 - INFO -      Usage: input=828, output=1445, total=2273
+2026-02-05 09:47:30,641 - INFO -   ✅ 候选 1/1 生成成功 (长度: 4555)
+2026-02-05 09:47:30,642 - INFO -   📊 成功: 1/1
+2026-02-05 09:47:30,642 - INFO -   🔢 Token 使用: input=828, output=1445, total=2273
+2026-02-05 09:47:30,642 - INFO - 
+2026-02-05 09:47:30,642 - INFO - [3/3] 处理: DAPORewardManager.__call__
+2026-02-05 09:47:30,642 - INFO -   📤 发送请求 1/1
+2026-02-05 09:47:30,642 - INFO -      模型: google/gemini-3-flash-preview
+2026-02-05 09:47:30,642 - INFO -      消息数: 2
+2026-02-05 09:47:33,044 - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"

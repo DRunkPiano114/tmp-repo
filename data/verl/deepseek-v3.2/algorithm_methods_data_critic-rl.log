@@ -1,0 +1,69 @@
+2026-02-05 09:36:22,300 - INFO - 📖 加载数据: /Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/scripts/data/verl/algorithm_methods_data_critic-rl.jsonl
+2026-02-05 09:36:22,300 - INFO - ✅ 加载了 5 个样本
+2026-02-05 09:36:22,300 - INFO - 🔧 初始化 OpenRouter 客户端
+2026-02-05 09:36:22,300 - INFO -    模型: deepseek/deepseek-v3.2
+2026-02-05 09:36:22,300 - INFO -    每个样本生成: 1 个候选
+2026-02-05 09:36:22,334 - INFO - 🚀 开始生成...
+2026-02-05 09:36:22,334 - INFO - 
+2026-02-05 09:36:22,334 - INFO - [1/5] 处理: RewardModelForCritic.build_revision_messages
+2026-02-05 09:36:22,334 - INFO -   📤 发送请求 1/1
+2026-02-05 09:36:22,334 - INFO -      模型: deepseek/deepseek-v3.2
+2026-02-05 09:36:22,334 - INFO -      消息数: 2
+2026-02-05 09:36:27,347 - INFO - Retrying request to /chat/completions in 0.477562 seconds
+2026-02-05 09:36:32,833 - INFO - Retrying request to /chat/completions in 0.956368 seconds
+2026-02-05 09:36:38,793 - ERROR -   ❌ 候选 1/1 生成失败: Request timed out.
+2026-02-05 09:36:38,793 - INFO -   📊 成功: 0/1
+2026-02-05 09:36:38,793 - INFO - 
+2026-02-05 09:36:38,793 - INFO - [2/5] 处理: RewardModelForCritic.get_reward_all
+2026-02-05 09:36:38,793 - INFO -   📤 发送请求 1/1
+2026-02-05 09:36:38,793 - INFO -      模型: deepseek/deepseek-v3.2
+2026-02-05 09:36:38,793 - INFO -      消息数: 2
+2026-02-05 09:36:43,797 - INFO - Retrying request to /chat/completions in 0.402866 seconds
+2026-02-05 09:36:49,205 - INFO - Retrying request to /chat/completions in 0.805545 seconds
+2026-02-05 09:36:55,016 - ERROR -   ❌ 候选 1/1 生成失败: Request timed out.
+2026-02-05 09:36:55,017 - INFO -   📊 成功: 0/1
+2026-02-05 09:36:55,017 - INFO - 
+2026-02-05 09:36:55,017 - INFO - [3/5] 处理: sanitize
+2026-02-05 09:36:55,017 - INFO -   📤 发送请求 1/1
+2026-02-05 09:36:55,017 - INFO -      模型: deepseek/deepseek-v3.2
+2026-02-05 09:36:55,017 - INFO -      消息数: 2
+2026-02-05 09:37:00,019 - INFO - Retrying request to /chat/completions in 0.487345 seconds
+2026-02-05 09:37:05,516 - INFO - Retrying request to /chat/completions in 0.879632 seconds
+2026-02-05 09:37:11,402 - ERROR -   ❌ 候选 1/1 生成失败: Request timed out.
+2026-02-05 09:37:11,402 - INFO -   📊 成功: 0/1
+2026-02-05 09:37:11,402 - INFO - 
+2026-02-05 09:37:11,403 - INFO - [4/5] 处理: desanitize
+2026-02-05 09:37:11,403 - INFO -   📤 发送请求 1/1
+2026-02-05 09:37:11,403 - INFO -      模型: deepseek/deepseek-v3.2
+2026-02-05 09:37:11,403 - INFO -      消息数: 2
+2026-02-05 09:37:16,404 - INFO - Retrying request to /chat/completions in 0.474878 seconds
+2026-02-05 09:37:21,887 - INFO - Retrying request to /chat/completions in 0.931818 seconds
+2026-02-05 09:37:27,827 - ERROR -   ❌ 候选 1/1 生成失败: Request timed out.
+2026-02-05 09:37:27,827 - INFO -   📊 成功: 0/1
+2026-02-05 09:37:27,828 - INFO - 
+2026-02-05 09:37:27,828 - INFO - [5/5] 处理: normalize_code
+2026-02-05 09:37:27,828 - INFO -   📤 发送请求 1/1
+2026-02-05 09:37:27,828 - INFO -      模型: deepseek/deepseek-v3.2
+2026-02-05 09:37:27,828 - INFO -      消息数: 2
+2026-02-05 09:37:32,833 - INFO - Retrying request to /chat/completions in 0.389428 seconds
+2026-02-05 09:37:38,230 - INFO - Retrying request to /chat/completions in 0.874529 seconds
+2026-02-05 09:37:44,113 - ERROR -   ❌ 候选 1/1 生成失败: Request timed out.
+2026-02-05 09:37:44,113 - INFO -   📊 成功: 0/1
+2026-02-05 09:37:44,113 - INFO - 
+2026-02-05 09:37:44,113 - INFO - 💾 保存结果: /Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/scripts/data/verl/deepseek-v3.2/algorithm_methods_data_critic-rl_output.jsonl
+2026-02-05 09:37:44,113 - INFO - 
+2026-02-05 09:37:44,113 - INFO - ============================================================
+2026-02-05 09:37:44,113 - INFO - 📊 生成统计
+2026-02-05 09:37:44,113 - INFO - ============================================================
+2026-02-05 09:37:44,113 - INFO - 总样本数: 5
+2026-02-05 09:37:44,113 - INFO - 总生成数: 5
+2026-02-05 09:37:44,113 - INFO - ✅ 成功: 0
+2026-02-05 09:37:44,113 - INFO - ❌ 失败: 5
+2026-02-05 09:37:44,113 - INFO - 成功率: 0.0%
+2026-02-05 09:37:44,113 - INFO - 
+2026-02-05 09:37:44,113 - INFO - 🔢 Token 使用统计:
+2026-02-05 09:37:44,113 - INFO -   输入 tokens: 0
+2026-02-05 09:37:44,113 - INFO -   输出 tokens: 0
+2026-02-05 09:37:44,113 - INFO -   总计 tokens: 0
+2026-02-05 09:37:44,113 - INFO -   平均每样本: 0.0 tokens
+2026-02-05 09:37:44,113 - INFO - ============================================================

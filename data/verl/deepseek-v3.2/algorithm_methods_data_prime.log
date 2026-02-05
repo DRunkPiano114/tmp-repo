@@ -1,0 +1,31 @@
+2026-02-05 09:43:21,004 - INFO - 📖 加载数据: /Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/scripts/data/verl/algorithm_methods_data_prime.jsonl
+2026-02-05 09:43:21,004 - INFO - ✅ 加载了 7 个样本
+2026-02-05 09:43:21,004 - INFO - 🔧 初始化 OpenRouter 客户端
+2026-02-05 09:43:21,004 - INFO -    模型: deepseek/deepseek-v3.2
+2026-02-05 09:43:21,004 - INFO -    每个样本生成: 1 个候选
+2026-02-05 09:43:21,045 - INFO - 🚀 开始生成...
+2026-02-05 09:43:21,045 - INFO - 
+2026-02-05 09:43:21,045 - INFO - [1/7] 处理: DataParallelPRIMERewardModel._forward_micro_batch
+2026-02-05 09:43:21,045 - INFO -   📤 发送请求 1/1
+2026-02-05 09:43:21,045 - INFO -      模型: deepseek/deepseek-v3.2
+2026-02-05 09:43:21,045 - INFO -      消息数: 2
+2026-02-05 09:43:26,062 - INFO - Retrying request to /chat/completions in 0.464217 seconds
+2026-02-05 09:43:31,535 - INFO - Retrying request to /chat/completions in 0.990658 seconds
+2026-02-05 09:43:37,533 - ERROR -   ❌ 候选 1/1 生成失败: Request timed out.
+2026-02-05 09:43:37,534 - INFO -   📊 成功: 0/1
+2026-02-05 09:43:37,534 - INFO - 
+2026-02-05 09:43:37,534 - INFO - [2/7] 处理: compute_ce_dpo_loss_rm
+2026-02-05 09:43:37,534 - INFO -   📤 发送请求 1/1
+2026-02-05 09:43:37,534 - INFO -      模型: deepseek/deepseek-v3.2
+2026-02-05 09:43:37,534 - INFO -      消息数: 2
+2026-02-05 09:43:42,539 - INFO - Retrying request to /chat/completions in 0.478179 seconds
+2026-02-05 09:43:48,026 - INFO - Retrying request to /chat/completions in 0.816531 seconds
+2026-02-05 09:43:53,851 - ERROR -   ❌ 候选 1/1 生成失败: Request timed out.
+2026-02-05 09:43:53,851 - INFO -   📊 成功: 0/1
+2026-02-05 09:43:53,851 - INFO - 
+2026-02-05 09:43:53,851 - INFO - [3/7] 处理: compute_detach_dpo_loss_rm
+2026-02-05 09:43:53,851 - INFO -   📤 发送请求 1/1
+2026-02-05 09:43:53,851 - INFO -      模型: deepseek/deepseek-v3.2
+2026-02-05 09:43:53,851 - INFO -      消息数: 2
+2026-02-05 09:43:58,854 - INFO - Retrying request to /chat/completions in 0.407523 seconds
+2026-02-05 09:44:04,269 - INFO - Retrying request to /chat/completions in 0.921964 seconds

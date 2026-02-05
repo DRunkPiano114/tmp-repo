@@ -1,0 +1,69 @@
+2026-02-05 09:45:46,622 - INFO - 📖 加载数据: /Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/scripts/data/verl/algorithm_methods_data_critic-rl.jsonl
+2026-02-05 09:45:46,622 - INFO - ✅ 加载了 5 个样本
+2026-02-05 09:45:46,622 - INFO - 🔧 初始化 OpenRouter 客户端
+2026-02-05 09:45:46,622 - INFO -    模型: google/gemini-3-flash-preview
+2026-02-05 09:45:46,622 - INFO -    每个样本生成: 1 个候选
+2026-02-05 09:45:46,657 - INFO - 🚀 开始生成...
+2026-02-05 09:45:46,657 - INFO - 
+2026-02-05 09:45:46,657 - INFO - [1/5] 处理: RewardModelForCritic.build_revision_messages
+2026-02-05 09:45:46,657 - INFO -   📤 发送请求 1/1
+2026-02-05 09:45:46,657 - INFO -      模型: google/gemini-3-flash-preview
+2026-02-05 09:45:46,657 - INFO -      消息数: 2
+2026-02-05 09:45:51,672 - INFO - Retrying request to /chat/completions in 0.386259 seconds
+2026-02-05 09:45:57,063 - INFO - Retrying request to /chat/completions in 0.826978 seconds
+2026-02-05 09:46:02,894 - ERROR -   ❌ 候选 1/1 生成失败: Request timed out.
+2026-02-05 09:46:02,894 - INFO -   📊 成功: 0/1
+2026-02-05 09:46:02,894 - INFO - 
+2026-02-05 09:46:02,894 - INFO - [2/5] 处理: RewardModelForCritic.get_reward_all
+2026-02-05 09:46:02,894 - INFO -   📤 发送请求 1/1
+2026-02-05 09:46:02,894 - INFO -      模型: google/gemini-3-flash-preview
+2026-02-05 09:46:02,894 - INFO -      消息数: 2
+2026-02-05 09:46:07,898 - INFO - Retrying request to /chat/completions in 0.474841 seconds
+2026-02-05 09:46:13,379 - INFO - Retrying request to /chat/completions in 0.777647 seconds
+2026-02-05 09:46:19,161 - ERROR -   ❌ 候选 1/1 生成失败: Request timed out.
+2026-02-05 09:46:19,161 - INFO -   📊 成功: 0/1
+2026-02-05 09:46:19,161 - INFO - 
+2026-02-05 09:46:19,161 - INFO - [3/5] 处理: sanitize
+2026-02-05 09:46:19,161 - INFO -   📤 发送请求 1/1
+2026-02-05 09:46:19,161 - INFO -      模型: google/gemini-3-flash-preview
+2026-02-05 09:46:19,161 - INFO -      消息数: 2
+2026-02-05 09:46:24,165 - INFO - Retrying request to /chat/completions in 0.440678 seconds
+2026-02-05 09:46:29,613 - INFO - Retrying request to /chat/completions in 0.953027 seconds
+2026-02-05 09:46:35,573 - ERROR -   ❌ 候选 1/1 生成失败: Request timed out.
+2026-02-05 09:46:35,574 - INFO -   📊 成功: 0/1
+2026-02-05 09:46:35,574 - INFO - 
+2026-02-05 09:46:35,574 - INFO - [4/5] 处理: desanitize
+2026-02-05 09:46:35,574 - INFO -   📤 发送请求 1/1
+2026-02-05 09:46:35,574 - INFO -      模型: google/gemini-3-flash-preview
+2026-02-05 09:46:35,574 - INFO -      消息数: 2
+2026-02-05 09:46:40,607 - INFO - Retrying request to /chat/completions in 0.418476 seconds
+2026-02-05 09:46:46,029 - INFO - Retrying request to /chat/completions in 0.794997 seconds
+2026-02-05 09:46:51,832 - ERROR -   ❌ 候选 1/1 生成失败: Request timed out.
+2026-02-05 09:46:51,832 - INFO -   📊 成功: 0/1
+2026-02-05 09:46:51,832 - INFO - 
+2026-02-05 09:46:51,832 - INFO - [5/5] 处理: normalize_code
+2026-02-05 09:46:51,832 - INFO -   📤 发送请求 1/1
+2026-02-05 09:46:51,832 - INFO -      模型: google/gemini-3-flash-preview
+2026-02-05 09:46:51,832 - INFO -      消息数: 2
+2026-02-05 09:46:56,839 - INFO - Retrying request to /chat/completions in 0.437517 seconds
+2026-02-05 09:47:02,282 - INFO - Retrying request to /chat/completions in 0.815996 seconds
+2026-02-05 09:47:08,102 - ERROR -   ❌ 候选 1/1 生成失败: Request timed out.
+2026-02-05 09:47:08,103 - INFO -   📊 成功: 0/1
+2026-02-05 09:47:08,103 - INFO - 
+2026-02-05 09:47:08,103 - INFO - 💾 保存结果: /Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/scripts/data/verl/gemini-3-flash-preview/algorithm_methods_data_critic-rl_output.jsonl
+2026-02-05 09:47:08,103 - INFO - 
+2026-02-05 09:47:08,103 - INFO - ============================================================
+2026-02-05 09:47:08,103 - INFO - 📊 生成统计
+2026-02-05 09:47:08,103 - INFO - ============================================================
+2026-02-05 09:47:08,103 - INFO - 总样本数: 5
+2026-02-05 09:47:08,103 - INFO - 总生成数: 5
+2026-02-05 09:47:08,103 - INFO - ✅ 成功: 0
+2026-02-05 09:47:08,103 - INFO - ❌ 失败: 5
+2026-02-05 09:47:08,103 - INFO - 成功率: 0.0%
+2026-02-05 09:47:08,103 - INFO - 
+2026-02-05 09:47:08,103 - INFO - 🔢 Token 使用统计:
+2026-02-05 09:47:08,103 - INFO -   输入 tokens: 0
+2026-02-05 09:47:08,103 - INFO -   输出 tokens: 0
+2026-02-05 09:47:08,103 - INFO -   总计 tokens: 0
+2026-02-05 09:47:08,104 - INFO -   平均每样本: 0.0 tokens
+2026-02-05 09:47:08,104 - INFO - ============================================================

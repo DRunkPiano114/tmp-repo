@@ -1,0 +1,94 @@
+2026-02-04 18:34:45,393 - INFO - 📖 加载数据: /Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/scripts/data/verl/algorithm_methods_data_critic-rl.jsonl
+2026-02-04 18:34:45,393 - INFO - ✅ 加载了 5 个样本
+2026-02-04 18:34:45,393 - INFO - 🔧 初始化 OpenRouter 客户端
+2026-02-04 18:34:45,393 - INFO -    模型: qwen/qwen-2.5-coder-32b-instruct
+2026-02-04 18:34:45,393 - INFO -    每个样本生成: 1 个候选
+2026-02-04 18:34:45,429 - INFO - 🚀 开始生成...
+2026-02-04 18:34:45,429 - INFO - 
+2026-02-04 18:34:45,429 - INFO - [1/5] 处理: RewardModelForCritic.build_revision_messages
+2026-02-04 18:34:45,429 - INFO -   📤 发送请求 1/1
+2026-02-04 18:34:45,429 - INFO -      模型: qwen/qwen-2.5-coder-32b-instruct
+2026-02-04 18:34:45,429 - INFO -      消息数: 2
+2026-02-04 18:34:46,683 - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-04 18:35:08,850 - INFO -   📥 收到响应
+2026-02-04 18:35:08,850 - INFO -      Response ID: gen-1770201286-SdIclA2I2cY5vVYeoBjz
+2026-02-04 18:35:08,850 - INFO -      Model: qwen/qwen-2.5-coder-32b-instruct
+2026-02-04 18:35:08,850 - INFO -      Choices: 1
+2026-02-04 18:35:08,850 - INFO -      Usage: input=404, output=759, total=1163
+2026-02-04 18:35:08,850 - INFO -   ✅ 候选 1/1 生成成功 (长度: 3810)
+2026-02-04 18:35:08,850 - INFO -   📊 成功: 1/1
+2026-02-04 18:35:08,850 - INFO -   🔢 Token 使用: input=404, output=759, total=1163
+2026-02-04 18:35:08,850 - INFO - 
+2026-02-04 18:35:08,850 - INFO - [2/5] 处理: RewardModelForCritic.get_reward_all
+2026-02-04 18:35:08,850 - INFO -   📤 发送请求 1/1
+2026-02-04 18:35:08,850 - INFO -      模型: qwen/qwen-2.5-coder-32b-instruct
+2026-02-04 18:35:08,850 - INFO -      消息数: 2
+2026-02-04 18:35:09,518 - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-04 18:35:31,634 - INFO -   📥 收到响应
+2026-02-04 18:35:31,634 - INFO -      Response ID: gen-1770201309-1oxMnJudazkITirLRG9J
+2026-02-04 18:35:31,634 - INFO -      Model: qwen/qwen-2.5-coder-32b-instruct
+2026-02-04 18:35:31,634 - INFO -      Choices: 1
+2026-02-04 18:35:31,634 - INFO -      Usage: input=448, output=778, total=1226
+2026-02-04 18:35:31,634 - INFO -   ✅ 候选 1/1 生成成功 (长度: 3506)
+2026-02-04 18:35:31,634 - INFO -   📊 成功: 1/1
+2026-02-04 18:35:31,634 - INFO -   🔢 Token 使用: input=448, output=778, total=1226
+2026-02-04 18:35:31,634 - INFO - 
+2026-02-04 18:35:31,634 - INFO - [3/5] 处理: sanitize
+2026-02-04 18:35:31,634 - INFO -   📤 发送请求 1/1
+2026-02-04 18:35:31,634 - INFO -      模型: qwen/qwen-2.5-coder-32b-instruct
+2026-02-04 18:35:31,634 - INFO -      消息数: 2
+2026-02-04 18:35:32,476 - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-04 18:35:49,273 - INFO -   📥 收到响应
+2026-02-04 18:35:49,274 - INFO -      Response ID: gen-1770201332-oADWPHC5p7sexdmW8OZS
+2026-02-04 18:35:49,274 - INFO -      Model: qwen/qwen-2.5-coder-32b-instruct
+2026-02-04 18:35:49,274 - INFO -      Choices: 1
+2026-02-04 18:35:49,274 - INFO -      Usage: input=415, output=575, total=990
+2026-02-04 18:35:49,274 - INFO -   ✅ 候选 1/1 生成成功 (长度: 2478)
+2026-02-04 18:35:49,274 - INFO -   📊 成功: 1/1
+2026-02-04 18:35:49,274 - INFO -   🔢 Token 使用: input=415, output=575, total=990
+2026-02-04 18:35:49,274 - INFO - 
+2026-02-04 18:35:49,274 - INFO - [4/5] 处理: desanitize
+2026-02-04 18:35:49,274 - INFO -   📤 发送请求 1/1
+2026-02-04 18:35:49,274 - INFO -      模型: qwen/qwen-2.5-coder-32b-instruct
+2026-02-04 18:35:49,274 - INFO -      消息数: 2
+2026-02-04 18:35:49,764 - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-04 18:36:07,922 - INFO -   📥 收到响应
+2026-02-04 18:36:07,923 - INFO -      Response ID: gen-1770201349-y7z9D5MQAlwcShuAHXGA
+2026-02-04 18:36:07,923 - INFO -      Model: qwen/qwen-2.5-coder-32b-instruct
+2026-02-04 18:36:07,923 - INFO -      Choices: 1
+2026-02-04 18:36:07,923 - INFO -      Usage: input=362, output=619, total=981
+2026-02-04 18:36:07,923 - INFO -   ✅ 候选 1/1 生成成功 (长度: 2701)
+2026-02-04 18:36:07,934 - INFO -   📊 成功: 1/1
+2026-02-04 18:36:07,935 - INFO -   🔢 Token 使用: input=362, output=619, total=981
+2026-02-04 18:36:07,943 - INFO - 
+2026-02-04 18:36:07,943 - INFO - [5/5] 处理: normalize_code
+2026-02-04 18:36:07,951 - INFO -   📤 发送请求 1/1
+2026-02-04 18:36:07,952 - INFO -      模型: qwen/qwen-2.5-coder-32b-instruct
+2026-02-04 18:36:07,954 - INFO -      消息数: 2
+2026-02-04 18:36:08,650 - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-04 18:36:28,055 - INFO -   📥 收到响应
+2026-02-04 18:36:28,055 - INFO -      Response ID: gen-1770201368-ZiJ1cAWR468KrwLN9iPU
+2026-02-04 18:36:28,055 - INFO -      Model: qwen/qwen-2.5-coder-32b-instruct
+2026-02-04 18:36:28,055 - INFO -      Choices: 1
+2026-02-04 18:36:28,055 - INFO -      Usage: input=418, output=667, total=1085
+2026-02-04 18:36:28,055 - INFO -   ✅ 候选 1/1 生成成功 (长度: 3021)
+2026-02-04 18:36:28,055 - INFO -   📊 成功: 1/1
+2026-02-04 18:36:28,055 - INFO -   🔢 Token 使用: input=418, output=667, total=1085
+2026-02-04 18:36:28,055 - INFO - 
+2026-02-04 18:36:28,055 - INFO - 💾 保存结果: /Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/scripts/data/verl/qwen-2.5-coder-32b-instruct/algorithm_methods_data_critic-rl_output.jsonl
+2026-02-04 18:36:28,058 - INFO - 
+2026-02-04 18:36:28,058 - INFO - ============================================================
+2026-02-04 18:36:28,058 - INFO - 📊 生成统计
+2026-02-04 18:36:28,058 - INFO - ============================================================
+2026-02-04 18:36:28,058 - INFO - 总样本数: 5
+2026-02-04 18:36:28,058 - INFO - 总生成数: 5
+2026-02-04 18:36:28,058 - INFO - ✅ 成功: 5
+2026-02-04 18:36:28,058 - INFO - ❌ 失败: 0
+2026-02-04 18:36:28,058 - INFO - 成功率: 100.0%
+2026-02-04 18:36:28,058 - INFO - 
+2026-02-04 18:36:28,058 - INFO - 🔢 Token 使用统计:
+2026-02-04 18:36:28,058 - INFO -   输入 tokens: 2,047
+2026-02-04 18:36:28,058 - INFO -   输出 tokens: 3,398
+2026-02-04 18:36:28,058 - INFO -   总计 tokens: 5,445
+2026-02-04 18:36:28,058 - INFO -   平均每样本: 1089.0 tokens
+2026-02-04 18:36:28,058 - INFO - ============================================================
