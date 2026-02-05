@@ -1,0 +1,52 @@
+================================================================================
+测试时间: 2026-02-05 20:06:54
+函数名: RewardModelForCritic.get_reward_all
+测试文件: test_code/test_get_reward_all.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+EEE.....
+======================================================================
+ERROR: test_get_reward_all_empty_input (__main__.TestGetRewardAllAsync.test_get_reward_all_empty_input)
+Test empty input
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/critic-rl/code/test_code/test_get_reward_all.py", line 187, in test_get_reward_all_empty_input
+    self.rm.get_reward_all(critiques, revisions, samples)
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'RewardModelForCritic' object has no attribute 'get_reward_all'
+
+======================================================================
+ERROR: test_get_reward_all_invalid_critique (__main__.TestGetRewardAllAsync.test_get_reward_all_invalid_critique)
+Test invalid critique returns zero reward
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/critic-rl/code/test_code/test_get_reward_all.py", line 173, in test_get_reward_all_invalid_critique
+    self.rm.get_reward_all(critiques, revisions, samples)
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'RewardModelForCritic' object has no attribute 'get_reward_all'
+
+======================================================================
+ERROR: test_get_reward_all_with_mocked_sandbox (__main__.TestGetRewardAllAsync.test_get_reward_all_with_mocked_sandbox)
+Test get_reward_all using mocked sandbox
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/critic-rl/code/test_code/test_get_reward_all.py", line 154, in test_get_reward_all_with_mocked_sandbox
+    self.rm.get_reward_all(critiques, revisions, samples)
+    ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'RewardModelForCritic' object has no attribute 'get_reward_all'
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.077s
+
+FAILED (errors=3)
+
+================================================================================
+日志结束

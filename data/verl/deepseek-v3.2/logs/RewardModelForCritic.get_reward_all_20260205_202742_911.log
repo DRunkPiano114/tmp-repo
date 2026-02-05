@@ -1,0 +1,73 @@
+================================================================================
+测试时间: 2026-02-05 20:27:42
+函数名: RewardModelForCritic.get_reward_all
+测试文件: test_code/test_get_reward_all.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+EEE/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/pandas/core/indexers/utils.py:542: RuntimeWarning: coroutine 'RewardModelForCritic._get_single_reward' was never awaited
+  from pandas.core.construction import array as pd_array
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+.....
+======================================================================
+ERROR: test_get_reward_all_empty_input (__main__.TestGetRewardAllAsync.test_get_reward_all_empty_input)
+Test empty input
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/critic-rl/code/test_code/test_get_reward_all.py", line 186, in test_get_reward_all_empty_input
+    rewards = loop.run_until_complete(
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.13/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/critic-rl/code/test_code/../ctrl/rl/critic_rm.py", line 230, in get_reward_all
+    semaphore = Semaphore(self.MAX_REQUESTS)  # Default MAX_REQUESTS = 256
+                          ^^^^^^^^^^^^^^^^^
+AttributeError: 'RewardModelForCritic' object has no attribute 'MAX_REQUESTS'
+
+======================================================================
+ERROR: test_get_reward_all_invalid_critique (__main__.TestGetRewardAllAsync.test_get_reward_all_invalid_critique)
+Test invalid critique returns zero reward
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/critic-rl/code/test_code/test_get_reward_all.py", line 172, in test_get_reward_all_invalid_critique
+    rewards = loop.run_until_complete(
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.13/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/critic-rl/code/test_code/../ctrl/rl/critic_rm.py", line 230, in get_reward_all
+    semaphore = Semaphore(self.MAX_REQUESTS)  # Default MAX_REQUESTS = 256
+                          ^^^^^^^^^^^^^^^^^
+AttributeError: 'RewardModelForCritic' object has no attribute 'MAX_REQUESTS'
+
+======================================================================
+ERROR: test_get_reward_all_with_mocked_sandbox (__main__.TestGetRewardAllAsync.test_get_reward_all_with_mocked_sandbox)
+Test get_reward_all using mocked sandbox
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/critic-rl/code/test_code/test_get_reward_all.py", line 153, in test_get_reward_all_with_mocked_sandbox
+    rewards = loop.run_until_complete(
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.11/3.11.13/Frameworks/Python.framework/Versions/3.11/lib/python3.11/asyncio/base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/critic-rl/code/test_code/../ctrl/rl/critic_rm.py", line 230, in get_reward_all
+    semaphore = Semaphore(self.MAX_REQUESTS)  # Default MAX_REQUESTS = 256
+                          ^^^^^^^^^^^^^^^^^
+AttributeError: 'RewardModelForCritic' object has no attribute 'MAX_REQUESTS'
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.105s
+
+FAILED (errors=3)
+
+================================================================================
+日志结束

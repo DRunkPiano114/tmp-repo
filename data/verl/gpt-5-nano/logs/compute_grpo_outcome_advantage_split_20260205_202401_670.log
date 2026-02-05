@@ -1,0 +1,112 @@
+================================================================================
+测试时间: 2026-02-05 20:24:01
+函数名: compute_grpo_outcome_advantage_split
+测试文件: test_code/test_compute_grpo_outcome_advantage_split.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+F..F.FF.F.F.
+======================================================================
+FAIL: test_basic_functionality (__main__.TestComputeGrpoOutcomeAdvantageSplit.test_basic_functionality)
+Test basic functionality: compute within-group baseline using only on-policy samples
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_grpo_outcome_advantage_split.py", line 55, in test_basic_functionality
+    torch.testing.assert_close(advantages, expected_advantages, atol=1e-4, rtol=1e-4)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Tensor-likes are not close!
+
+Mismatched elements: 20 / 20 (100.0%)
+Greatest absolute difference: 0.29289907217025757 at index (0, 0) (up to 0.0001 allowed)
+Greatest relative difference: 0.41422581672668457 at index (0, 0) (up to 0.0001 allowed)
+
+======================================================================
+FAIL: test_eos_mask_application (__main__.TestComputeGrpoOutcomeAdvantageSplit.test_eos_mask_application)
+Test eos_mask application: compute advantages only at valid token positions
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_grpo_outcome_advantage_split.py", line 210, in test_eos_mask_application
+    torch.testing.assert_close(advantages, expected_advantages, atol=1e-4, rtol=1e-4)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Tensor-likes are not close!
+
+Mismatched elements: 10 / 10 (100.0%)
+Greatest absolute difference: 0.9999990463256836 at index (0, 4) (up to 0.0001 allowed)
+Greatest relative difference: inf at index (0, 4) (up to 0.0001 allowed)
+
+======================================================================
+FAIL: test_multiple_groups (__main__.TestComputeGrpoOutcomeAdvantageSplit.test_multiple_groups)
+Test handling of multiple prompt groups
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_grpo_outcome_advantage_split.py", line 245, in test_multiple_groups
+    torch.testing.assert_close(advantages, expected_advantages, atol=1e-4, rtol=1e-4)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Tensor-likes are not close!
+
+Mismatched elements: 24 / 24 (100.0%)
+Greatest absolute difference: 0.29289907217025757 at index (0, 0) (up to 0.0001 allowed)
+Greatest relative difference: 0.41422581672668457 at index (0, 0) (up to 0.0001 allowed)
+
+======================================================================
+FAIL: test_on_policy_mask_filtering (__main__.TestComputeGrpoOutcomeAdvantageSplit.test_on_policy_mask_filtering)
+Test on_policy_mask filtering: compute baseline using only on-policy samples
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_grpo_outcome_advantage_split.py", line 89, in test_on_policy_mask_filtering
+    torch.testing.assert_close(advantages, expected_advantages, atol=1e-4, rtol=1e-4)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Tensor-likes are not close!
+
+Mismatched elements: 15 / 20 (75.0%)
+Greatest absolute difference: 0.44948816299438477 at index (1, 0) (up to 0.0001 allowed)
+Greatest relative difference: 0.22474408149719238 at index (0, 0) (up to 0.0001 allowed)
+
+======================================================================
+FAIL: test_token_level_broadcast (__main__.TestComputeGrpoOutcomeAdvantageSplit.test_token_level_broadcast)
+Test sequence-level advantage broadcast to token level
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_grpo_outcome_advantage_split.py", line 275, in test_token_level_broadcast
+    torch.testing.assert_close(advantages, expected_advantages, atol=1e-4, rtol=1e-4)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Tensor-likes are not close!
+
+Mismatched elements: 8 / 8 (100.0%)
+Greatest absolute difference: 0.29289907217025757 at index (0, 0) (up to 0.0001 allowed)
+Greatest relative difference: 0.41422581672668457 at index (0, 0) (up to 0.0001 allowed)
+
+======================================================================
+FAIL: test_mixed_on_off_policy_scenario (__main__.TestComputeGrpoOutcomeAdvantageSplitIntegration.test_mixed_on_off_policy_scenario)
+Test real-world scenario with mixed on-policy and off-policy samples
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_grpo_outcome_advantage_split.py", line 363, in test_mixed_on_off_policy_scenario
+    torch.testing.assert_close(advantages, expected_advantages, atol=1e-4, rtol=1e-4)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Tensor-likes are not close!
+
+Mismatched elements: 48 / 48 (100.0%)
+Greatest absolute difference: 1.4644951820373535 at index (3, 0) (up to 0.0001 allowed)
+Greatest relative difference: 0.41422581672668457 at index (0, 0) (up to 0.0001 allowed)
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.007s
+
+FAILED (failures=6)
+
+================================================================================
+日志结束

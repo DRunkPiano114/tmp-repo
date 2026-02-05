@@ -1,0 +1,21 @@
+================================================================================
+测试时间: 2026-02-05 20:03:41
+函数名: compute_ce_dpo_loss_rm
+测试文件: test_code/test_ce_dpo_loss.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_ce_dpo_loss.py", line 34, in <module>
+    from prime.prime_core_algos import compute_ce_dpo_loss_rm
+ImportError: cannot import name 'compute_ce_dpo_loss_rm' from 'prime.prime_core_algos' (/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py)
+
+================================================================================
+日志结束

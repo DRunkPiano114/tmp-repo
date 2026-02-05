@@ -1,0 +1,112 @@
+================================================================================
+测试时间: 2026-02-05 20:35:42
+函数名: RayPRIMETrainer.filter_and_downsample
+测试文件: test_code/test_filter_and_downsample.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+FFFFFFFFFF
+======================================================================
+FAIL: test_accuracy_filtering (__main__.TestFilterAndDownsample.test_accuracy_filtering)
+Test accuracy filtering - using ground truth code
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_filter_and_downsample.py", line 169, in test_accuracy_filtering
+    self.assertEqual(len(result_batch.batch["responses"]), expected_kept_samples)
+AssertionError: 20 != 5
+
+======================================================================
+FAIL: test_combined_filtering (__main__.TestFilterAndDownsample.test_combined_filtering)
+Test combined accuracy and length filtering - using ground truth code
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_filter_and_downsample.py", line 304, in test_combined_filtering
+    self.assertEqual(len(result_batch.batch["responses"]), expected_kept_samples)
+AssertionError: 12 != 3
+
+======================================================================
+FAIL: test_different_oversample_factors (__main__.TestFilterAndDownsample.test_different_oversample_factors) (oversample_factor=2.0)
+Test different oversample factors - using ground truth code
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_filter_and_downsample.py", line 328, in test_different_oversample_factors
+    self.assertEqual(len(result_batch.batch["responses"]), expected_kept_samples)
+AssertionError: 24 != 12
+
+======================================================================
+FAIL: test_different_oversample_factors (__main__.TestFilterAndDownsample.test_different_oversample_factors) (oversample_factor=3.0)
+Test different oversample factors - using ground truth code
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_filter_and_downsample.py", line 328, in test_different_oversample_factors
+    self.assertEqual(len(result_batch.batch["responses"]), expected_kept_samples)
+AssertionError: 24 != 8
+
+======================================================================
+FAIL: test_different_oversample_factors (__main__.TestFilterAndDownsample.test_different_oversample_factors) (oversample_factor=6.0)
+Test different oversample factors - using ground truth code
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_filter_and_downsample.py", line 328, in test_different_oversample_factors
+    self.assertEqual(len(result_batch.batch["responses"]), expected_kept_samples)
+AssertionError: 24 != 4
+
+======================================================================
+FAIL: test_filter_and_downsample_basic (__main__.TestFilterAndDownsample.test_filter_and_downsample_basic)
+Test basic filtering and downsampling functionality - using ground truth code
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_filter_and_downsample.py", line 139, in test_filter_and_downsample_basic
+    self.assertEqual(len(result_batch.batch["responses"]), expected_kept_samples)
+AssertionError: 16 != 4
+
+======================================================================
+FAIL: test_filter_disabled (__main__.TestFilterAndDownsample.test_filter_disabled)
+Test case with filters disabled - using ground truth code
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_filter_and_downsample.py", line 353, in test_filter_disabled
+    self.assertEqual(len(result_batch.batch["responses"]), expected_kept_samples)
+AssertionError: 16 != 4
+
+======================================================================
+FAIL: test_length_filtering (__main__.TestFilterAndDownsample.test_length_filtering)
+Test length filtering - using ground truth code
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_filter_and_downsample.py", line 213, in test_length_filtering
+    self.assertEqual(len(result_batch.batch["responses"]), expected_kept_samples)
+AssertionError: 12 != 3
+
+======================================================================
+FAIL: test_no_groups_pass_filter (__main__.TestFilterAndDownsample.test_no_groups_pass_filter)
+Test fallback mechanism when no groups pass filtering - using ground truth code
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_filter_and_downsample.py", line 234, in test_no_groups_pass_filter
+    self.assertEqual(len(result_batch.batch["responses"]), expected_kept_samples)
+AssertionError: 12 != 3
+
+======================================================================
+FAIL: test_priority_downsampling (__main__.TestFilterAndDownsample.test_priority_downsampling)
+Test priority downsampling - using ground truth code
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_filter_and_downsample.py", line 260, in test_priority_downsampling
+    self.assertEqual(len(result_batch.batch["responses"]), expected_kept_samples)
+AssertionError: 16 != 4
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.006s
+
+FAILED (failures=10)
+
+================================================================================
+日志结束

@@ -1,0 +1,214 @@
+================================================================================
+测试时间: 2026-02-05 20:35:40
+函数名: compute_dpo_abs_accuracy
+测试文件: test_code/test_dpo_abs_accuracy.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+EEEEEEEFEEEEEEEE
+======================================================================
+ERROR: test_batch_computation_input_output (__main__.TestDPOAbsAccuracy.test_batch_computation_input_output)
+Test specific input-output for batch computation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 432, in test_batch_computation_input_output
+    self.assertAlmostEqual(result.item(), expected_accuracy, places=30)
+                           ^^^^^^^^^^^
+AttributeError: 'float' object has no attribute 'item'
+
+======================================================================
+ERROR: test_binary_classification_logic (__main__.TestDPOAbsAccuracy.test_binary_classification_logic)
+Test correctness of binary classification logic
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 127, in test_binary_classification_logic
+    accuracy = compute_dpo_abs_accuracy(token_level_scores, acc, response_mask, n_samples)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 219, in compute_dpo_abs_accuracy
+    correct = (preds == true_idx).to(dtype=tl_scores.dtype)
+               ^^^^^^^^^^^^^^^^^
+RuntimeError: The size of tensor a (3) must match the size of tensor b (6) at non-singleton dimension 0
+
+======================================================================
+ERROR: test_compute_dpo_abs_accuracy_basic (__main__.TestDPOAbsAccuracy.test_compute_dpo_abs_accuracy_basic)
+Test basic functionality of DPO absolute accuracy calculation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 54, in test_compute_dpo_abs_accuracy_basic
+    accuracy = compute_dpo_abs_accuracy(token_level_scores, acc, response_mask, n_samples)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 219, in compute_dpo_abs_accuracy
+    correct = (preds == true_idx).to(dtype=tl_scores.dtype)
+               ^^^^^^^^^^^^^^^^^
+RuntimeError: The size of tensor a (2) must match the size of tensor b (4) at non-singleton dimension 0
+
+======================================================================
+ERROR: test_consistency_with_different_seeds (__main__.TestDPOAbsAccuracy.test_consistency_with_different_seeds)
+Test consistency with different random seeds
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 249, in test_consistency_with_different_seeds
+    accuracy = compute_dpo_abs_accuracy(token_level_scores, acc, response_mask, n_samples)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 219, in compute_dpo_abs_accuracy
+    correct = (preds == true_idx).to(dtype=tl_scores.dtype)
+               ^^^^^^^^^^^^^^^^^
+RuntimeError: The size of tensor a (3) must match the size of tensor b (6) at non-singleton dimension 0
+
+======================================================================
+ERROR: test_different_n_samples (__main__.TestDPOAbsAccuracy.test_different_n_samples) (n_samples=1)
+Test impact of different n_samples parameters
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 148, in test_different_n_samples
+    accuracies.append(accuracy.item())
+                      ^^^^^^^^^^^^^
+AttributeError: 'float' object has no attribute 'item'
+
+======================================================================
+ERROR: test_different_n_samples (__main__.TestDPOAbsAccuracy.test_different_n_samples) (n_samples=2)
+Test impact of different n_samples parameters
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 147, in test_different_n_samples
+    accuracy = compute_dpo_abs_accuracy(token_level_scores, acc, response_mask, n_samples)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 219, in compute_dpo_abs_accuracy
+    correct = (preds == true_idx).to(dtype=tl_scores.dtype)
+               ^^^^^^^^^^^^^^^^^
+RuntimeError: The size of tensor a (4) must match the size of tensor b (8) at non-singleton dimension 0
+
+======================================================================
+ERROR: test_different_n_samples (__main__.TestDPOAbsAccuracy.test_different_n_samples) (n_samples=4)
+Test impact of different n_samples parameters
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 147, in test_different_n_samples
+    accuracy = compute_dpo_abs_accuracy(token_level_scores, acc, response_mask, n_samples)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 219, in compute_dpo_abs_accuracy
+    correct = (preds == true_idx).to(dtype=tl_scores.dtype)
+               ^^^^^^^^^^^^^^^^^
+RuntimeError: The size of tensor a (4) must match the size of tensor b (16) at non-singleton dimension 0
+
+======================================================================
+ERROR: test_input_output_samples (__main__.TestDPOAbsAccuracy.test_input_output_samples)
+Test specific input-output examples
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 278, in test_input_output_samples
+    self.assertAlmostEqual(result.item(), expected_accuracy, places=5)
+                           ^^^^^^^^^^^
+AttributeError: 'float' object has no attribute 'item'
+
+======================================================================
+ERROR: test_mask_effect_input_output (__main__.TestDPOAbsAccuracy.test_mask_effect_input_output)
+Test specific input-output for mask effect
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 391, in test_mask_effect_input_output
+    self.assertAlmostEqual(result_full.item(), expected_full, places=30)
+                           ^^^^^^^^^^^^^^^^
+AttributeError: 'float' object has no attribute 'item'
+
+======================================================================
+ERROR: test_opposite_prediction (__main__.TestDPOAbsAccuracy.test_opposite_prediction)
+Test opposite prediction case
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 104, in test_opposite_prediction
+    accuracy = compute_dpo_abs_accuracy(token_level_scores, acc, response_mask, n_samples)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 219, in compute_dpo_abs_accuracy
+    correct = (preds == true_idx).to(dtype=tl_scores.dtype)
+               ^^^^^^^^^^^^^^^^^
+RuntimeError: The size of tensor a (2) must match the size of tensor b (4) at non-singleton dimension 0
+
+======================================================================
+ERROR: test_perfect_prediction (__main__.TestDPOAbsAccuracy.test_perfect_prediction)
+Test perfect prediction case
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 81, in test_perfect_prediction
+    accuracy = compute_dpo_abs_accuracy(token_level_scores, acc, response_mask, n_samples)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 219, in compute_dpo_abs_accuracy
+    correct = (preds == true_idx).to(dtype=tl_scores.dtype)
+               ^^^^^^^^^^^^^^^^^
+RuntimeError: The size of tensor a (2) must match the size of tensor b (4) at non-singleton dimension 0
+
+======================================================================
+ERROR: test_response_mask_impact (__main__.TestDPOAbsAccuracy.test_response_mask_impact)
+Test impact of response_mask on absolute accuracy
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 168, in test_response_mask_impact
+    accuracy_full = compute_dpo_abs_accuracy(token_level_scores, acc, full_mask, n_samples)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 219, in compute_dpo_abs_accuracy
+    correct = (preds == true_idx).to(dtype=tl_scores.dtype)
+               ^^^^^^^^^^^^^^^^^
+RuntimeError: The size of tensor a (2) must match the size of tensor b (4) at non-singleton dimension 0
+
+======================================================================
+ERROR: test_score_aggregation_correctness (__main__.TestDPOAbsAccuracy.test_score_aggregation_correctness)
+Test correctness of score aggregation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 225, in test_score_aggregation_correctness
+    self.assertAlmostEqual(accuracy.item(), 1.0, places=5)
+                           ^^^^^^^^^^^^^
+AttributeError: 'float' object has no attribute 'item'
+
+======================================================================
+ERROR: test_zero_boundary_cases (__main__.TestDPOAbsAccuracy.test_zero_boundary_cases)
+Test specific input-output for zero boundary cases
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 346, in test_zero_boundary_cases
+    self.assertAlmostEqual(result.item(), expected_accuracy, places=30)
+                           ^^^^^^^^^^^
+AttributeError: 'float' object has no attribute 'item'
+
+======================================================================
+ERROR: test_zero_scores_edge_case (__main__.TestDPOAbsAccuracy.test_zero_scores_edge_case)
+Test edge case with zero scores
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 201, in test_zero_scores_edge_case
+    accuracy = compute_dpo_abs_accuracy(token_level_scores, acc, response_mask, n_samples)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 219, in compute_dpo_abs_accuracy
+    correct = (preds == true_idx).to(dtype=tl_scores.dtype)
+               ^^^^^^^^^^^^^^^^^
+RuntimeError: The size of tensor a (2) must match the size of tensor b (4) at non-singleton dimension 0
+
+======================================================================
+FAIL: test_different_n_samples (__main__.TestDPOAbsAccuracy.test_different_n_samples)
+Test impact of different n_samples parameters
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 155, in test_different_n_samples
+    torch.testing.assert_close(accuracies, expected_accuracies, atol=1e-30, rtol=1e-30)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1578, in assert_close
+    error_metas = not_close_error_metas(
+                  ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1293, in not_close_error_metas
+    raise error_meta.to_error() from None  # noqa: RSE102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: The length of the sequences mismatch: 0 != 3
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.006s
+
+FAILED (failures=1, errors=15)
+
+================================================================================
+日志结束

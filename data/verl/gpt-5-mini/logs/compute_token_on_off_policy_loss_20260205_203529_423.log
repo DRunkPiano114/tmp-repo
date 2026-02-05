@@ -1,0 +1,187 @@
+================================================================================
+测试时间: 2026-02-05 20:35:29
+函数名: compute_token_on_off_policy_loss
+测试文件: test_code/test_compute_token_on_off_policy_loss.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+..EFEFEEFFE.FF
+======================================================================
+ERROR: test_cliprange_parameter (__main__.TestComputeTokenOnOffPolicyLoss.test_cliprange_parameter)
+Test cliprange parameter's effect on PPO clipping
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_token_on_off_policy_loss.py", line 180, in test_cliprange_parameter
+    torch.testing.assert_close(result_small_clip['on_pg_clipfrac'], expected_on_pg_clipfrac_small, atol=1e-4, rtol=1e-4)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1578, in assert_close
+    error_metas = not_close_error_metas(
+                  ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1293, in not_close_error_metas
+    raise error_meta.to_error() from None  # noqa: RSE102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: No comparison pair was able to handle inputs of type <class 'float'> and <class 'torch.Tensor'>.
+
+======================================================================
+ERROR: test_loss_remove_clip_parameter (__main__.TestComputeTokenOnOffPolicyLoss.test_loss_remove_clip_parameter)
+Test loss_remove_clip parameter: remove clip operation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_token_on_off_policy_loss.py", line 490, in test_loss_remove_clip_parameter
+    torch.testing.assert_close(result_with_clip['on_pg_clipfrac'], expected_on_pg_clipfrac_with_clip, atol=1e-4, rtol=1e-4)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1578, in assert_close
+    error_metas = not_close_error_metas(
+                  ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1293, in not_close_error_metas
+    raise error_meta.to_error() from None  # noqa: RSE102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: No comparison pair was able to handle inputs of type <class 'float'> and <class 'torch.Tensor'>.
+
+======================================================================
+ERROR: test_off_max_clip_parameter (__main__.TestComputeTokenOnOffPolicyLoss.test_off_max_clip_parameter)
+Test off_max_clip parameter: limit off-policy ratio upper bound
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_token_on_off_policy_loss.py", line 338, in test_off_max_clip_parameter
+    torch.testing.assert_close(result['off_ratio_max_clip_frac'], expected_off_ratio_max_clip_frac, atol=1e-4, rtol=1e-4)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1578, in assert_close
+    error_metas = not_close_error_metas(
+                  ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1293, in not_close_error_metas
+    raise error_meta.to_error() from None  # noqa: RSE102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: No comparison pair was able to handle inputs of type <class 'float'> and <class 'torch.Tensor'>.
+
+======================================================================
+ERROR: test_off_min_clip_parameter (__main__.TestComputeTokenOnOffPolicyLoss.test_off_min_clip_parameter)
+Test off_min_clip parameter: limit off-policy ratio lower bound
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_token_on_off_policy_loss.py", line 362, in test_off_min_clip_parameter
+    torch.testing.assert_close(result['off_ratio_min_clip_frac'], expected_off_ratio_min_clip_frac, atol=1e-4, rtol=1e-4)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1578, in assert_close
+    error_metas = not_close_error_metas(
+                  ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1293, in not_close_error_metas
+    raise error_meta.to_error() from None  # noqa: RSE102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: No comparison pair was able to handle inputs of type <class 'float'> and <class 'torch.Tensor'>.
+
+======================================================================
+ERROR: test_ppo_kl_computation (__main__.TestComputeTokenOnOffPolicyLoss.test_ppo_kl_computation)
+Test PPO KL divergence computation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_token_on_off_policy_loss.py", line 414, in test_ppo_kl_computation
+    torch.testing.assert_close(result['ppo_kl'], expected_ppo_kl, atol=1e-4, rtol=1e-4)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1578, in assert_close
+    error_metas = not_close_error_metas(
+                  ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1293, in not_close_error_metas
+    raise error_meta.to_error() from None  # noqa: RSE102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: No comparison pair was able to handle inputs of type <class 'float'> and <class 'torch.Tensor'>.
+
+======================================================================
+FAIL: test_eos_mask_application (__main__.TestComputeTokenOnOffPolicyLoss.test_eos_mask_application)
+Test eos_mask application
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_token_on_off_policy_loss.py", line 387, in test_eos_mask_application
+    torch.testing.assert_close(result['pg_loss'], expected_pg_loss, atol=1e-4, rtol=1e-4)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Scalars are not close!
+
+Expected -1.960800051689148 but got -0.9579000473022461.
+Absolute difference: 1.0029000043869019 (up to 0.0001 allowed)
+Relative difference: 0.5114748969549164 (up to 0.0001 allowed)
+
+======================================================================
+FAIL: test_mixed_on_off_policy_loss (__main__.TestComputeTokenOnOffPolicyLoss.test_mixed_on_off_policy_loss)
+Test mixed on-policy and off-policy loss
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_token_on_off_policy_loss.py", line 134, in test_mixed_on_off_policy_loss
+    torch.testing.assert_close(result['pg_loss'], expected_pg_loss, atol=1e-4, rtol=1e-4)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Scalars are not close!
+
+Expected -0.5958999991416931 but got -1.1918590068817139.
+Absolute difference: 0.5959590077400208 (up to 0.0001 allowed)
+Relative difference: 1.0000990243302779 (up to 0.0001 allowed)
+
+======================================================================
+FAIL: test_off_policy_reshape_methods (__main__.TestComputeTokenOnOffPolicyLoss.test_off_policy_reshape_methods)
+Test different off_policy_reshape methods
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_token_on_off_policy_loss.py", line 251, in test_off_policy_reshape_methods
+    torch.testing.assert_close(results[i]['on_pg_loss'], expected_results[i]['on_pg_loss'], equal_nan=True)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Scalars are not close!
+
+Expected nan but got 0.0.
+Absolute difference: nan (up to 1e-05 allowed)
+Relative difference: nan (up to 1.3e-06 allowed)
+
+======================================================================
+FAIL: test_on_policy_reshape_methods (__main__.TestComputeTokenOnOffPolicyLoss.test_on_policy_reshape_methods)
+Test different on_policy_reshape methods
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_token_on_off_policy_loss.py", line 305, in test_on_policy_reshape_methods
+    torch.testing.assert_close(results[i]['pg_loss'], expected_results[i]['pg_loss'], atol=1e-4, rtol=1e-4)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Scalars are not close!
+
+Expected -1.3499000072479248 but got -1.1999999284744263.
+Absolute difference: 0.14990007877349854 (up to 0.0001 allowed)
+Relative difference: 0.11104532037087962 (up to 0.0001 allowed)
+
+======================================================================
+FAIL: test_policy_shaping_comparison (__main__.TestComputeTokenOnOffPolicyLossIntegration.test_policy_shaping_comparison)
+Test comparison of different policy shaping methods
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_token_on_off_policy_loss.py", line 602, in test_policy_shaping_comparison
+    torch.testing.assert_close(results[method], expected_results[method], atol=1e-4, rtol=1e-4)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Scalars are not close!
+
+Expected 0.4278620481491089 but got -0.019917408004403114.
+Absolute difference: 0.447779456153512 (up to 0.0001 allowed)
+Relative difference: 1.0465510042093333 (up to 0.0001 allowed)
+
+======================================================================
+FAIL: test_realistic_training_scenario (__main__.TestComputeTokenOnOffPolicyLossIntegration.test_realistic_training_scenario)
+Test realistic training scenario: mixed on-policy and off-policy samples
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_token_on_off_policy_loss.py", line 547, in test_realistic_training_scenario
+    torch.testing.assert_close(result['pg_loss'], expected_pg_loss, atol=1e-4, rtol=1e-4)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Scalars are not close!
+
+Expected 0.07339999824762344 but got 0.1273140013217926.
+Absolute difference: 0.05391400307416916 (up to 0.0001 allowed)
+Relative difference: 0.7345232201816135 (up to 0.0001 allowed)
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.014s
+
+FAILED (failures=6, errors=5)
+
+================================================================================
+日志结束

@@ -1,0 +1,212 @@
+================================================================================
+测试时间: 2026-02-05 20:24:14
+函数名: compute_dpo_abs_accuracy
+测试文件: test_code/test_dpo_abs_accuracy.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+EEEEEEEFEEEEEEEE
+======================================================================
+ERROR: test_batch_computation_input_output (__main__.TestDPOAbsAccuracy.test_batch_computation_input_output)
+Test specific input-output for batch computation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 432, in test_batch_computation_input_output
+    self.assertAlmostEqual(result.item(), expected_accuracy, places=30)
+                           ^^^^^^^^^^^
+AttributeError: 'float' object has no attribute 'item'
+
+======================================================================
+ERROR: test_binary_classification_logic (__main__.TestDPOAbsAccuracy.test_binary_classification_logic)
+Test correctness of binary classification logic
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 131, in test_binary_classification_logic
+    torch.testing.assert_close(accuracy, expected_accuracy, atol=1e-30, rtol=1e-30)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1578, in assert_close
+    error_metas = not_close_error_metas(
+                  ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1293, in not_close_error_metas
+    raise error_meta.to_error() from None  # noqa: RSE102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: No comparison pair was able to handle inputs of type <class 'float'> and <class 'torch.Tensor'>.
+
+======================================================================
+ERROR: test_compute_dpo_abs_accuracy_basic (__main__.TestDPOAbsAccuracy.test_compute_dpo_abs_accuracy_basic)
+Test basic functionality of DPO absolute accuracy calculation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 58, in test_compute_dpo_abs_accuracy_basic
+    torch.testing.assert_close(accuracy, expected_accuracy, atol=1e-30, rtol=1e-30)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1578, in assert_close
+    error_metas = not_close_error_metas(
+                  ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1293, in not_close_error_metas
+    raise error_meta.to_error() from None  # noqa: RSE102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: No comparison pair was able to handle inputs of type <class 'float'> and <class 'torch.Tensor'>.
+
+======================================================================
+ERROR: test_consistency_with_different_seeds (__main__.TestDPOAbsAccuracy.test_consistency_with_different_seeds)
+Test consistency with different random seeds
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 250, in test_consistency_with_different_seeds
+    accuracies.append(accuracy.item())
+                      ^^^^^^^^^^^^^
+AttributeError: 'float' object has no attribute 'item'
+
+======================================================================
+ERROR: test_different_n_samples (__main__.TestDPOAbsAccuracy.test_different_n_samples) (n_samples=1)
+Test impact of different n_samples parameters
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 148, in test_different_n_samples
+    accuracies.append(accuracy.item())
+                      ^^^^^^^^^^^^^
+AttributeError: 'float' object has no attribute 'item'
+
+======================================================================
+ERROR: test_different_n_samples (__main__.TestDPOAbsAccuracy.test_different_n_samples) (n_samples=2)
+Test impact of different n_samples parameters
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 148, in test_different_n_samples
+    accuracies.append(accuracy.item())
+                      ^^^^^^^^^^^^^
+AttributeError: 'float' object has no attribute 'item'
+
+======================================================================
+ERROR: test_different_n_samples (__main__.TestDPOAbsAccuracy.test_different_n_samples) (n_samples=4)
+Test impact of different n_samples parameters
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 148, in test_different_n_samples
+    accuracies.append(accuracy.item())
+                      ^^^^^^^^^^^^^
+AttributeError: 'float' object has no attribute 'item'
+
+======================================================================
+ERROR: test_input_output_samples (__main__.TestDPOAbsAccuracy.test_input_output_samples)
+Test specific input-output examples
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 278, in test_input_output_samples
+    self.assertAlmostEqual(result.item(), expected_accuracy, places=5)
+                           ^^^^^^^^^^^
+AttributeError: 'float' object has no attribute 'item'
+
+======================================================================
+ERROR: test_mask_effect_input_output (__main__.TestDPOAbsAccuracy.test_mask_effect_input_output)
+Test specific input-output for mask effect
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 391, in test_mask_effect_input_output
+    self.assertAlmostEqual(result_full.item(), expected_full, places=30)
+                           ^^^^^^^^^^^^^^^^
+AttributeError: 'float' object has no attribute 'item'
+
+======================================================================
+ERROR: test_opposite_prediction (__main__.TestDPOAbsAccuracy.test_opposite_prediction)
+Test opposite prediction case
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 107, in test_opposite_prediction
+    self.assertAlmostEqual(accuracy.item(), 0.0, places=5)
+                           ^^^^^^^^^^^^^
+AttributeError: 'float' object has no attribute 'item'
+
+======================================================================
+ERROR: test_perfect_prediction (__main__.TestDPOAbsAccuracy.test_perfect_prediction)
+Test perfect prediction case
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 86, in test_perfect_prediction
+    torch.testing.assert_close(accuracy, expected_accuracy, atol=1e-30, rtol=1e-30)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1578, in assert_close
+    error_metas = not_close_error_metas(
+                  ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1293, in not_close_error_metas
+    raise error_meta.to_error() from None  # noqa: RSE102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: No comparison pair was able to handle inputs of type <class 'float'> and <class 'torch.Tensor'>.
+
+======================================================================
+ERROR: test_response_mask_impact (__main__.TestDPOAbsAccuracy.test_response_mask_impact)
+Test impact of response_mask on absolute accuracy
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 184, in test_response_mask_impact
+    torch.testing.assert_close(accuracy_full, expected_accuracy_full, atol=1e-30, rtol=1e-30)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1578, in assert_close
+    error_metas = not_close_error_metas(
+                  ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1293, in not_close_error_metas
+    raise error_meta.to_error() from None  # noqa: RSE102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: No comparison pair was able to handle inputs of type <class 'float'> and <class 'torch.Tensor'>.
+
+======================================================================
+ERROR: test_score_aggregation_correctness (__main__.TestDPOAbsAccuracy.test_score_aggregation_correctness)
+Test correctness of score aggregation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 225, in test_score_aggregation_correctness
+    self.assertAlmostEqual(accuracy.item(), 1.0, places=5)
+                           ^^^^^^^^^^^^^
+AttributeError: 'float' object has no attribute 'item'
+
+======================================================================
+ERROR: test_zero_boundary_cases (__main__.TestDPOAbsAccuracy.test_zero_boundary_cases)
+Test specific input-output for zero boundary cases
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 346, in test_zero_boundary_cases
+    self.assertAlmostEqual(result.item(), expected_accuracy, places=30)
+                           ^^^^^^^^^^^
+AttributeError: 'float' object has no attribute 'item'
+
+======================================================================
+ERROR: test_zero_scores_edge_case (__main__.TestDPOAbsAccuracy.test_zero_scores_edge_case)
+Test edge case with zero scores
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 205, in test_zero_scores_edge_case
+    torch.testing.assert_close(accuracy, expected_accuracy, atol=1e-30, rtol=1e-30)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1578, in assert_close
+    error_metas = not_close_error_metas(
+                  ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1293, in not_close_error_metas
+    raise error_meta.to_error() from None  # noqa: RSE102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: No comparison pair was able to handle inputs of type <class 'float'> and <class 'torch.Tensor'>.
+
+======================================================================
+FAIL: test_different_n_samples (__main__.TestDPOAbsAccuracy.test_different_n_samples)
+Test impact of different n_samples parameters
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 155, in test_different_n_samples
+    torch.testing.assert_close(accuracies, expected_accuracies, atol=1e-30, rtol=1e-30)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1578, in assert_close
+    error_metas = not_close_error_metas(
+                  ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1293, in not_close_error_metas
+    raise error_meta.to_error() from None  # noqa: RSE102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: The length of the sequences mismatch: 0 != 3
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.004s
+
+FAILED (failures=1, errors=15)
+
+================================================================================
+日志结束

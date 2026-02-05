@@ -1,0 +1,228 @@
+================================================================================
+测试时间: 2026-02-05 18:09:45
+函数名: compute_rloo_advantage_return
+测试文件: test_code/test_rloo_advantage_return.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+FFFFFFFFFFFFFF
+======================================================================
+FAIL: test_accuracy_reward_allocation (__main__.TestRLOOAdvantageReturn.test_accuracy_reward_allocation)
+Test accuracy reward allocation to the last valid token position
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_rloo_advantage_return.py", line 644, in test_accuracy_reward_allocation
+    torch.testing.assert_close(advantages, expected_advantages, atol=1e-30, rtol=1e-30)
+  File "/opt/homebrew/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Tensor-likes are not close!
+
+Mismatched elements: 12 / 12 (100.0%)
+Greatest absolute difference: 3.0842533111572266 at index (1, 0) (up to 1e-30 allowed)
+Greatest relative difference: 10.74402141571045 at index (0, 5) (up to 1e-30 allowed)
+
+======================================================================
+FAIL: test_compute_rloo_advantage_return_rm_only (__main__.TestRLOOAdvantageReturn.test_compute_rloo_advantage_return_rm_only)
+Test RLOO advantage computation using only rm_scores
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_rloo_advantage_return.py", line 111, in test_compute_rloo_advantage_return_rm_only
+    torch.testing.assert_close(advantages, expected_advantages, atol=1e-30, rtol=1e-30)
+  File "/opt/homebrew/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Tensor-likes are not close!
+
+Mismatched elements: 40 / 40 (100.0%)
+Greatest absolute difference: 2.2971243858337402 at index (2, 9) (up to 1e-30 allowed)
+Greatest relative difference: 13.375658988952637 at index (2, 0) (up to 1e-30 allowed)
+
+======================================================================
+FAIL: test_compute_rloo_advantage_return_with_accuracy (__main__.TestRLOOAdvantageReturn.test_compute_rloo_advantage_return_with_accuracy)
+Test RLOO advantage computation using both rm_scores and accuracy
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_rloo_advantage_return.py", line 183, in test_compute_rloo_advantage_return_with_accuracy
+    torch.testing.assert_close(advantages, expected_advantages, atol=1e-30, rtol=1e-30)
+  File "/opt/homebrew/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Tensor-likes are not close!
+
+Mismatched elements: 40 / 40 (100.0%)
+Greatest absolute difference: 2.730708122253418 at index (2, 9) (up to 1e-30 allowed)
+Greatest relative difference: 35.86384582519531 at index (0, 5) (up to 1e-30 allowed)
+
+======================================================================
+FAIL: test_different_reward_coefficients (__main__.TestRLOOAdvantageReturn.test_different_reward_coefficients)
+Test the impact of different reward coefficients
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_rloo_advantage_return.py", line 534, in test_different_reward_coefficients
+    torch.testing.assert_close(results, expected_results, atol=1e-30, rtol=1e-30)
+  File "/opt/homebrew/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Tensor-likes are not close!
+
+Mismatched elements: 40 / 40 (100.0%)
+Greatest absolute difference: 2.2971243858337402 at index (2, 9) (up to 1e-30 allowed)
+Greatest relative difference: 13.375658988952637 at index (2, 0) (up to 1e-30 allowed)
+
+The failure occurred for item [0][0]
+
+======================================================================
+FAIL: test_input_output_samples_accuracy_reward (__main__.TestRLOOAdvantageReturn.test_input_output_samples_accuracy_reward)
+Test specific input/output samples for accuracy reward allocation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_rloo_advantage_return.py", line 888, in test_input_output_samples_accuracy_reward
+    torch.testing.assert_close(advantages, expected_advantages, atol=1e-30, rtol=1e-30)
+  File "/opt/homebrew/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Tensor-likes are not close!
+
+Mismatched elements: 16 / 16 (100.0%)
+Greatest absolute difference: 2.9022631645202637 at index (3, 0) (up to 1e-30 allowed)
+Greatest relative difference: 7.362371921539307 at index (1, 3) (up to 1e-30 allowed)
+
+======================================================================
+FAIL: test_input_output_samples_multi_source_fusion (__main__.TestRLOOAdvantageReturn.test_input_output_samples_multi_source_fusion)
+Test specific input/output samples for multi-source reward fusion
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_rloo_advantage_return.py", line 943, in test_input_output_samples_multi_source_fusion
+    torch.testing.assert_close(advantages, expected_advantages, atol=1e-30, rtol=1e-30)
+  File "/opt/homebrew/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Tensor-likes are not close!
+
+Mismatched elements: 12 / 12 (100.0%)
+Greatest absolute difference: 2.5927586555480957 at index (3, 0) (up to 1e-30 allowed)
+Greatest relative difference: 3.4715795516967773 at index (2, 2) (up to 1e-30 allowed)
+
+======================================================================
+FAIL: test_input_output_samples_rm_only (__main__.TestRLOOAdvantageReturn.test_input_output_samples_rm_only)
+Test specific input/output samples using only RM reward
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_rloo_advantage_return.py", line 808, in test_input_output_samples_rm_only
+    torch.testing.assert_close(advantages, expected_advantages, atol=1e-30, rtol=1e-30)
+  File "/opt/homebrew/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Tensor-likes are not close!
+
+Mismatched elements: 12 / 12 (100.0%)
+Greatest absolute difference: 2.9518957138061523 at index (3, 0) (up to 1e-30 allowed)
+Greatest relative difference: 4.672903060913086 at index (3, 2) (up to 1e-30 allowed)
+
+======================================================================
+FAIL: test_leave_one_out_baseline (__main__.TestRLOOAdvantageReturn.test_leave_one_out_baseline)
+Test the concept of Leave-One-Out baseline estimation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_rloo_advantage_return.py", line 588, in test_leave_one_out_baseline
+    torch.testing.assert_close(advantages, expected_advantages, atol=1e-30, rtol=1e-30)
+  File "/opt/homebrew/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Tensor-likes are not close!
+
+Mismatched elements: 24 / 24 (100.0%)
+Greatest absolute difference: 2.771481513977051 at index (0, 0) (up to 1e-30 allowed)
+Greatest relative difference: 4.753259658813477 at index (5, 3) (up to 1e-30 allowed)
+
+======================================================================
+FAIL: test_multi_source_reward_fusion (__main__.TestRLOOAdvantageReturn.test_multi_source_reward_fusion)
+Test multi-source reward fusion functionality
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_rloo_advantage_return.py", line 311, in test_multi_source_reward_fusion
+    torch.testing.assert_close(advantages, expected_advantages, atol=1e-30, rtol=1e-30)
+  File "/opt/homebrew/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Tensor-likes are not close!
+
+Mismatched elements: 40 / 40 (100.0%)
+Greatest absolute difference: 2.711660146713257 at index (2, 9) (up to 1e-30 allowed)
+Greatest relative difference: 12.276442527770996 at index (0, 7) (up to 1e-30 allowed)
+
+======================================================================
+FAIL: test_rloo_baseline_calculation_input_output (__main__.TestRLOOAdvantageReturn.test_rloo_baseline_calculation_input_output)
+Test specific input/output samples for RLOO baseline calculation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_rloo_advantage_return.py", line 1019, in test_rloo_baseline_calculation_input_output
+    torch.testing.assert_close(advantages, expected_advantages, atol=1e-30, rtol=1e-30)
+  File "/opt/homebrew/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Tensor-likes are not close!
+
+Mismatched elements: 12 / 12 (100.0%)
+Greatest absolute difference: 2.4832396507263184 at index (0, 0) (up to 1e-30 allowed)
+Greatest relative difference: inf at index (1, 0) (up to 1e-30 allowed)
+
+======================================================================
+FAIL: test_rloo_mathematical_correctness (__main__.TestRLOOAdvantageReturn.test_rloo_mathematical_correctness)
+Test mathematical correctness of RLOO algorithm
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_rloo_advantage_return.py", line 254, in test_rloo_mathematical_correctness
+    torch.testing.assert_close(masked_advantages, expected_masked_advantages, atol=1e-30, rtol=1e-30)
+  File "/opt/homebrew/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Tensor-likes are not close!
+
+Mismatched elements: 40 / 40 (100.0%)
+Greatest absolute difference: 2.2971243858337402 at index (29,) (up to 1e-30 allowed)
+Greatest relative difference: 13.375658988952637 at index (20,) (up to 1e-30 allowed)
+
+======================================================================
+FAIL: test_sample_grouping_logic (__main__.TestRLOOAdvantageReturn.test_sample_grouping_logic)
+Test sample grouping logic
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_rloo_advantage_return.py", line 767, in test_sample_grouping_logic
+    self.assertAlmostEqual(masked_advantages.std().item(), 1.0, places=4)
+AssertionError: 1.0141850709915161 != 1.0 within 4 places (0.014185070991516113 difference)
+
+======================================================================
+FAIL: test_whitening_process (__main__.TestRLOOAdvantageReturn.test_whitening_process)
+Test correctness of whitening process
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_rloo_advantage_return.py", line 698, in test_whitening_process
+    torch.testing.assert_close(advantages, expected_advantages, atol=1e-30, rtol=1e-30)
+  File "/opt/homebrew/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Tensor-likes are not close!
+
+Mismatched elements: 40 / 40 (100.0%)
+Greatest absolute difference: 2.2971243858337402 at index (2, 9) (up to 1e-30 allowed)
+Greatest relative difference: 13.375658988952637 at index (2, 0) (up to 1e-30 allowed)
+
+======================================================================
+FAIL: test_zero_coefficient_input_output (__main__.TestRLOOAdvantageReturn.test_zero_coefficient_input_output)
+Test specific input/output samples for zero coefficient case
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_rloo_advantage_return.py", line 1114, in test_zero_coefficient_input_output
+    torch.testing.assert_close(advantages1, expected_advantages1, atol=1e-30, rtol=1e-30)
+  File "/opt/homebrew/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Tensor-likes are not close!
+
+Mismatched elements: 12 / 12 (100.0%)
+Greatest absolute difference: 2.707416534423828 at index (0, 2) (up to 1e-30 allowed)
+Greatest relative difference: 12.013659477233887 at index (2, 0) (up to 1e-30 allowed)
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.018s
+
+FAILED (failures=14)
+
+================================================================================
+日志结束

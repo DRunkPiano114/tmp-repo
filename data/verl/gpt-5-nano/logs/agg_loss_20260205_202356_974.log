@@ -1,0 +1,37 @@
+================================================================================
+测试时间: 2026-02-05 20:23:56
+函数名: agg_loss
+测试文件: test_code/test_agg_loss.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+..........F
+======================================================================
+FAIL: test_agg_loss_zero_mask (__main__.TestAggLoss.test_agg_loss_zero_mask)
+Test edge case with all-zero mask
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/DAPO/code/test_code/test_agg_loss.py", line 171, in test_agg_loss_zero_mask
+    torch.testing.assert_close(losses[2], expected_losses[2], atol=1e-5, rtol=1e-5, equal_nan=True)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Scalars are not close!
+
+Expected nan but got 0.0.
+Absolute difference: nan (up to 1e-05 allowed)
+Relative difference: nan (up to 1e-05 allowed)
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.054s
+
+FAILED (failures=1)
+
+================================================================================
+日志结束

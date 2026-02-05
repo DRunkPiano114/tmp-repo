@@ -1,0 +1,144 @@
+================================================================================
+测试时间: 2026-02-05 18:15:30
+函数名: compute_ce_dpo_loss_rm
+测试文件: test_code/test_ce_dpo_loss.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+EEFEFFEEF
+======================================================================
+ERROR: test_batch_consistency (__main__.TestCEDPOLoss.test_batch_consistency)
+Test batch processing consistency
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_ce_dpo_loss.py", line 186, in test_batch_consistency
+    single_loss = compute_ce_dpo_loss_rm(single_scores, single_acc, single_mask, beta)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 114, in compute_ce_dpo_loss_rm
+    raise ValueError("Batch size must be even for DPO paired comparison.")
+ValueError: Batch size must be even for DPO paired comparison.
+
+======================================================================
+ERROR: test_beta_scaling_input_output_samples (__main__.TestCEDPOLoss.test_beta_scaling_input_output_samples)
+Test specific input-output examples for beta parameter scaling
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_ce_dpo_loss.py", line 282, in test_beta_scaling_input_output_samples
+    result_small = compute_ce_dpo_loss_rm(token_level_scores, acc, response_mask, beta_small)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 114, in compute_ce_dpo_loss_rm
+    raise ValueError("Batch size must be even for DPO paired comparison.")
+ValueError: Batch size must be even for DPO paired comparison.
+
+======================================================================
+ERROR: test_compute_ce_dpo_loss_rm_basic (__main__.TestCEDPOLoss.test_compute_ce_dpo_loss_rm_basic)
+Test basic functionality of Cross-Entropy DPO loss calculation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_ce_dpo_loss.py", line 53, in test_compute_ce_dpo_loss_rm_basic
+    loss = compute_ce_dpo_loss_rm(token_level_scores, acc, response_mask, beta)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 123, in compute_ce_dpo_loss_rm
+    raise ValueError("Each pair must contain exactly one preferred and one dispreferred sequence.")
+ValueError: Each pair must contain exactly one preferred and one dispreferred sequence.
+
+======================================================================
+ERROR: test_input_output_samples (__main__.TestCEDPOLoss.test_input_output_samples)
+Test specific input-output examples
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_ce_dpo_loss.py", line 206, in test_input_output_samples
+    result = compute_ce_dpo_loss_rm(token_level_scores, acc, response_mask, beta)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 114, in compute_ce_dpo_loss_rm
+    raise ValueError("Batch size must be even for DPO paired comparison.")
+ValueError: Batch size must be even for DPO paired comparison.
+
+======================================================================
+ERROR: test_perfect_prediction_cases (__main__.TestCEDPOLoss.test_perfect_prediction_cases)
+Test input-output examples for perfect prediction cases
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_ce_dpo_loss.py", line 311, in test_perfect_prediction_cases
+    result = compute_ce_dpo_loss_rm(token_level_scores, acc, response_mask, beta)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 114, in compute_ce_dpo_loss_rm
+    raise ValueError("Batch size must be even for DPO paired comparison.")
+ValueError: Batch size must be even for DPO paired comparison.
+
+======================================================================
+FAIL: test_ce_dpo_loss_mathematical_properties (__main__.TestCEDPOLoss.test_ce_dpo_loss_mathematical_properties)
+Test mathematical properties and computational correctness of CE DPO loss
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_ce_dpo_loss.py", line 84, in test_ce_dpo_loss_mathematical_properties
+    torch.testing.assert_close(loss, expected_loss, atol=1e-30, rtol=1e-30)
+  File "/opt/homebrew/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Scalars are not close!
+
+Expected 0.04858734831213951 but got 0.04858735203742981.
+Absolute difference: 3.725290298461914e-09 (up to 1e-30 allowed)
+Relative difference: 7.667202322978292e-08 (up to 1e-30 allowed)
+
+======================================================================
+FAIL: test_different_beta_values (__main__.TestCEDPOLoss.test_different_beta_values)
+Test the impact of different beta parameter values
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_ce_dpo_loss.py", line 110, in test_different_beta_values
+    torch.testing.assert_close(losses, expected_losses, atol=1e-30, rtol=1e-30)
+  File "/opt/homebrew/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Scalars are not close!
+
+Expected 0.7036470770835876 but got 0.6981596946716309.
+Absolute difference: 0.005487382411956787 (up to 1e-30 allowed)
+Relative difference: 0.007798486756600184 (up to 1e-30 allowed)
+
+The failure occurred for item [0]
+
+======================================================================
+FAIL: test_edge_cases (__main__.TestCEDPOLoss.test_edge_cases)
+Test edge cases
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_ce_dpo_loss.py", line 163, in test_edge_cases
+    torch.testing.assert_close(loss, expected_loss, atol=1e-30, rtol=1e-30)
+  File "/opt/homebrew/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Scalars are not close!
+
+Expected 4.6788117949230976e-14 but got 2.06115369216775e-09.
+Absolute difference: 2.0611069040498006e-09 (up to 1e-30 allowed)
+Relative difference: 44051.930156418646 (up to 1e-30 allowed)
+
+======================================================================
+FAIL: test_response_mask_effect (__main__.TestCEDPOLoss.test_response_mask_effect)
+Test the effect of response_mask on loss calculation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_ce_dpo_loss.py", line 135, in test_response_mask_effect
+    torch.testing.assert_close(loss_full, expected_loss_full, atol=1e-30, rtol=1e-30)
+  File "/opt/homebrew/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Scalars are not close!
+
+Expected 0.7130152583122253 but got 0.6931471824645996.
+Absolute difference: 0.019868075847625732 (up to 1e-30 allowed)
+Relative difference: 0.027864867709360596 (up to 1e-30 allowed)
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.031s
+
+FAILED (failures=4, errors=5)
+
+================================================================================
+日志结束

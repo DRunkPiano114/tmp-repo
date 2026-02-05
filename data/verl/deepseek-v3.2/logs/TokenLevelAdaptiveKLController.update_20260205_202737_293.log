@@ -1,0 +1,190 @@
+================================================================================
+测试时间: 2026-02-05 20:27:37
+函数名: TokenLevelAdaptiveKLController.update
+测试文件: test_code/test_kl_controller.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+.EEEEEEEEEEEEEE
+======================================================================
+ERROR: test_different_targets_for_different_difficulties (__main__.TestTokenLevelAdaptiveKLController.test_different_targets_for_different_difficulties)
+Test different KL targets for different difficulties
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_kl_controller.py", line 249, in test_different_targets_for_different_difficulties
+    controller.update(current_kls, n_steps)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/../verl/trainer/core_algos.py", line 96, in update
+    for difficulty in self.difficulty_levels:
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TokenLevelAdaptiveKLController' object has no attribute 'difficulty_levels'
+
+======================================================================
+ERROR: test_dual_ascent_convergence (__main__.TestTokenLevelAdaptiveKLController.test_dual_ascent_convergence)
+Test dual ascent convergence
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_kl_controller.py", line 210, in test_dual_ascent_convergence
+    controller.update(current_kls, n_steps)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/../verl/trainer/core_algos.py", line 96, in update
+    for difficulty in self.difficulty_levels:
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TokenLevelAdaptiveKLController' object has no attribute 'difficulty_levels'
+
+======================================================================
+ERROR: test_kl_coef_update (__main__.TestTokenLevelAdaptiveKLController.test_kl_coef_update)
+Test KL coefficient update
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_kl_controller.py", line 188, in test_kl_coef_update
+    controller.update(current_kls, n_steps)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/../verl/trainer/core_algos.py", line 96, in update
+    for difficulty in self.difficulty_levels:
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TokenLevelAdaptiveKLController' object has no attribute 'difficulty_levels'
+
+======================================================================
+ERROR: test_lambda_non_negative_constraint (__main__.TestTokenLevelAdaptiveKLController.test_lambda_non_negative_constraint)
+Test lambda non-negative constraint
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_kl_controller.py", line 165, in test_lambda_non_negative_constraint
+    controller.update(current_kls, n_steps)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/../verl/trainer/core_algos.py", line 96, in update
+    for difficulty in self.difficulty_levels:
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TokenLevelAdaptiveKLController' object has no attribute 'difficulty_levels'
+
+======================================================================
+ERROR: test_learning_rate_effect (__main__.TestTokenLevelAdaptiveKLController.test_learning_rate_effect)
+Test effect of learning rate on updates
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_kl_controller.py", line 301, in test_learning_rate_effect
+    controller.update(current_kls, n_steps)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/../verl/trainer/core_algos.py", line 96, in update
+    for difficulty in self.difficulty_levels:
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TokenLevelAdaptiveKLController' object has no attribute 'difficulty_levels'
+
+======================================================================
+ERROR: test_partial_bucket_update (__main__.TestTokenLevelAdaptiveKLController.test_partial_bucket_update)
+Test updating only partial buckets
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_kl_controller.py", line 280, in test_partial_bucket_update
+    controller.update(current_kls, n_steps)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/../verl/trainer/core_algos.py", line 96, in update
+    for difficulty in self.difficulty_levels:
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TokenLevelAdaptiveKLController' object has no attribute 'difficulty_levels'
+
+======================================================================
+ERROR: test_update_kl_above_target (__main__.TestTokenLevelAdaptiveKLController.test_update_kl_above_target)
+Test update when KL is above target
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_kl_controller.py", line 90, in test_update_kl_above_target
+    controller.update(current_kls, n_steps)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/../verl/trainer/core_algos.py", line 96, in update
+    for difficulty in self.difficulty_levels:
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TokenLevelAdaptiveKLController' object has no attribute 'difficulty_levels'
+
+======================================================================
+ERROR: test_update_kl_at_target (__main__.TestTokenLevelAdaptiveKLController.test_update_kl_at_target)
+Test update when KL equals target
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_kl_controller.py", line 115, in test_update_kl_at_target
+    controller.update(current_kls, n_steps)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/../verl/trainer/core_algos.py", line 96, in update
+    for difficulty in self.difficulty_levels:
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TokenLevelAdaptiveKLController' object has no attribute 'difficulty_levels'
+
+======================================================================
+ERROR: test_update_kl_below_target (__main__.TestTokenLevelAdaptiveKLController.test_update_kl_below_target)
+Test update when KL is below target
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_kl_controller.py", line 61, in test_update_kl_below_target
+    controller.update(current_kls, n_steps)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/../verl/trainer/core_algos.py", line 96, in update
+    for difficulty in self.difficulty_levels:
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TokenLevelAdaptiveKLController' object has no attribute 'difficulty_levels'
+
+======================================================================
+ERROR: test_update_multiple_buckets (__main__.TestTokenLevelAdaptiveKLController.test_update_multiple_buckets)
+Test updating multiple difficulty buckets simultaneously
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_kl_controller.py", line 140, in test_update_multiple_buckets
+    controller.update(current_kls, n_steps)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/../verl/trainer/core_algos.py", line 96, in update
+    for difficulty in self.difficulty_levels:
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TokenLevelAdaptiveKLController' object has no attribute 'difficulty_levels'
+
+======================================================================
+ERROR: test_difficulty_aware_kl_budget (__main__.TestTokenLevelAdaptiveKLControllerIntegration.test_difficulty_aware_kl_budget)
+Test difficulty-aware KL budget allocation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_kl_controller.py", line 379, in test_difficulty_aware_kl_budget
+    controller.update(current_kls, n_steps)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/../verl/trainer/core_algos.py", line 96, in update
+    for difficulty in self.difficulty_levels:
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TokenLevelAdaptiveKLController' object has no attribute 'difficulty_levels'
+
+======================================================================
+ERROR: test_edge_case_empty_bucket (__main__.TestTokenLevelAdaptiveKLControllerIntegration.test_edge_case_empty_bucket)
+Test empty bucket case (a difficulty has no samples)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_kl_controller.py", line 414, in test_edge_case_empty_bucket
+    controller.update(current_kls, n_steps)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/../verl/trainer/core_algos.py", line 96, in update
+    for difficulty in self.difficulty_levels:
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TokenLevelAdaptiveKLController' object has no attribute 'difficulty_levels'
+
+======================================================================
+ERROR: test_oscillating_kl_values (__main__.TestTokenLevelAdaptiveKLControllerIntegration.test_oscillating_kl_values)
+Test oscillating KL values
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_kl_controller.py", line 439, in test_oscillating_kl_values
+    controller.update(kls, {"medium": 100})
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/../verl/trainer/core_algos.py", line 96, in update
+    for difficulty in self.difficulty_levels:
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TokenLevelAdaptiveKLController' object has no attribute 'difficulty_levels'
+
+======================================================================
+ERROR: test_realistic_training_scenario (__main__.TestTokenLevelAdaptiveKLControllerIntegration.test_realistic_training_scenario)
+Test realistic training scenario
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_kl_controller.py", line 341, in test_realistic_training_scenario
+    controller.update(step_kls, n_steps)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/../verl/trainer/core_algos.py", line 96, in update
+    for difficulty in self.difficulty_levels:
+                      ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'TokenLevelAdaptiveKLController' object has no attribute 'difficulty_levels'
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.001s
+
+FAILED (errors=14)
+
+================================================================================
+日志结束

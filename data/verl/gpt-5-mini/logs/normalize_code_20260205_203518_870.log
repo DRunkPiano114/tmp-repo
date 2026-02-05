@@ -1,0 +1,56 @@
+================================================================================
+测试时间: 2026-02-05 20:35:18
+函数名: normalize_code
+测试文件: test_code/test_normalize_code.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+F...F
+======================================================================
+FAIL: test_normalize_code_basic (__main__.TestNormalizeCode.test_normalize_code_basic)
+Test basic code normalization
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/critic-rl/code/test_code/test_normalize_code.py", line 34, in test_normalize_code_basic
+    self.assertEqual(normalized, expected_result)
+AssertionError: 'def v_0(v_1, v_2):\n    return v_1 + v_2' != 'def add(x, y):\n    return x + y'
+- def v_0(v_1, v_2):
++ def add(x, y):
+-     return v_1 + v_2?            ^^^   ^^^
++     return x + y?            ^   ^
+
+
+======================================================================
+FAIL: test_normalize_code_variable_renaming (__main__.TestNormalizeCode.test_normalize_code_variable_renaming)
+Test variable renaming
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/critic-rl/code/test_code/test_normalize_code.py", line 57, in test_normalize_code_variable_renaming
+    self.assertEqual(normalized1, expected_result1)
+AssertionError: 'def v_0():\n    v_1 = 1\n    v_2 = 2\n    return v_1 + v_2' != 'def func():\n    v_0 = 1\n    v_1 = 2\n    return v_0 + v_1'
+- def v_0():
++ def func():
+-     v_1 = 1
+?       ^
++     v_0 = 1
+?       ^
+-     v_2 = 2
+?       ^
++     v_1 = 2
+?       ^
+-     return v_1 + v_2+     return v_0 + v_1
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+FAILED (failures=2)
+
+================================================================================
+日志结束

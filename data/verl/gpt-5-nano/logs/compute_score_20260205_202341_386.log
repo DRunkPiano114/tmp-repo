@@ -1,0 +1,23 @@
+================================================================================
+测试时间: 2026-02-05 20:23:41
+函数名: compute_score
+测试文件: test_code/test_compute_score.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_compute_score.py", line 9, in <module>
+    from examples.reward_function.aepo import compute_score
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/../examples/reward_function/aepo.py", line 19, in <module>
+    from mathruler.grader import extract_boxed_content, grade_answer
+ModuleNotFoundError: No module named 'mathruler'
+
+================================================================================
+日志结束

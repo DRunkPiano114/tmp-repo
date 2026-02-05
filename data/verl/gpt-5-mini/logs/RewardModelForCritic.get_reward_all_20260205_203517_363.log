@@ -1,0 +1,51 @@
+================================================================================
+测试时间: 2026-02-05 20:35:17
+函数名: RewardModelForCritic.get_reward_all
+测试文件: test_code/test_get_reward_all.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+
+Generating rewards: 0it [00:00, ?it/s]
+Generating rewards: 0it [00:00, ?it/s]
+.
+Generating rewards:   0%|          | 0/1 [00:00<?, ?it/s]
+Generating rewards: 100%|██████████| 1/1 [00:00<00:00, 6668.21it/s]
+.
+Generating rewards:   0%|          | 0/2 [00:00<?, ?it/s]
+Generating rewards: 100%|██████████| 2/2 [00:00<00:00, 19737.90it/s]
+F.....
+======================================================================
+FAIL: test_get_reward_all_with_mocked_sandbox (__main__.TestGetRewardAllAsync.test_get_reward_all_with_mocked_sandbox)
+Test get_reward_all using mocked sandbox
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/critic-rl/code/test_code/test_get_reward_all.py", line 162, in test_get_reward_all_with_mocked_sandbox
+    self.assertEqual(rewards, expected_result)
+AssertionError: Lists differ: [0.0, 0.0] != [1.0, 1.0]
+
+First differing element 0:
+0.0
+1.0
+
+- [0.0, 0.0]
+?  ^    ^
+
++ [1.0, 1.0]
+?  ^    ^
+
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.112s
+
+FAILED (failures=1)
+
+================================================================================
+日志结束

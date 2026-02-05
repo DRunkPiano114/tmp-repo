@@ -1,0 +1,85 @@
+================================================================================
+测试时间: 2026-02-05 20:35:36
+函数名: compute_ce_dpo_loss_rm
+测试文件: test_code/test_ce_dpo_loss.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+..FFFFF..
+======================================================================
+FAIL: test_ce_dpo_loss_mathematical_properties (__main__.TestCEDPOLoss.test_ce_dpo_loss_mathematical_properties)
+Test mathematical properties and computational correctness of CE DPO loss
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_ce_dpo_loss.py", line 84, in test_ce_dpo_loss_mathematical_properties
+    torch.testing.assert_close(loss, expected_loss, atol=1e-30, rtol=1e-30)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Scalars are not close!
+
+Expected 0.04858734831213951 but got 0.04858734458684921.
+Absolute difference: 3.725290298461914e-09 (up to 1e-30 allowed)
+Relative difference: 7.667202322978292e-08 (up to 1e-30 allowed)
+
+======================================================================
+FAIL: test_compute_ce_dpo_loss_rm_basic (__main__.TestCEDPOLoss.test_compute_ce_dpo_loss_rm_basic)
+Test basic functionality of Cross-Entropy DPO loss calculation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_ce_dpo_loss.py", line 62, in test_compute_ce_dpo_loss_rm_basic
+    torch.testing.assert_close(loss, expected_loss, atol=1e-30, rtol=1e-30)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Scalars are not close!
+
+Expected 0.6844281554222107 but got 0.6844282150268555.
+Absolute difference: 5.960464477539063e-08 (up to 1e-30 allowed)
+Relative difference: 8.708678084498387e-08 (up to 1e-30 allowed)
+
+======================================================================
+FAIL: test_different_beta_values (__main__.TestCEDPOLoss.test_different_beta_values)
+Test the impact of different beta parameter values
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_ce_dpo_loss.py", line 105, in test_different_beta_values
+    self.assertFalse(torch.isnan(loss))
+AssertionError: tensor(True) is not false
+
+======================================================================
+FAIL: test_edge_cases (__main__.TestCEDPOLoss.test_edge_cases)
+Test edge cases
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_ce_dpo_loss.py", line 163, in test_edge_cases
+    torch.testing.assert_close(loss, expected_loss, atol=1e-30, rtol=1e-30)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Scalars are not close!
+
+Expected 4.6788117949230976e-14 but got nan.
+Absolute difference: nan (up to 1e-30 allowed)
+Relative difference: nan (up to 1e-30 allowed)
+
+======================================================================
+FAIL: test_input_output_samples (__main__.TestCEDPOLoss.test_input_output_samples)
+Test specific input-output examples
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_ce_dpo_loss.py", line 230, in test_input_output_samples
+    self.assertAlmostEqual(result.item(), expected_loss.item(), places=30)
+AssertionError: 0.04858734458684921 != 0.04858735203742981 within 30 places (7.450580596923828e-09 difference)
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.007s
+
+FAILED (failures=5)
+
+================================================================================
+日志结束

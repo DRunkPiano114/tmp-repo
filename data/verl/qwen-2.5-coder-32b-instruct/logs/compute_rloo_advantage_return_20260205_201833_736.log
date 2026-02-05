@@ -1,0 +1,24 @@
+================================================================================
+测试时间: 2026-02-05 20:18:33
+函数名: compute_rloo_advantage_return
+测试文件: test_code/test_rloo_advantage_return.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_rloo_advantage_return.py", line 44, in <module>
+    from prime.prime_core_algos import compute_rloo_advantage_return
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 32
+    reward_dpo_coef = config.algorithm.get('reward_dpo_coef', .)
+                                                              ^
+SyntaxError: invalid syntax
+
+================================================================================
+日志结束

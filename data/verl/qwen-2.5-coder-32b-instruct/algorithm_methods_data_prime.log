@@ -1,122 +1,123 @@
-2026-02-04 18:40:54,388 - INFO - 📖 加载数据: /Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/scripts/data/verl/algorithm_methods_data_prime.jsonl
-2026-02-04 18:40:54,389 - INFO - ✅ 加载了 7 个样本
-2026-02-04 18:40:54,389 - INFO - 🔧 初始化 OpenRouter 客户端
-2026-02-04 18:40:54,389 - INFO -    模型: qwen/qwen-2.5-coder-32b-instruct
-2026-02-04 18:40:54,389 - INFO -    每个样本生成: 1 个候选
-2026-02-04 18:40:54,425 - INFO - 🚀 开始生成...
-2026-02-04 18:40:54,425 - INFO - 
-2026-02-04 18:40:54,425 - INFO - [1/7] 处理: DataParallelPRIMERewardModel._forward_micro_batch
-2026-02-04 18:40:54,425 - INFO -   📤 发送请求 1/1
-2026-02-04 18:40:54,425 - INFO -      模型: qwen/qwen-2.5-coder-32b-instruct
-2026-02-04 18:40:54,425 - INFO -      消息数: 2
-2026-02-04 18:40:55,761 - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
-2026-02-04 18:41:19,838 - INFO -   📥 收到响应
-2026-02-04 18:41:19,839 - INFO -      Response ID: gen-1770201655-WtzkvzEEsuxefMc5Ba8B
-2026-02-04 18:41:19,839 - INFO -      Model: qwen/qwen-2.5-coder-32b-instruct
-2026-02-04 18:41:19,840 - INFO -      Choices: 1
-2026-02-04 18:41:19,840 - INFO -      Usage: input=431, output=847, total=1278
-2026-02-04 18:41:19,840 - INFO -   ✅ 候选 1/1 生成成功 (长度: 4372)
-2026-02-04 18:41:19,840 - INFO -   📊 成功: 1/1
-2026-02-04 18:41:19,840 - INFO -   🔢 Token 使用: input=431, output=847, total=1278
-2026-02-04 18:41:19,840 - INFO - 
-2026-02-04 18:41:19,840 - INFO - [2/7] 处理: compute_ce_dpo_loss_rm
-2026-02-04 18:41:19,841 - INFO -   📤 发送请求 1/1
-2026-02-04 18:41:19,841 - INFO -      模型: qwen/qwen-2.5-coder-32b-instruct
-2026-02-04 18:41:19,841 - INFO -      消息数: 2
-2026-02-04 18:41:20,316 - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
-2026-02-04 18:41:38,218 - INFO -   📥 收到响应
-2026-02-04 18:41:38,218 - INFO -      Response ID: gen-1770201680-rrwOdpOtibQDFQ3bTVUS
-2026-02-04 18:41:38,218 - INFO -      Model: qwen/qwen-2.5-coder-32b-instruct
-2026-02-04 18:41:38,218 - INFO -      Choices: 1
-2026-02-04 18:41:38,218 - INFO -      Usage: input=319, output=630, total=949
-2026-02-04 18:41:38,218 - INFO -   ✅ 候选 1/1 生成成功 (长度: 2699)
-2026-02-04 18:41:38,219 - INFO -   📊 成功: 1/1
-2026-02-04 18:41:38,219 - INFO -   🔢 Token 使用: input=319, output=630, total=949
-2026-02-04 18:41:38,219 - INFO - 
-2026-02-04 18:41:38,219 - INFO - [3/7] 处理: compute_detach_dpo_loss_rm
-2026-02-04 18:41:38,219 - INFO -   📤 发送请求 1/1
-2026-02-04 18:41:38,219 - INFO -      模型: qwen/qwen-2.5-coder-32b-instruct
-2026-02-04 18:41:38,219 - INFO -      消息数: 2
-2026-02-04 18:41:38,882 - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
-2026-02-04 18:42:08,783 - INFO -   📥 收到响应
-2026-02-04 18:42:08,783 - INFO -      Response ID: gen-1770201698-Aa8FyecSx8UNFFVKaICL
-2026-02-04 18:42:08,783 - INFO -      Model: qwen/qwen-2.5-coder-32b-instruct
-2026-02-04 18:42:08,783 - INFO -      Choices: 1
-2026-02-04 18:42:08,783 - INFO -      Usage: input=406, output=1003, total=1409
-2026-02-04 18:42:08,783 - INFO -   ✅ 候选 1/1 生成成功 (长度: 4435)
-2026-02-04 18:42:08,783 - INFO -   📊 成功: 1/1
-2026-02-04 18:42:08,783 - INFO -   🔢 Token 使用: input=406, output=1003, total=1409
-2026-02-04 18:42:08,784 - INFO - 
-2026-02-04 18:42:08,784 - INFO - [4/7] 处理: compute_dpo_accuracy
-2026-02-04 18:42:08,784 - INFO -   📤 发送请求 1/1
-2026-02-04 18:42:08,784 - INFO -      模型: qwen/qwen-2.5-coder-32b-instruct
-2026-02-04 18:42:08,784 - INFO -      消息数: 2
-2026-02-04 18:42:09,411 - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
-2026-02-04 18:42:33,356 - INFO -   📥 收到响应
-2026-02-04 18:42:33,356 - INFO -      Response ID: gen-1770201729-D1auPiUeonRNHdiJt9nN
-2026-02-04 18:42:33,356 - INFO -      Model: qwen/qwen-2.5-coder-32b-instruct
-2026-02-04 18:42:33,356 - INFO -      Choices: 1
-2026-02-04 18:42:33,357 - INFO -      Usage: input=368, output=845, total=1213
-2026-02-04 18:42:33,357 - INFO -   ✅ 候选 1/1 生成成功 (长度: 3582)
-2026-02-04 18:42:33,357 - INFO -   📊 成功: 1/1
-2026-02-04 18:42:33,357 - INFO -   🔢 Token 使用: input=368, output=845, total=1213
-2026-02-04 18:42:33,357 - INFO - 
-2026-02-04 18:42:33,357 - INFO - [5/7] 处理: compute_dpo_abs_accuracy
-2026-02-04 18:42:33,357 - INFO -   📤 发送请求 1/1
-2026-02-04 18:42:33,357 - INFO -      模型: qwen/qwen-2.5-coder-32b-instruct
-2026-02-04 18:42:33,357 - INFO -      消息数: 2
-2026-02-04 18:42:33,583 - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
-2026-02-04 18:42:54,870 - INFO -   📥 收到响应
-2026-02-04 18:42:54,870 - INFO -      Response ID: gen-1770201753-c4ksyzilRinNbMCYXtsP
-2026-02-04 18:42:54,870 - INFO -      Model: qwen/qwen-2.5-coder-32b-instruct
-2026-02-04 18:42:54,870 - INFO -      Choices: 1
-2026-02-04 18:42:54,871 - INFO -      Usage: input=307, output=741, total=1048
-2026-02-04 18:42:54,871 - INFO -   ✅ 候选 1/1 生成成功 (长度: 3129)
-2026-02-04 18:42:54,871 - INFO -   📊 成功: 1/1
-2026-02-04 18:42:54,871 - INFO -   🔢 Token 使用: input=307, output=741, total=1048
-2026-02-04 18:42:54,871 - INFO - 
-2026-02-04 18:42:54,871 - INFO - [6/7] 处理: compute_rloo_advantage_return
-2026-02-04 18:42:54,871 - INFO -   📤 发送请求 1/1
-2026-02-04 18:42:54,871 - INFO -      模型: qwen/qwen-2.5-coder-32b-instruct
-2026-02-04 18:42:54,871 - INFO -      消息数: 2
-2026-02-04 18:42:55,463 - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
-2026-02-04 18:43:21,612 - INFO -   📥 收到响应
-2026-02-04 18:43:21,613 - INFO -      Response ID: gen-1770201775-Q5svqT1k6ThYptfiCkDI
-2026-02-04 18:43:21,613 - INFO -      Model: qwen/qwen-2.5-coder-32b-instruct
-2026-02-04 18:43:21,613 - INFO -      Choices: 1
-2026-02-04 18:43:21,613 - INFO -      Usage: input=526, output=896, total=1422
-2026-02-04 18:43:21,613 - INFO -   ✅ 候选 1/1 生成成功 (长度: 3987)
-2026-02-04 18:43:21,613 - INFO -   📊 成功: 1/1
-2026-02-04 18:43:21,613 - INFO -   🔢 Token 使用: input=526, output=896, total=1422
-2026-02-04 18:43:21,613 - INFO - 
-2026-02-04 18:43:21,613 - INFO - [7/7] 处理: RayPRIMETrainer.filter_and_downsample
-2026-02-04 18:43:21,613 - INFO -   📤 发送请求 1/1
-2026-02-04 18:43:21,613 - INFO -      模型: qwen/qwen-2.5-coder-32b-instruct
-2026-02-04 18:43:21,613 - INFO -      消息数: 2
-2026-02-04 18:43:21,995 - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
-2026-02-04 18:43:52,081 - INFO -   📥 收到响应
-2026-02-04 18:43:52,082 - INFO -      Response ID: gen-1770201801-gR8pKy0VEOm5xYVvoD5g
-2026-02-04 18:43:52,082 - INFO -      Model: qwen/qwen-2.5-coder-32b-instruct
-2026-02-04 18:43:52,082 - INFO -      Choices: 1
-2026-02-04 18:43:52,082 - INFO -      Usage: input=396, output=1060, total=1456
-2026-02-04 18:43:52,082 - INFO -   ✅ 候选 1/1 生成成功 (长度: 4843)
-2026-02-04 18:43:52,082 - INFO -   📊 成功: 1/1
-2026-02-04 18:43:52,082 - INFO -   🔢 Token 使用: input=396, output=1060, total=1456
-2026-02-04 18:43:52,082 - INFO - 
-2026-02-04 18:43:52,082 - INFO - 💾 保存结果: /Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/scripts/data/verl/qwen-2.5-coder-32b-instruct/algorithm_methods_data_prime_output.jsonl
-2026-02-04 18:43:52,084 - INFO - 
-2026-02-04 18:43:52,084 - INFO - ============================================================
-2026-02-04 18:43:52,084 - INFO - 📊 生成统计
-2026-02-04 18:43:52,084 - INFO - ============================================================
-2026-02-04 18:43:52,084 - INFO - 总样本数: 7
-2026-02-04 18:43:52,084 - INFO - 总生成数: 7
-2026-02-04 18:43:52,084 - INFO - ✅ 成功: 7
-2026-02-04 18:43:52,084 - INFO - ❌ 失败: 0
-2026-02-04 18:43:52,084 - INFO - 成功率: 100.0%
-2026-02-04 18:43:52,084 - INFO - 
-2026-02-04 18:43:52,084 - INFO - 🔢 Token 使用统计:
-2026-02-04 18:43:52,084 - INFO -   输入 tokens: 2,753
-2026-02-04 18:43:52,084 - INFO -   输出 tokens: 6,022
-2026-02-04 18:43:52,084 - INFO -   总计 tokens: 8,775
-2026-02-04 18:43:52,084 - INFO -   平均每样本: 1253.6 tokens
-2026-02-04 18:43:52,084 - INFO - ============================================================
+2026-02-05 20:13:28,962 - INFO - 📖 加载数据: /Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/scripts/data/verl/algorithm_methods_data_prime.jsonl
+2026-02-05 20:13:28,962 - INFO - ✅ 加载了 7 个样本
+2026-02-05 20:13:28,962 - INFO - 🔧 初始化 OpenRouter 客户端
+2026-02-05 20:13:28,962 - INFO -    模型: qwen/qwen-2.5-coder-32b-instruct
+2026-02-05 20:13:28,962 - INFO -    每个样本生成: 1 个候选
+2026-02-05 20:13:28,988 - INFO -    超时时间: 180.0 秒
+2026-02-05 20:13:28,988 - INFO - 🚀 开始生成...
+2026-02-05 20:13:28,988 - INFO - 
+2026-02-05 20:13:28,988 - INFO - [1/7] 处理: DataParallelPRIMERewardModel._forward_micro_batch
+2026-02-05 20:13:28,988 - INFO -   📤 发送请求 1/1
+2026-02-05 20:13:28,988 - INFO -      模型: qwen/qwen-2.5-coder-32b-instruct
+2026-02-05 20:13:28,988 - INFO -      消息数: 2
+2026-02-05 20:13:29,901 - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-05 20:13:55,531 - INFO -   📥 收到响应
+2026-02-05 20:13:55,531 - INFO -      Response ID: gen-1770293609-kRwECrD65ewLJaP9sest
+2026-02-05 20:13:55,531 - INFO -      Model: qwen/qwen-2.5-coder-32b-instruct
+2026-02-05 20:13:55,531 - INFO -      Choices: 1
+2026-02-05 20:13:55,531 - INFO -      Usage: input=431, output=869, total=1300
+2026-02-05 20:13:55,531 - INFO -   ✅ 候选 1/1 生成成功 (长度: 4429)
+2026-02-05 20:13:55,531 - INFO -   📊 成功: 1/1
+2026-02-05 20:13:55,531 - INFO -   🔢 Token 使用: input=431, output=869, total=1300
+2026-02-05 20:13:55,531 - INFO - 
+2026-02-05 20:13:55,531 - INFO - [2/7] 处理: compute_ce_dpo_loss_rm
+2026-02-05 20:13:55,531 - INFO -   📤 发送请求 1/1
+2026-02-05 20:13:55,531 - INFO -      模型: qwen/qwen-2.5-coder-32b-instruct
+2026-02-05 20:13:55,531 - INFO -      消息数: 2
+2026-02-05 20:13:56,248 - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-05 20:14:14,737 - INFO -   📥 收到响应
+2026-02-05 20:14:14,737 - INFO -      Response ID: gen-1770293635-40PZmZB3m7n9bZHCoSN6
+2026-02-05 20:14:14,737 - INFO -      Model: qwen/qwen-2.5-coder-32b-instruct
+2026-02-05 20:14:14,737 - INFO -      Choices: 1
+2026-02-05 20:14:14,737 - INFO -      Usage: input=319, output=630, total=949
+2026-02-05 20:14:14,737 - INFO -   ✅ 候选 1/1 生成成功 (长度: 2699)
+2026-02-05 20:14:14,738 - INFO -   📊 成功: 1/1
+2026-02-05 20:14:14,738 - INFO -   🔢 Token 使用: input=319, output=630, total=949
+2026-02-05 20:14:14,738 - INFO - 
+2026-02-05 20:14:14,738 - INFO - [3/7] 处理: compute_detach_dpo_loss_rm
+2026-02-05 20:14:14,738 - INFO -   📤 发送请求 1/1
+2026-02-05 20:14:14,738 - INFO -      模型: qwen/qwen-2.5-coder-32b-instruct
+2026-02-05 20:14:14,738 - INFO -      消息数: 2
+2026-02-05 20:14:15,320 - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-05 20:14:45,262 - INFO -   📥 收到响应
+2026-02-05 20:14:45,262 - INFO -      Response ID: gen-1770293655-p1vBrLwmA5SLbhI5s9lT
+2026-02-05 20:14:45,262 - INFO -      Model: qwen/qwen-2.5-coder-32b-instruct
+2026-02-05 20:14:45,262 - INFO -      Choices: 1
+2026-02-05 20:14:45,262 - INFO -      Usage: input=406, output=967, total=1373
+2026-02-05 20:14:45,262 - INFO -   ✅ 候选 1/1 生成成功 (长度: 4221)
+2026-02-05 20:14:45,262 - INFO -   📊 成功: 1/1
+2026-02-05 20:14:45,262 - INFO -   🔢 Token 使用: input=406, output=967, total=1373
+2026-02-05 20:14:45,262 - INFO - 
+2026-02-05 20:14:45,262 - INFO - [4/7] 处理: compute_dpo_accuracy
+2026-02-05 20:14:45,262 - INFO -   📤 发送请求 1/1
+2026-02-05 20:14:45,262 - INFO -      模型: qwen/qwen-2.5-coder-32b-instruct
+2026-02-05 20:14:45,262 - INFO -      消息数: 2
+2026-02-05 20:14:45,560 - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-05 20:15:10,248 - INFO -   📥 收到响应
+2026-02-05 20:15:10,248 - INFO -      Response ID: gen-1770293685-jnuZh2KOEHmmlQoZQGCR
+2026-02-05 20:15:10,248 - INFO -      Model: qwen/qwen-2.5-coder-32b-instruct
+2026-02-05 20:15:10,248 - INFO -      Choices: 1
+2026-02-05 20:15:10,248 - INFO -      Usage: input=368, output=864, total=1232
+2026-02-05 20:15:10,248 - INFO -   ✅ 候选 1/1 生成成功 (长度: 3912)
+2026-02-05 20:15:10,248 - INFO -   📊 成功: 1/1
+2026-02-05 20:15:10,248 - INFO -   🔢 Token 使用: input=368, output=864, total=1232
+2026-02-05 20:15:10,248 - INFO - 
+2026-02-05 20:15:10,248 - INFO - [5/7] 处理: compute_dpo_abs_accuracy
+2026-02-05 20:15:10,249 - INFO -   📤 发送请求 1/1
+2026-02-05 20:15:10,249 - INFO -      模型: qwen/qwen-2.5-coder-32b-instruct
+2026-02-05 20:15:10,249 - INFO -      消息数: 2
+2026-02-05 20:15:11,057 - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-05 20:15:33,500 - INFO -   📥 收到响应
+2026-02-05 20:15:33,500 - INFO -      Response ID: gen-1770293710-BM8vnTUFHdhD8q0iDJ0E
+2026-02-05 20:15:33,500 - INFO -      Model: qwen/qwen-2.5-coder-32b-instruct
+2026-02-05 20:15:33,500 - INFO -      Choices: 1
+2026-02-05 20:15:33,501 - INFO -      Usage: input=307, output=756, total=1063
+2026-02-05 20:15:33,501 - INFO -   ✅ 候选 1/1 生成成功 (长度: 3292)
+2026-02-05 20:15:33,501 - INFO -   📊 成功: 1/1
+2026-02-05 20:15:33,501 - INFO -   🔢 Token 使用: input=307, output=756, total=1063
+2026-02-05 20:15:33,501 - INFO - 
+2026-02-05 20:15:33,501 - INFO - [6/7] 处理: compute_rloo_advantage_return
+2026-02-05 20:15:33,501 - INFO -   📤 发送请求 1/1
+2026-02-05 20:15:33,501 - INFO -      模型: qwen/qwen-2.5-coder-32b-instruct
+2026-02-05 20:15:33,501 - INFO -      消息数: 2
+2026-02-05 20:15:34,240 - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-05 20:16:00,736 - INFO -   📥 收到响应
+2026-02-05 20:16:00,736 - INFO -      Response ID: gen-1770293734-RAVzngRvSnHPIYMaUpuY
+2026-02-05 20:16:00,736 - INFO -      Model: qwen/qwen-2.5-coder-32b-instruct
+2026-02-05 20:16:00,736 - INFO -      Choices: 1
+2026-02-05 20:16:00,736 - INFO -      Usage: input=526, output=909, total=1435
+2026-02-05 20:16:00,736 - INFO -   ✅ 候选 1/1 生成成功 (长度: 4065)
+2026-02-05 20:16:00,736 - INFO -   📊 成功: 1/1
+2026-02-05 20:16:00,736 - INFO -   🔢 Token 使用: input=526, output=909, total=1435
+2026-02-05 20:16:00,736 - INFO - 
+2026-02-05 20:16:00,736 - INFO - [7/7] 处理: RayPRIMETrainer.filter_and_downsample
+2026-02-05 20:16:00,736 - INFO -   📤 发送请求 1/1
+2026-02-05 20:16:00,736 - INFO -      模型: qwen/qwen-2.5-coder-32b-instruct
+2026-02-05 20:16:00,736 - INFO -      消息数: 2
+2026-02-05 20:16:01,421 - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-05 20:16:32,065 - INFO -   📥 收到响应
+2026-02-05 20:16:32,066 - INFO -      Response ID: gen-1770293761-NFIyXIP6b3w1BqcrmZeR
+2026-02-05 20:16:32,066 - INFO -      Model: qwen/qwen-2.5-coder-32b-instruct
+2026-02-05 20:16:32,066 - INFO -      Choices: 1
+2026-02-05 20:16:32,066 - INFO -      Usage: input=396, output=1069, total=1465
+2026-02-05 20:16:32,066 - INFO -   ✅ 候选 1/1 生成成功 (长度: 4914)
+2026-02-05 20:16:32,067 - INFO -   📊 成功: 1/1
+2026-02-05 20:16:32,067 - INFO -   🔢 Token 使用: input=396, output=1069, total=1465
+2026-02-05 20:16:32,067 - INFO - 
+2026-02-05 20:16:32,067 - INFO - 💾 保存结果: /Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/scripts/data/verl/qwen-2.5-coder-32b-instruct/algorithm_methods_data_prime_output.jsonl
+2026-02-05 20:16:32,070 - INFO - 
+2026-02-05 20:16:32,071 - INFO - ============================================================
+2026-02-05 20:16:32,071 - INFO - 📊 生成统计
+2026-02-05 20:16:32,071 - INFO - ============================================================
+2026-02-05 20:16:32,071 - INFO - 总样本数: 7
+2026-02-05 20:16:32,071 - INFO - 总生成数: 7
+2026-02-05 20:16:32,071 - INFO - ✅ 成功: 7
+2026-02-05 20:16:32,071 - INFO - ❌ 失败: 0
+2026-02-05 20:16:32,071 - INFO - 成功率: 100.0%
+2026-02-05 20:16:32,071 - INFO - 
+2026-02-05 20:16:32,071 - INFO - 🔢 Token 使用统计:
+2026-02-05 20:16:32,071 - INFO -   输入 tokens: 2,753
+2026-02-05 20:16:32,071 - INFO -   输出 tokens: 6,064
+2026-02-05 20:16:32,071 - INFO -   总计 tokens: 8,817
+2026-02-05 20:16:32,071 - INFO -   平均每样本: 1259.6 tokens
+2026-02-05 20:16:32,071 - INFO - ============================================================

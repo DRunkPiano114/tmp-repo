@@ -1,0 +1,172 @@
+================================================================================
+测试时间: 2026-02-05 20:02:55
+函数名: TokenLevelAdaptiveKLController.update
+测试文件: test_code/test_kl_controller.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+EEEEEEEEEEEEEEE
+======================================================================
+ERROR: test_controller_initialization (__main__.TestTokenLevelAdaptiveKLController.test_controller_initialization)
+Test controller initialization
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_kl_controller.py", line 31, in test_controller_initialization
+    controller = TokenLevelAdaptiveKLController(init_kl_coefs, targets, horizon)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Can't instantiate abstract class TokenLevelAdaptiveKLController with abstract method update
+
+======================================================================
+ERROR: test_different_targets_for_different_difficulties (__main__.TestTokenLevelAdaptiveKLController.test_different_targets_for_different_difficulties)
+Test different KL targets for different difficulties
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_kl_controller.py", line 236, in test_different_targets_for_different_difficulties
+    controller = TokenLevelAdaptiveKLController(init_kl_coefs, targets, horizon=10000)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Can't instantiate abstract class TokenLevelAdaptiveKLController with abstract method update
+
+======================================================================
+ERROR: test_dual_ascent_convergence (__main__.TestTokenLevelAdaptiveKLController.test_dual_ascent_convergence)
+Test dual ascent convergence
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_kl_controller.py", line 203, in test_dual_ascent_convergence
+    controller = TokenLevelAdaptiveKLController(init_kl_coefs, targets, horizon=10000)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Can't instantiate abstract class TokenLevelAdaptiveKLController with abstract method update
+
+======================================================================
+ERROR: test_kl_coef_update (__main__.TestTokenLevelAdaptiveKLController.test_kl_coef_update)
+Test KL coefficient update
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_kl_controller.py", line 179, in test_kl_coef_update
+    controller = TokenLevelAdaptiveKLController(init_kl_coefs, targets, horizon=10000)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Can't instantiate abstract class TokenLevelAdaptiveKLController with abstract method update
+
+======================================================================
+ERROR: test_lambda_non_negative_constraint (__main__.TestTokenLevelAdaptiveKLController.test_lambda_non_negative_constraint)
+Test lambda non-negative constraint
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_kl_controller.py", line 159, in test_lambda_non_negative_constraint
+    controller = TokenLevelAdaptiveKLController(init_kl_coefs, targets, horizon=10000)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Can't instantiate abstract class TokenLevelAdaptiveKLController with abstract method update
+
+======================================================================
+ERROR: test_learning_rate_effect (__main__.TestTokenLevelAdaptiveKLController.test_learning_rate_effect)
+Test effect of learning rate on updates
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_kl_controller.py", line 294, in test_learning_rate_effect
+    controller = TokenLevelAdaptiveKLController(init_kl_coefs, targets, horizon=10000)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Can't instantiate abstract class TokenLevelAdaptiveKLController with abstract method update
+
+======================================================================
+ERROR: test_partial_bucket_update (__main__.TestTokenLevelAdaptiveKLController.test_partial_bucket_update)
+Test updating only partial buckets
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_kl_controller.py", line 270, in test_partial_bucket_update
+    controller = TokenLevelAdaptiveKLController(init_kl_coefs, targets, horizon=10000)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Can't instantiate abstract class TokenLevelAdaptiveKLController with abstract method update
+
+======================================================================
+ERROR: test_update_kl_above_target (__main__.TestTokenLevelAdaptiveKLController.test_update_kl_above_target)
+Test update when KL is above target
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_kl_controller.py", line 81, in test_update_kl_above_target
+    controller = TokenLevelAdaptiveKLController(init_kl_coefs, targets, horizon=10000)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Can't instantiate abstract class TokenLevelAdaptiveKLController with abstract method update
+
+======================================================================
+ERROR: test_update_kl_at_target (__main__.TestTokenLevelAdaptiveKLController.test_update_kl_at_target)
+Test update when KL equals target
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_kl_controller.py", line 106, in test_update_kl_at_target
+    controller = TokenLevelAdaptiveKLController(init_kl_coefs, targets, horizon=10000)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Can't instantiate abstract class TokenLevelAdaptiveKLController with abstract method update
+
+======================================================================
+ERROR: test_update_kl_below_target (__main__.TestTokenLevelAdaptiveKLController.test_update_kl_below_target)
+Test update when KL is below target
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_kl_controller.py", line 51, in test_update_kl_below_target
+    controller = TokenLevelAdaptiveKLController(init_kl_coefs, targets, horizon=10000)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Can't instantiate abstract class TokenLevelAdaptiveKLController with abstract method update
+
+======================================================================
+ERROR: test_update_multiple_buckets (__main__.TestTokenLevelAdaptiveKLController.test_update_multiple_buckets)
+Test updating multiple difficulty buckets simultaneously
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_kl_controller.py", line 127, in test_update_multiple_buckets
+    controller = TokenLevelAdaptiveKLController(init_kl_coefs, targets, horizon=10000)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Can't instantiate abstract class TokenLevelAdaptiveKLController with abstract method update
+
+======================================================================
+ERROR: test_difficulty_aware_kl_budget (__main__.TestTokenLevelAdaptiveKLControllerIntegration.test_difficulty_aware_kl_budget)
+Test difficulty-aware KL budget allocation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_kl_controller.py", line 368, in test_difficulty_aware_kl_budget
+    controller = TokenLevelAdaptiveKLController(init_kl_coefs, targets, horizon=10000)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Can't instantiate abstract class TokenLevelAdaptiveKLController with abstract method update
+
+======================================================================
+ERROR: test_edge_case_empty_bucket (__main__.TestTokenLevelAdaptiveKLControllerIntegration.test_edge_case_empty_bucket)
+Test empty bucket case (a difficulty has no samples)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_kl_controller.py", line 405, in test_edge_case_empty_bucket
+    controller = TokenLevelAdaptiveKLController(init_kl_coefs, targets, horizon=10000)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Can't instantiate abstract class TokenLevelAdaptiveKLController with abstract method update
+
+======================================================================
+ERROR: test_oscillating_kl_values (__main__.TestTokenLevelAdaptiveKLControllerIntegration.test_oscillating_kl_values)
+Test oscillating KL values
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_kl_controller.py", line 425, in test_oscillating_kl_values
+    controller = TokenLevelAdaptiveKLController(init_kl_coefs, targets, horizon=10000)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Can't instantiate abstract class TokenLevelAdaptiveKLController with abstract method update
+
+======================================================================
+ERROR: test_realistic_training_scenario (__main__.TestTokenLevelAdaptiveKLControllerIntegration.test_realistic_training_scenario)
+Test realistic training scenario
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_kl_controller.py", line 323, in test_realistic_training_scenario
+    controller = TokenLevelAdaptiveKLController(init_kl_coefs, targets, horizon=10000)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Can't instantiate abstract class TokenLevelAdaptiveKLController with abstract method update
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.001s
+
+FAILED (errors=15)
+
+================================================================================
+日志结束

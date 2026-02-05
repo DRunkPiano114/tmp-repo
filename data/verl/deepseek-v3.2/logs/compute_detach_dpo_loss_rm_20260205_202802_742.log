@@ -1,0 +1,206 @@
+================================================================================
+测试时间: 2026-02-05 20:28:02
+函数名: compute_detach_dpo_loss_rm
+测试文件: test_code/test_detach_dpo_loss.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+FFFFFFFFFFFF
+======================================================================
+FAIL: test_bon_mode_acc (__main__.TestDetachDPOLoss.test_bon_mode_acc)
+Test BoN weight calculation for bon_mode='bon_acc'
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_detach_dpo_loss.py", line 176, in test_bon_mode_acc
+    torch.testing.assert_close(loss, expected_loss, atol=1e-30, rtol=1e-30)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Scalars are not close!
+
+Expected 3.1467528343200684 but got 2.3928608894348145.
+Absolute difference: 0.7538919448852539 (up to 1e-30 allowed)
+Relative difference: 0.23957774397243067 (up to 1e-30 allowed)
+
+======================================================================
+FAIL: test_bon_mode_none (__main__.TestDetachDPOLoss.test_bon_mode_none)
+Test weight calculation for bon_mode='none'
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_detach_dpo_loss.py", line 127, in test_bon_mode_none
+    torch.testing.assert_close(loss, expected_loss, atol=1e-30, rtol=1e-30)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Scalars are not close!
+
+Expected 0.6714861989021301 but got 6.487509250640869.
+Absolute difference: 5.816023051738739 (up to 1e-30 allowed)
+Relative difference: 8.661418598398374 (up to 1e-30 allowed)
+
+======================================================================
+FAIL: test_bon_mode_rm (__main__.TestDetachDPOLoss.test_bon_mode_rm)
+Test BoN weight calculation for bon_mode='bon_rm'
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_detach_dpo_loss.py", line 152, in test_bon_mode_rm
+    torch.testing.assert_close(loss, expected_loss, atol=1e-30, rtol=1e-30)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Scalars are not close!
+
+Expected 5.371889591217041 but got 6.487509250640869.
+Absolute difference: 1.1156196594238281 (up to 1e-30 allowed)
+Relative difference: 0.20767732479979661 (up to 1e-30 allowed)
+
+======================================================================
+FAIL: test_bon_weighting_input_output (__main__.TestDetachDPOLoss.test_bon_weighting_input_output)
+Test specific input-output for BoN weight calculation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_detach_dpo_loss.py", line 436, in test_bon_weighting_input_output
+    torch.testing.assert_close(result, expected_result, atol=1e-30, rtol=1e-30)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Scalars are not close!
+
+Expected 1.7183912992477417 but got 0.6931471824645996.
+Absolute difference: 1.025244116783142 (up to 1e-30 allowed)
+Relative difference: 0.5966301838422727 (up to 1e-30 allowed)
+
+======================================================================
+FAIL: test_compute_detach_dpo_loss_rm_basic (__main__.TestDetachDPOLoss.test_compute_detach_dpo_loss_rm_basic)
+Test basic functionality of detached DPO loss calculation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_detach_dpo_loss.py", line 73, in test_compute_detach_dpo_loss_rm_basic
+    torch.testing.assert_close(losses, expected_losses, atol=1e-30, rtol=1e-30)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Scalars are not close!
+
+Expected 0.6421908140182495 but got 11.362500190734863.
+Absolute difference: 10.720309376716614 (up to 1e-30 allowed)
+Relative difference: 16.693339647197085 (up to 1e-30 allowed)
+
+The failure occurred for item [0]
+
+======================================================================
+FAIL: test_contrast_sample_selection_input_output (__main__.TestDetachDPOLoss.test_contrast_sample_selection_input_output)
+Test specific input-output for contrastive sample selection
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_detach_dpo_loss.py", line 387, in test_contrast_sample_selection_input_output
+    torch.testing.assert_close(result, expected_result, atol=1e-30, rtol=1e-30)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Scalars are not close!
+
+Expected 0.5759393572807312 but got 3.999999761581421.
+Absolute difference: 3.4240604043006897 (up to 1e-30 allowed)
+Relative difference: 5.94517523592626 (up to 1e-30 allowed)
+
+======================================================================
+FAIL: test_contrasting_samples_selection (__main__.TestDetachDPOLoss.test_contrasting_samples_selection)
+Test contrastive sample selection logic
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_detach_dpo_loss.py", line 239, in test_contrasting_samples_selection
+    torch.testing.assert_close(loss, expected_loss, atol=1e-30, rtol=1e-30)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Scalars are not close!
+
+Expected 0.6468947529792786 but got 0.020154301077127457.
+Absolute difference: 0.6267404519021511 (up to 1e-30 allowed)
+Relative difference: 0.9688445439009875 (up to 1e-30 allowed)
+
+======================================================================
+FAIL: test_different_beta_values (__main__.TestDetachDPOLoss.test_different_beta_values)
+Test the impact of different beta parameters on detached DPO loss
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_detach_dpo_loss.py", line 211, in test_different_beta_values
+    torch.testing.assert_close(losses, expected_losses, atol=1e-30, rtol=1e-30)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Scalars are not close!
+
+Expected 0.6887817978858948 but got 9.0.
+Absolute difference: 8.311218202114105 (up to 1e-30 allowed)
+Relative difference: 12.066547384997769 (up to 1e-30 allowed)
+
+The failure occurred for item [0]
+
+======================================================================
+FAIL: test_direction_calculation (__main__.TestDetachDPOLoss.test_direction_calculation)
+Test preference direction calculation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_detach_dpo_loss.py", line 273, in test_direction_calculation
+    torch.testing.assert_close(loss_pos, expected_loss_pos, atol=1e-30, rtol=1e-30)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Scalars are not close!
+
+Expected 0.5787412524223328 but got 6.03749942779541.
+Absolute difference: 5.458758175373077 (up to 1e-30 allowed)
+Relative difference: 9.432122131479895 (up to 1e-30 allowed)
+
+======================================================================
+FAIL: test_dpo_loss_mathematical_properties (__main__.TestDetachDPOLoss.test_dpo_loss_mathematical_properties)
+Test mathematical properties of detached DPO loss
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_detach_dpo_loss.py", line 101, in test_dpo_loss_mathematical_properties
+    torch.testing.assert_close(loss, expected_loss, atol=1e-30, rtol=1e-30)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Scalars are not close!
+
+Expected 0.8017187118530273 but got 32.5.
+Absolute difference: 31.698281288146973 (up to 1e-30 allowed)
+Relative difference: 39.53790876962588 (up to 1e-30 allowed)
+
+======================================================================
+FAIL: test_edge_cases_input_output (__main__.TestDetachDPOLoss.test_edge_cases_input_output)
+Test specific input-output for edge cases
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_detach_dpo_loss.py", line 488, in test_edge_cases_input_output
+    torch.testing.assert_close(result, expected_result, atol=1e-30, rtol=1e-30)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Scalars are not close!
+
+Expected 0.554355263710022 but got 7.500000476837158.
+Absolute difference: 6.945645213127136 (up to 1e-30 allowed)
+Relative difference: 12.529231104695233 (up to 1e-30 allowed)
+
+======================================================================
+FAIL: test_input_output_samples (__main__.TestDetachDPOLoss.test_input_output_samples)
+Test specific input-output examples
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_detach_dpo_loss.py", line 302, in test_input_output_samples
+    torch.testing.assert_close(result, expected_result, atol=1e-30, rtol=1e-30)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Scalars are not close!
+
+Expected 0.6570521593093872 but got 0.34657374024391174.
+Absolute difference: 0.31047841906547546 (up to 1e-30 allowed)
+Relative difference: 0.4725323776301297 (up to 1e-30 allowed)
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.007s
+
+FAILED (failures=12)
+
+================================================================================
+日志结束

@@ -1,0 +1,130 @@
+================================================================================
+测试时间: 2026-02-05 20:24:13
+函数名: compute_dpo_accuracy
+测试文件: test_code/test_dpo_accuracy.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+EEEEEEEEE
+======================================================================
+ERROR: test_compute_dpo_accuracy_basic (__main__.TestDPOAccuracy.test_compute_dpo_accuracy_basic)
+Test basic functionality of DPO accuracy calculation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_accuracy.py", line 55, in test_compute_dpo_accuracy_basic
+    accuracy = compute_dpo_accuracy(token_level_scores, acc, response_mask, n_samples)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 146, in compute_dpo_accuracy
+    raise ValueError("token_level_scores must be a 3D tensor of shape (G, S, L).")
+ValueError: token_level_scores must be a 3D tensor of shape (G, S, L).
+
+======================================================================
+ERROR: test_edge_case_input_output_samples (__main__.TestDPOAccuracy.test_edge_case_input_output_samples)
+Test edge case input-output examples
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_accuracy.py", line 238, in test_edge_case_input_output_samples
+    result = compute_dpo_accuracy(token_level_scores, acc, response_mask, n_samples)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 146, in compute_dpo_accuracy
+    raise ValueError("token_level_scores must be a 3D tensor of shape (G, S, L).")
+ValueError: token_level_scores must be a 3D tensor of shape (G, S, L).
+
+======================================================================
+ERROR: test_equal_accuracy_case (__main__.TestDPOAccuracy.test_equal_accuracy_case)
+Test edge case with equal accuracy
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_accuracy.py", line 77, in test_equal_accuracy_case
+    accuracy = compute_dpo_accuracy(token_level_scores, acc, response_mask, n_samples)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 146, in compute_dpo_accuracy
+    raise ValueError("token_level_scores must be a 3D tensor of shape (G, S, L).")
+ValueError: token_level_scores must be a 3D tensor of shape (G, S, L).
+
+======================================================================
+ERROR: test_extreme_cases (__main__.TestDPOAccuracy.test_extreme_cases)
+Test extreme cases
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_accuracy.py", line 294, in test_extreme_cases
+    accuracy = compute_dpo_accuracy(extreme_scores, acc, response_mask, n_samples)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 146, in compute_dpo_accuracy
+    raise ValueError("token_level_scores must be a 3D tensor of shape (G, S, L).")
+ValueError: token_level_scores must be a 3D tensor of shape (G, S, L).
+
+======================================================================
+ERROR: test_input_output_samples (__main__.TestDPOAccuracy.test_input_output_samples)
+Test specific input-output examples
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_accuracy.py", line 184, in test_input_output_samples
+    result = compute_dpo_accuracy(token_level_scores, acc, response_mask, n_samples)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 146, in compute_dpo_accuracy
+    raise ValueError("token_level_scores must be a 3D tensor of shape (G, S, L).")
+ValueError: token_level_scores must be a 3D tensor of shape (G, S, L).
+
+======================================================================
+ERROR: test_pairwise_comparison_logic (__main__.TestDPOAccuracy.test_pairwise_comparison_logic)
+Test correctness of pairwise comparison logic
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_accuracy.py", line 98, in test_pairwise_comparison_logic
+    accuracy = compute_dpo_accuracy(token_level_scores, acc, response_mask, n_samples)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 146, in compute_dpo_accuracy
+    raise ValueError("token_level_scores must be a 3D tensor of shape (G, S, L).")
+ValueError: token_level_scores must be a 3D tensor of shape (G, S, L).
+
+======================================================================
+ERROR: test_response_mask_effect (__main__.TestDPOAccuracy.test_response_mask_effect)
+Test impact of response_mask on accuracy calculation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_accuracy.py", line 137, in test_response_mask_effect
+    accuracy_full = compute_dpo_accuracy(token_level_scores, acc, full_mask, n_samples)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 146, in compute_dpo_accuracy
+    raise ValueError("token_level_scores must be a 3D tensor of shape (G, S, L).")
+ValueError: token_level_scores must be a 3D tensor of shape (G, S, L).
+
+======================================================================
+ERROR: test_score_aggregation_logic (__main__.TestDPOAccuracy.test_score_aggregation_logic)
+Test sequence-level score aggregation logic
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_accuracy.py", line 165, in test_score_aggregation_logic
+    accuracy = compute_dpo_accuracy(token_level_scores, acc, response_mask, n_samples)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 146, in compute_dpo_accuracy
+    raise ValueError("token_level_scores must be a 3D tensor of shape (G, S, L).")
+ValueError: token_level_scores must be a 3D tensor of shape (G, S, L).
+
+======================================================================
+ERROR: test_weighted_average_computation (__main__.TestDPOAccuracy.test_weighted_average_computation)
+Test weighted average accuracy calculation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_accuracy.py", line 117, in test_weighted_average_computation
+    accuracy = compute_dpo_accuracy(token_level_scores, acc, response_mask, n_samples)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 146, in compute_dpo_accuracy
+    raise ValueError("token_level_scores must be a 3D tensor of shape (G, S, L).")
+ValueError: token_level_scores must be a 3D tensor of shape (G, S, L).
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.003s
+
+FAILED (errors=9)
+
+================================================================================
+日志结束

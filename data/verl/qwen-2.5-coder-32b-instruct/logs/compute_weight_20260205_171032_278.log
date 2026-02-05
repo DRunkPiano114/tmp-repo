@@ -1,0 +1,24 @@
+================================================================================
+测试时间: 2026-02-05 17:10:32
+函数名: compute_weight
+测试文件: test_code/test_compute_weight.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/PACS/code/test_code/test_compute_weight.py", line 11, in <module>
+    from pacs.pacs_core_algos import compute_weight
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/PACS/code/test_code/../src/pacs/pacs_core_algos.py", line 77
+    if score.shape[] % rollout_n != :
+                   ^
+SyntaxError: invalid syntax
+
+================================================================================
+日志结束

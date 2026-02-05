@@ -1,0 +1,152 @@
+================================================================================
+测试时间: 2026-02-05 20:03:44
+函数名: RayPRIMETrainer.filter_and_downsample
+测试文件: test_code/test_filter_and_downsample.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+EEEEEEEEEE
+======================================================================
+ERROR: test_accuracy_filtering (__main__.TestFilterAndDownsample.test_accuracy_filtering)
+Test accuracy filtering - using ground truth code
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_filter_and_downsample.py", line 165, in test_accuracy_filtering
+    result_batch = self._call_filter_and_downsample(scores, batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_filter_and_downsample.py", line 106, in _call_filter_and_downsample
+    return RayPRIMETrainer.filter_and_downsample(trainer, scores, batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'RayPRIMETrainer' has no attribute 'filter_and_downsample'
+
+======================================================================
+ERROR: test_combined_filtering (__main__.TestFilterAndDownsample.test_combined_filtering)
+Test combined accuracy and length filtering - using ground truth code
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_filter_and_downsample.py", line 300, in test_combined_filtering
+    result_batch = self._call_filter_and_downsample(scores, batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_filter_and_downsample.py", line 106, in _call_filter_and_downsample
+    return RayPRIMETrainer.filter_and_downsample(trainer, scores, batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'RayPRIMETrainer' has no attribute 'filter_and_downsample'
+
+======================================================================
+ERROR: test_different_oversample_factors (__main__.TestFilterAndDownsample.test_different_oversample_factors) (oversample_factor=2.0)
+Test different oversample factors - using ground truth code
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_filter_and_downsample.py", line 325, in test_different_oversample_factors
+    result_batch = self._call_filter_and_downsample(scores, batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_filter_and_downsample.py", line 106, in _call_filter_and_downsample
+    return RayPRIMETrainer.filter_and_downsample(trainer, scores, batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'RayPRIMETrainer' has no attribute 'filter_and_downsample'
+
+======================================================================
+ERROR: test_different_oversample_factors (__main__.TestFilterAndDownsample.test_different_oversample_factors) (oversample_factor=3.0)
+Test different oversample factors - using ground truth code
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_filter_and_downsample.py", line 325, in test_different_oversample_factors
+    result_batch = self._call_filter_and_downsample(scores, batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_filter_and_downsample.py", line 106, in _call_filter_and_downsample
+    return RayPRIMETrainer.filter_and_downsample(trainer, scores, batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'RayPRIMETrainer' has no attribute 'filter_and_downsample'
+
+======================================================================
+ERROR: test_different_oversample_factors (__main__.TestFilterAndDownsample.test_different_oversample_factors) (oversample_factor=6.0)
+Test different oversample factors - using ground truth code
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_filter_and_downsample.py", line 325, in test_different_oversample_factors
+    result_batch = self._call_filter_and_downsample(scores, batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_filter_and_downsample.py", line 106, in _call_filter_and_downsample
+    return RayPRIMETrainer.filter_and_downsample(trainer, scores, batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'RayPRIMETrainer' has no attribute 'filter_and_downsample'
+
+======================================================================
+ERROR: test_filter_and_downsample_basic (__main__.TestFilterAndDownsample.test_filter_and_downsample_basic)
+Test basic filtering and downsampling functionality - using ground truth code
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_filter_and_downsample.py", line 135, in test_filter_and_downsample_basic
+    result_batch = self._call_filter_and_downsample(scores, batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_filter_and_downsample.py", line 106, in _call_filter_and_downsample
+    return RayPRIMETrainer.filter_and_downsample(trainer, scores, batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'RayPRIMETrainer' has no attribute 'filter_and_downsample'
+
+======================================================================
+ERROR: test_filter_disabled (__main__.TestFilterAndDownsample.test_filter_disabled)
+Test case with filters disabled - using ground truth code
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_filter_and_downsample.py", line 349, in test_filter_disabled
+    result_batch = self._call_filter_and_downsample(scores, batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_filter_and_downsample.py", line 106, in _call_filter_and_downsample
+    return RayPRIMETrainer.filter_and_downsample(trainer, scores, batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'RayPRIMETrainer' has no attribute 'filter_and_downsample'
+
+======================================================================
+ERROR: test_length_filtering (__main__.TestFilterAndDownsample.test_length_filtering)
+Test length filtering - using ground truth code
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_filter_and_downsample.py", line 209, in test_length_filtering
+    result_batch = self._call_filter_and_downsample(scores, batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_filter_and_downsample.py", line 106, in _call_filter_and_downsample
+    return RayPRIMETrainer.filter_and_downsample(trainer, scores, batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'RayPRIMETrainer' has no attribute 'filter_and_downsample'
+
+======================================================================
+ERROR: test_no_groups_pass_filter (__main__.TestFilterAndDownsample.test_no_groups_pass_filter)
+Test fallback mechanism when no groups pass filtering - using ground truth code
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_filter_and_downsample.py", line 230, in test_no_groups_pass_filter
+    result_batch = self._call_filter_and_downsample(scores, batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_filter_and_downsample.py", line 106, in _call_filter_and_downsample
+    return RayPRIMETrainer.filter_and_downsample(trainer, scores, batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'RayPRIMETrainer' has no attribute 'filter_and_downsample'
+
+======================================================================
+ERROR: test_priority_downsampling (__main__.TestFilterAndDownsample.test_priority_downsampling)
+Test priority downsampling - using ground truth code
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_filter_and_downsample.py", line 256, in test_priority_downsampling
+    result_batch = self._call_filter_and_downsample(scores, batch)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_filter_and_downsample.py", line 106, in _call_filter_and_downsample
+    return RayPRIMETrainer.filter_and_downsample(trainer, scores, batch)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: type object 'RayPRIMETrainer' has no attribute 'filter_and_downsample'
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.007s
+
+FAILED (errors=10)
+
+================================================================================
+日志结束

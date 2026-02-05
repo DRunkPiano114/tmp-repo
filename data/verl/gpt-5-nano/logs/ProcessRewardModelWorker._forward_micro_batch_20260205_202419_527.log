@@ -1,0 +1,34 @@
+================================================================================
+测试时间: 2026-02-05 20:24:19
+函数名: ProcessRewardModelWorker._forward_micro_batch
+测试文件: test_code/test_forward_micro_batch.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+E
+======================================================================
+ERROR: test_forward_micro_batch_basic_logic (__main__.TestForwardMicroBatch.test_forward_micro_batch_basic_logic)
+Test basic logic of _forward_micro_batch
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/PURE/code/test_code/test_forward_micro_batch.py", line 66, in test_forward_micro_batch_basic_logic
+    result = worker._forward_micro_batch(micro_batch)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/PURE/code/test_code/../verl/workers/fsdp_workers.py", line 1478, in _forward_micro_batch
+    raise RuntimeError("Process Reward Model (PRM) not found on the worker.")
+RuntimeError: Process Reward Model (PRM) not found on the worker.
+
+----------------------------------------------------------------------
+Ran 1 test in 0.002s
+
+FAILED (errors=1)
+
+================================================================================
+日志结束

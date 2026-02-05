@@ -1,0 +1,26 @@
+================================================================================
+测试时间: 2026-02-05 20:18:18
+函数名: DAPORewardManager.__call__
+测试文件: test_code/test_dapo_reward_manager.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/DAPO/code/test_code/test_dapo_reward_manager.py", line 13, in <module>
+    from verl.workers.reward_manager.dapo import DAPORewardManager
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/DAPO/code/test_code/../verl/workers/reward_manager/__init__.py", line 17, in <module>
+    from .dapo import DAPORewardManager
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/DAPO/code/test_code/../verl/workers/reward_manager/dapo.py", line 62
+    def __init__(self, tokenizer, reward_model, length_control: bool = False, max_length: int = , penalty_factor: float = .):
+                                                                                              ^
+SyntaxError: expected default value expression
+
+================================================================================
+日志结束

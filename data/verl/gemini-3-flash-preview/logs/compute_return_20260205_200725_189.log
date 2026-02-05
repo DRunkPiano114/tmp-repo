@@ -1,0 +1,58 @@
+================================================================================
+测试时间: 2026-02-05 20:07:25
+函数名: compute_return
+测试文件: test_code/test_compute_return.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+tensor([[ 9.0893,  5.4624,  3.8025, -1.0500, -4.0000],
+        [ 7.1439,  4.4672,  2.7550, -1.1000, -3.0000]])
+
+【STDERR】
+--------------------------------------------------------------------------------
+..F....F.E
+======================================================================
+ERROR: test_method_parameter_switching (__main__.TestComputeReturnIntegration.test_method_parameter_switching)
+Test method parameter switching functionality
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/PURE/code/test_code/test_compute_return.py", line 379, in test_method_parameter_switching
+    compute_return(token_rewards, eos_mask, method='invalid')
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/PURE/code/test_code/../verl/trainer/ppo/core_algos.py", line 120, in compute_return
+    raise ValueError(f"Unknown method: {method}. Expected 'sum' or 'min'.")
+ValueError: Unknown method: invalid. Expected 'sum' or 'min'.
+
+======================================================================
+FAIL: test_compute_return_input_output_samples_sum (__main__.TestComputeReturn.test_compute_return_input_output_samples_sum)
+Test specific input/output examples for sum method
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/PURE/code/test_code/test_compute_return.py", line 202, in test_compute_return_input_output_samples_sum
+    torch.testing.assert_close(returns_3, expected_3)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Tensor-likes are not close!
+
+Mismatched elements: 2 / 4 (50.0%)
+Greatest absolute difference: 0.7999999523162842 at index (0, 1) (up to 1e-05 allowed)
+Greatest relative difference: 0.2666666507720947 at index (0, 1) (up to 1.3e-06 allowed)
+
+======================================================================
+FAIL: test_compute_return_with_eos_mask (__main__.TestComputeReturn.test_compute_return_with_eos_mask)
+Test the effect of eos_mask on calculation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/PURE/code/test_code/test_compute_return.py", line 143, in test_compute_return_with_eos_mask
+    self.assertAlmostEqual(returns_sum[0, 2].item(), 3.0, places=5)
+AssertionError: 6.199999809265137 != 3.0 within 5 places (3.1999998092651367 difference)
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.014s
+
+FAILED (failures=2, errors=1)
+
+================================================================================
+日志结束

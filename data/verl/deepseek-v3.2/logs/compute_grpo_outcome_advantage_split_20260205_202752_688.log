@@ -1,0 +1,178 @@
+================================================================================
+测试时间: 2026-02-05 20:27:52
+函数名: compute_grpo_outcome_advantage_split
+测试文件: test_code/test_compute_grpo_outcome_advantage_split.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+EEEEEEEEEEEE
+======================================================================
+ERROR: test_basic_functionality (__main__.TestComputeGrpoOutcomeAdvantageSplit.test_basic_functionality)
+Test basic functionality: compute within-group baseline using only on-policy samples
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_grpo_outcome_advantage_split.py", line 40, in test_basic_functionality
+    advantages, returns = compute_grpo_outcome_advantage_split(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/../luffy/verl/verl/mix_src/mix_core_alg.py", line 43, in compute_grpo_outcome_advantage_split
+    valid_rewards = token_level_rewards[i][eos_mask[i]]
+                    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+IndexError: tensors used as indices must be long, int, byte or bool tensors
+
+======================================================================
+ERROR: test_edge_case_single_sample (__main__.TestComputeGrpoOutcomeAdvantageSplit.test_edge_case_single_sample)
+Test edge case: single sample
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_grpo_outcome_advantage_split.py", line 310, in test_edge_case_single_sample
+    advantages, returns = compute_grpo_outcome_advantage_split(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/../luffy/verl/verl/mix_src/mix_core_alg.py", line 43, in compute_grpo_outcome_advantage_split
+    valid_rewards = token_level_rewards[i][eos_mask[i]]
+                    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+IndexError: tensors used as indices must be long, int, byte or bool tensors
+
+======================================================================
+ERROR: test_edge_case_zero_rewards (__main__.TestComputeGrpoOutcomeAdvantageSplit.test_edge_case_zero_rewards)
+Test edge case: all zero rewards
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_grpo_outcome_advantage_split.py", line 293, in test_edge_case_zero_rewards
+    advantages, returns = compute_grpo_outcome_advantage_split(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/../luffy/verl/verl/mix_src/mix_core_alg.py", line 43, in compute_grpo_outcome_advantage_split
+    valid_rewards = token_level_rewards[i][eos_mask[i]]
+                    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+IndexError: tensors used as indices must be long, int, byte or bool tensors
+
+======================================================================
+ERROR: test_eos_mask_application (__main__.TestComputeGrpoOutcomeAdvantageSplit.test_eos_mask_application)
+Test eos_mask application: compute advantages only at valid token positions
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_grpo_outcome_advantage_split.py", line 202, in test_eos_mask_application
+    advantages, returns = compute_grpo_outcome_advantage_split(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/../luffy/verl/verl/mix_src/mix_core_alg.py", line 43, in compute_grpo_outcome_advantage_split
+    valid_rewards = token_level_rewards[i][eos_mask[i]]
+                    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+IndexError: tensors used as indices must be long, int, byte or bool tensors
+
+======================================================================
+ERROR: test_epsilon_parameter (__main__.TestComputeGrpoOutcomeAdvantageSplit.test_epsilon_parameter)
+Test epsilon parameter: numerical stability
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_grpo_outcome_advantage_split.py", line 168, in test_epsilon_parameter
+    advantages, returns = compute_grpo_outcome_advantage_split(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/../luffy/verl/verl/mix_src/mix_core_alg.py", line 43, in compute_grpo_outcome_advantage_split
+    valid_rewards = token_level_rewards[i][eos_mask[i]]
+                    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+IndexError: tensors used as indices must be long, int, byte or bool tensors
+
+======================================================================
+ERROR: test_multiple_groups (__main__.TestComputeGrpoOutcomeAdvantageSplit.test_multiple_groups)
+Test handling of multiple prompt groups
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_grpo_outcome_advantage_split.py", line 233, in test_multiple_groups
+    advantages, returns = compute_grpo_outcome_advantage_split(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/../luffy/verl/verl/mix_src/mix_core_alg.py", line 43, in compute_grpo_outcome_advantage_split
+    valid_rewards = token_level_rewards[i][eos_mask[i]]
+                    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+IndexError: tensors used as indices must be long, int, byte or bool tensors
+
+======================================================================
+ERROR: test_on_policy_mask_filtering (__main__.TestComputeGrpoOutcomeAdvantageSplit.test_on_policy_mask_filtering)
+Test on_policy_mask filtering: compute baseline using only on-policy samples
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_grpo_outcome_advantage_split.py", line 74, in test_on_policy_mask_filtering
+    advantages, returns = compute_grpo_outcome_advantage_split(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/../luffy/verl/verl/mix_src/mix_core_alg.py", line 43, in compute_grpo_outcome_advantage_split
+    valid_rewards = token_level_rewards[i][eos_mask[i]]
+                    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+IndexError: tensors used as indices must be long, int, byte or bool tensors
+
+======================================================================
+ERROR: test_single_on_policy_sample_per_group (__main__.TestComputeGrpoOutcomeAdvantageSplit.test_single_on_policy_sample_per_group)
+Test case with only one on-policy sample per group: mean=0, std=1
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_grpo_outcome_advantage_split.py", line 105, in test_single_on_policy_sample_per_group
+    advantages, returns = compute_grpo_outcome_advantage_split(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/../luffy/verl/verl/mix_src/mix_core_alg.py", line 43, in compute_grpo_outcome_advantage_split
+    valid_rewards = token_level_rewards[i][eos_mask[i]]
+                    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+IndexError: tensors used as indices must be long, int, byte or bool tensors
+
+======================================================================
+ERROR: test_token_level_broadcast (__main__.TestComputeGrpoOutcomeAdvantageSplit.test_token_level_broadcast)
+Test sequence-level advantage broadcast to token level
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_grpo_outcome_advantage_split.py", line 267, in test_token_level_broadcast
+    advantages, returns = compute_grpo_outcome_advantage_split(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/../luffy/verl/verl/mix_src/mix_core_alg.py", line 43, in compute_grpo_outcome_advantage_split
+    valid_rewards = token_level_rewards[i][eos_mask[i]]
+                    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+IndexError: tensors used as indices must be long, int, byte or bool tensors
+
+======================================================================
+ERROR: test_use_std_parameter (__main__.TestComputeGrpoOutcomeAdvantageSplit.test_use_std_parameter)
+Test use_std parameter: control whether to use standard deviation normalization
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_grpo_outcome_advantage_split.py", line 131, in test_use_std_parameter
+    advantages_with_std, _ = compute_grpo_outcome_advantage_split(
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/../luffy/verl/verl/mix_src/mix_core_alg.py", line 43, in compute_grpo_outcome_advantage_split
+    valid_rewards = token_level_rewards[i][eos_mask[i]]
+                    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+IndexError: tensors used as indices must be long, int, byte or bool tensors
+
+======================================================================
+ERROR: test_mixed_on_off_policy_scenario (__main__.TestComputeGrpoOutcomeAdvantageSplitIntegration.test_mixed_on_off_policy_scenario)
+Test real-world scenario with mixed on-policy and off-policy samples
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_grpo_outcome_advantage_split.py", line 349, in test_mixed_on_off_policy_scenario
+    advantages, returns = compute_grpo_outcome_advantage_split(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/../luffy/verl/verl/mix_src/mix_core_alg.py", line 43, in compute_grpo_outcome_advantage_split
+    valid_rewards = token_level_rewards[i][eos_mask[i]]
+                    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+IndexError: tensors used as indices must be long, int, byte or bool tensors
+
+======================================================================
+ERROR: test_normalization_consistency (__main__.TestComputeGrpoOutcomeAdvantageSplitIntegration.test_normalization_consistency)
+Test normalization consistency
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_grpo_outcome_advantage_split.py", line 386, in test_normalization_consistency
+    advantages, returns = compute_grpo_outcome_advantage_split(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/../luffy/verl/verl/mix_src/mix_core_alg.py", line 43, in compute_grpo_outcome_advantage_split
+    valid_rewards = token_level_rewards[i][eos_mask[i]]
+                    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+IndexError: tensors used as indices must be long, int, byte or bool tensors
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.007s
+
+FAILED (errors=12)
+
+================================================================================
+日志结束

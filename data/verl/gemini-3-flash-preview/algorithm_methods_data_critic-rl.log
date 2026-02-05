@@ -1,69 +1,95 @@
-2026-02-05 09:45:46,622 - INFO - 📖 加载数据: /Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/scripts/data/verl/algorithm_methods_data_critic-rl.jsonl
-2026-02-05 09:45:46,622 - INFO - ✅ 加载了 5 个样本
-2026-02-05 09:45:46,622 - INFO - 🔧 初始化 OpenRouter 客户端
-2026-02-05 09:45:46,622 - INFO -    模型: google/gemini-3-flash-preview
-2026-02-05 09:45:46,622 - INFO -    每个样本生成: 1 个候选
-2026-02-05 09:45:46,657 - INFO - 🚀 开始生成...
-2026-02-05 09:45:46,657 - INFO - 
-2026-02-05 09:45:46,657 - INFO - [1/5] 处理: RewardModelForCritic.build_revision_messages
-2026-02-05 09:45:46,657 - INFO -   📤 发送请求 1/1
-2026-02-05 09:45:46,657 - INFO -      模型: google/gemini-3-flash-preview
-2026-02-05 09:45:46,657 - INFO -      消息数: 2
-2026-02-05 09:45:51,672 - INFO - Retrying request to /chat/completions in 0.386259 seconds
-2026-02-05 09:45:57,063 - INFO - Retrying request to /chat/completions in 0.826978 seconds
-2026-02-05 09:46:02,894 - ERROR -   ❌ 候选 1/1 生成失败: Request timed out.
-2026-02-05 09:46:02,894 - INFO -   📊 成功: 0/1
-2026-02-05 09:46:02,894 - INFO - 
-2026-02-05 09:46:02,894 - INFO - [2/5] 处理: RewardModelForCritic.get_reward_all
-2026-02-05 09:46:02,894 - INFO -   📤 发送请求 1/1
-2026-02-05 09:46:02,894 - INFO -      模型: google/gemini-3-flash-preview
-2026-02-05 09:46:02,894 - INFO -      消息数: 2
-2026-02-05 09:46:07,898 - INFO - Retrying request to /chat/completions in 0.474841 seconds
-2026-02-05 09:46:13,379 - INFO - Retrying request to /chat/completions in 0.777647 seconds
-2026-02-05 09:46:19,161 - ERROR -   ❌ 候选 1/1 生成失败: Request timed out.
-2026-02-05 09:46:19,161 - INFO -   📊 成功: 0/1
-2026-02-05 09:46:19,161 - INFO - 
-2026-02-05 09:46:19,161 - INFO - [3/5] 处理: sanitize
-2026-02-05 09:46:19,161 - INFO -   📤 发送请求 1/1
-2026-02-05 09:46:19,161 - INFO -      模型: google/gemini-3-flash-preview
-2026-02-05 09:46:19,161 - INFO -      消息数: 2
-2026-02-05 09:46:24,165 - INFO - Retrying request to /chat/completions in 0.440678 seconds
-2026-02-05 09:46:29,613 - INFO - Retrying request to /chat/completions in 0.953027 seconds
-2026-02-05 09:46:35,573 - ERROR -   ❌ 候选 1/1 生成失败: Request timed out.
-2026-02-05 09:46:35,574 - INFO -   📊 成功: 0/1
-2026-02-05 09:46:35,574 - INFO - 
-2026-02-05 09:46:35,574 - INFO - [4/5] 处理: desanitize
-2026-02-05 09:46:35,574 - INFO -   📤 发送请求 1/1
-2026-02-05 09:46:35,574 - INFO -      模型: google/gemini-3-flash-preview
-2026-02-05 09:46:35,574 - INFO -      消息数: 2
-2026-02-05 09:46:40,607 - INFO - Retrying request to /chat/completions in 0.418476 seconds
-2026-02-05 09:46:46,029 - INFO - Retrying request to /chat/completions in 0.794997 seconds
-2026-02-05 09:46:51,832 - ERROR -   ❌ 候选 1/1 生成失败: Request timed out.
-2026-02-05 09:46:51,832 - INFO -   📊 成功: 0/1
-2026-02-05 09:46:51,832 - INFO - 
-2026-02-05 09:46:51,832 - INFO - [5/5] 处理: normalize_code
-2026-02-05 09:46:51,832 - INFO -   📤 发送请求 1/1
-2026-02-05 09:46:51,832 - INFO -      模型: google/gemini-3-flash-preview
-2026-02-05 09:46:51,832 - INFO -      消息数: 2
-2026-02-05 09:46:56,839 - INFO - Retrying request to /chat/completions in 0.437517 seconds
-2026-02-05 09:47:02,282 - INFO - Retrying request to /chat/completions in 0.815996 seconds
-2026-02-05 09:47:08,102 - ERROR -   ❌ 候选 1/1 生成失败: Request timed out.
-2026-02-05 09:47:08,103 - INFO -   📊 成功: 0/1
-2026-02-05 09:47:08,103 - INFO - 
-2026-02-05 09:47:08,103 - INFO - 💾 保存结果: /Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/scripts/data/verl/gemini-3-flash-preview/algorithm_methods_data_critic-rl_output.jsonl
-2026-02-05 09:47:08,103 - INFO - 
-2026-02-05 09:47:08,103 - INFO - ============================================================
-2026-02-05 09:47:08,103 - INFO - 📊 生成统计
-2026-02-05 09:47:08,103 - INFO - ============================================================
-2026-02-05 09:47:08,103 - INFO - 总样本数: 5
-2026-02-05 09:47:08,103 - INFO - 总生成数: 5
-2026-02-05 09:47:08,103 - INFO - ✅ 成功: 0
-2026-02-05 09:47:08,103 - INFO - ❌ 失败: 5
-2026-02-05 09:47:08,103 - INFO - 成功率: 0.0%
-2026-02-05 09:47:08,103 - INFO - 
-2026-02-05 09:47:08,103 - INFO - 🔢 Token 使用统计:
-2026-02-05 09:47:08,103 - INFO -   输入 tokens: 0
-2026-02-05 09:47:08,103 - INFO -   输出 tokens: 0
-2026-02-05 09:47:08,103 - INFO -   总计 tokens: 0
-2026-02-05 09:47:08,104 - INFO -   平均每样本: 0.0 tokens
-2026-02-05 09:47:08,104 - INFO - ============================================================
+2026-02-05 20:03:51,465 - INFO - 📖 加载数据: /Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/scripts/data/verl/algorithm_methods_data_critic-rl.jsonl
+2026-02-05 20:03:51,466 - INFO - ✅ 加载了 5 个样本
+2026-02-05 20:03:51,466 - INFO - 🔧 初始化 OpenRouter 客户端
+2026-02-05 20:03:51,466 - INFO -    模型: google/gemini-3-flash-preview
+2026-02-05 20:03:51,466 - INFO -    每个样本生成: 1 个候选
+2026-02-05 20:03:51,496 - INFO -    超时时间: 180.0 秒
+2026-02-05 20:03:51,496 - INFO - 🚀 开始生成...
+2026-02-05 20:03:51,496 - INFO - 
+2026-02-05 20:03:51,496 - INFO - [1/5] 处理: RewardModelForCritic.build_revision_messages
+2026-02-05 20:03:51,496 - INFO -   📤 发送请求 1/1
+2026-02-05 20:03:51,496 - INFO -      模型: google/gemini-3-flash-preview
+2026-02-05 20:03:51,496 - INFO -      消息数: 2
+2026-02-05 20:03:53,639 - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-05 20:03:56,191 - INFO -   📥 收到响应
+2026-02-05 20:03:56,191 - INFO -      Response ID: gen-1770293032-1hVCXb4iCBl4Rau28e5S
+2026-02-05 20:03:56,191 - INFO -      Model: google/gemini-3-flash-preview
+2026-02-05 20:03:56,191 - INFO -      Choices: 1
+2026-02-05 20:03:56,191 - INFO -      Usage: input=409, output=467, total=876
+2026-02-05 20:03:56,191 - INFO -   ✅ 候选 1/1 生成成功 (长度: 2010)
+2026-02-05 20:03:56,191 - INFO -   📊 成功: 1/1
+2026-02-05 20:03:56,191 - INFO -   🔢 Token 使用: input=409, output=467, total=876
+2026-02-05 20:03:56,191 - INFO - 
+2026-02-05 20:03:56,191 - INFO - [2/5] 处理: RewardModelForCritic.get_reward_all
+2026-02-05 20:03:56,191 - INFO -   📤 发送请求 1/1
+2026-02-05 20:03:56,191 - INFO -      模型: google/gemini-3-flash-preview
+2026-02-05 20:03:56,191 - INFO -      消息数: 2
+2026-02-05 20:03:57,573 - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-05 20:04:01,667 - INFO -   📥 收到响应
+2026-02-05 20:04:01,667 - INFO -      Response ID: gen-1770293036-w4h2g8jMRu3nTcuA5Z5p
+2026-02-05 20:04:01,667 - INFO -      Model: google/gemini-3-flash-preview
+2026-02-05 20:04:01,667 - INFO -      Choices: 1
+2026-02-05 20:04:01,667 - INFO -      Usage: input=458, output=713, total=1171
+2026-02-05 20:04:01,667 - INFO -   ✅ 候选 1/1 生成成功 (长度: 2970)
+2026-02-05 20:04:01,667 - INFO -   📊 成功: 1/1
+2026-02-05 20:04:01,667 - INFO -   🔢 Token 使用: input=458, output=713, total=1171
+2026-02-05 20:04:01,667 - INFO - 
+2026-02-05 20:04:01,667 - INFO - [3/5] 处理: sanitize
+2026-02-05 20:04:01,667 - INFO -   📤 发送请求 1/1
+2026-02-05 20:04:01,667 - INFO -      模型: google/gemini-3-flash-preview
+2026-02-05 20:04:01,667 - INFO -      消息数: 2
+2026-02-05 20:04:03,243 - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-05 20:04:05,349 - INFO -   📥 收到响应
+2026-02-05 20:04:05,349 - INFO -      Response ID: gen-1770293042-BXSiiMLTEUPlorZ4tlaF
+2026-02-05 20:04:05,349 - INFO -      Model: google/gemini-3-flash-preview
+2026-02-05 20:04:05,349 - INFO -      Choices: 1
+2026-02-05 20:04:05,349 - INFO -      Usage: input=419, output=361, total=780
+2026-02-05 20:04:05,349 - INFO -   ✅ 候选 1/1 生成成功 (长度: 1355)
+2026-02-05 20:04:05,349 - INFO -   📊 成功: 1/1
+2026-02-05 20:04:05,349 - INFO -   🔢 Token 使用: input=419, output=361, total=780
+2026-02-05 20:04:05,349 - INFO - 
+2026-02-05 20:04:05,349 - INFO - [4/5] 处理: desanitize
+2026-02-05 20:04:05,349 - INFO -   📤 发送请求 1/1
+2026-02-05 20:04:05,349 - INFO -      模型: google/gemini-3-flash-preview
+2026-02-05 20:04:05,349 - INFO -      消息数: 2
+2026-02-05 20:04:07,414 - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-05 20:04:09,193 - INFO -   📥 收到响应
+2026-02-05 20:04:09,193 - INFO -      Response ID: gen-1770293045-RnBKpWWveRlQ1g3nIxom
+2026-02-05 20:04:09,193 - INFO -      Model: google/gemini-3-flash-preview
+2026-02-05 20:04:09,193 - INFO -      Choices: 1
+2026-02-05 20:04:09,193 - INFO -      Usage: input=360, output=295, total=655
+2026-02-05 20:04:09,193 - INFO -   ✅ 候选 1/1 生成成功 (长度: 1199)
+2026-02-05 20:04:09,193 - INFO -   📊 成功: 1/1
+2026-02-05 20:04:09,193 - INFO -   🔢 Token 使用: input=360, output=295, total=655
+2026-02-05 20:04:09,193 - INFO - 
+2026-02-05 20:04:09,193 - INFO - [5/5] 处理: normalize_code
+2026-02-05 20:04:09,193 - INFO -   📤 发送请求 1/1
+2026-02-05 20:04:09,193 - INFO -      模型: google/gemini-3-flash-preview
+2026-02-05 20:04:09,193 - INFO -      消息数: 2
+2026-02-05 20:04:16,204 - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-05 20:04:20,387 - INFO -   📥 收到响应
+2026-02-05 20:04:20,387 - INFO -      Response ID: gen-1770293049-RPdeUBaBauB2wtxkTrCf
+2026-02-05 20:04:20,387 - INFO -      Model: google/gemini-3-flash-preview
+2026-02-05 20:04:20,387 - INFO -      Choices: 1
+2026-02-05 20:04:20,387 - INFO -      Usage: input=416, output=729, total=1145
+2026-02-05 20:04:20,387 - INFO -   ✅ 候选 1/1 生成成功 (长度: 2838)
+2026-02-05 20:04:20,387 - INFO -   📊 成功: 1/1
+2026-02-05 20:04:20,387 - INFO -   🔢 Token 使用: input=416, output=729, total=1145
+2026-02-05 20:04:20,387 - INFO - 
+2026-02-05 20:04:20,387 - INFO - 💾 保存结果: /Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/scripts/data/verl/gemini-3-flash-preview/algorithm_methods_data_critic-rl_output.jsonl
+2026-02-05 20:04:20,390 - INFO - 
+2026-02-05 20:04:20,390 - INFO - ============================================================
+2026-02-05 20:04:20,390 - INFO - 📊 生成统计
+2026-02-05 20:04:20,390 - INFO - ============================================================
+2026-02-05 20:04:20,390 - INFO - 总样本数: 5
+2026-02-05 20:04:20,390 - INFO - 总生成数: 5
+2026-02-05 20:04:20,390 - INFO - ✅ 成功: 5
+2026-02-05 20:04:20,390 - INFO - ❌ 失败: 0
+2026-02-05 20:04:20,390 - INFO - 成功率: 100.0%
+2026-02-05 20:04:20,390 - INFO - 
+2026-02-05 20:04:20,390 - INFO - 🔢 Token 使用统计:
+2026-02-05 20:04:20,390 - INFO -   输入 tokens: 2,062
+2026-02-05 20:04:20,390 - INFO -   输出 tokens: 2,565
+2026-02-05 20:04:20,390 - INFO -   总计 tokens: 4,627
+2026-02-05 20:04:20,390 - INFO -   平均每样本: 925.4 tokens
+2026-02-05 20:04:20,390 - INFO - ============================================================

@@ -1,0 +1,50 @@
+================================================================================
+测试时间: 2026-02-05 20:07:15
+函数名: compute_dpo_accuracy
+测试文件: test_code/test_dpo_accuracy.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+E.....F..
+======================================================================
+ERROR: test_compute_dpo_accuracy_basic (__main__.TestDPOAccuracy.test_compute_dpo_accuracy_basic)
+Test basic functionality of DPO accuracy calculation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_accuracy.py", line 55, in test_compute_dpo_accuracy_basic
+    accuracy = compute_dpo_accuracy(token_level_scores, acc, response_mask, n_samples)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 136, in compute_dpo_accuracy
+    seq_scores = torch.sum(token_level_scores * response_mask, dim=-1)
+                           ~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+RuntimeError: The size of tensor a (3) must match the size of tensor b (6) at non-singleton dimension 0
+
+======================================================================
+FAIL: test_response_mask_effect (__main__.TestDPOAccuracy.test_response_mask_effect)
+Test impact of response_mask on accuracy calculation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_accuracy.py", line 140, in test_response_mask_effect
+    torch.testing.assert_close(accuracy_full, expected_accuracy_full, atol=1e-30, rtol=1e-30)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Scalars are not close!
+
+Expected 0.5 but got 0.625.
+Absolute difference: 0.125 (up to 1e-30 allowed)
+Relative difference: 0.25 (up to 1e-30 allowed)
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.003s
+
+FAILED (failures=1, errors=1)
+
+================================================================================
+日志结束

@@ -1,0 +1,46 @@
+================================================================================
+测试时间: 2026-02-05 20:07:04
+函数名: compute_grpo_outcome_advantage_split
+测试文件: test_code/test_compute_grpo_outcome_advantage_split.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+.F.....F....
+======================================================================
+FAIL: test_edge_case_single_sample (__main__.TestComputeGrpoOutcomeAdvantageSplit.test_edge_case_single_sample)
+Test edge case: single sample
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_grpo_outcome_advantage_split.py", line 317, in test_edge_case_single_sample
+    torch.testing.assert_close(advantages, expected_advantages, atol=1e-4, rtol=1e-4)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Tensor-likes are not close!
+
+Mismatched elements: 4 / 4 (100.0%)
+Greatest absolute difference: 7.0 at index (0, 0) (up to 0.0001 allowed)
+Greatest relative difference: 1.0 at index (0, 0) (up to 0.0001 allowed)
+
+======================================================================
+FAIL: test_single_on_policy_sample_per_group (__main__.TestComputeGrpoOutcomeAdvantageSplit.test_single_on_policy_sample_per_group)
+Test case with only one on-policy sample per group: mean=0, std=1
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_grpo_outcome_advantage_split.py", line 113, in test_single_on_policy_sample_per_group
+    self.assertAlmostEqual(advantages[0, -1].item(), 5.0, places=4)
+AssertionError: 0.0 != 5.0 within 4 places (5.0 difference)
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.014s
+
+FAILED (failures=2)
+
+================================================================================
+日志结束

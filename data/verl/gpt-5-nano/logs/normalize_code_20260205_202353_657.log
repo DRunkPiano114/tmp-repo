@@ -1,0 +1,52 @@
+================================================================================
+测试时间: 2026-02-05 20:23:53
+函数名: normalize_code
+测试文件: test_code/test_normalize_code.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+F.F..
+======================================================================
+FAIL: test_normalize_code_basic (__main__.TestNormalizeCode.test_normalize_code_basic)
+Test basic code normalization
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/critic-rl/code/test_code/test_normalize_code.py", line 34, in test_normalize_code_basic
+    self.assertEqual(normalized, expected_result)
+AssertionError: 'def add(v_0, v_1):\n    return v_0 + v_1' != 'def add(x, y):\n    return x + y'
+- def add(v_0, v_1):
+?         ^^^  ^^^
++ def add(x, y):
+?         ^  ^
+-     return v_0 + v_1?            ^^^   ^^^
++     return x + y?            ^   ^
+
+
+======================================================================
+FAIL: test_normalize_code_same_semantics (__main__.TestNormalizeCode.test_normalize_code_same_semantics)
+Test that code with same semantics produces same normalization result
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/critic-rl/code/test_code/test_normalize_code.py", line 84, in test_normalize_code_same_semantics
+    self.assertEqual(norm_v1, norm_v2)
+AssertionError: 'x = 5' != 'y = 5'
+- x = 5
+? ^
++ y = 5
+? ^
+
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.001s
+
+FAILED (failures=2)
+
+================================================================================
+日志结束

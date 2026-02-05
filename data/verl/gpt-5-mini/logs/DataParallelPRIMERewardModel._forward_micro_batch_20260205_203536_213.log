@@ -1,0 +1,23 @@
+================================================================================
+测试时间: 2026-02-05 20:35:36
+函数名: DataParallelPRIMERewardModel._forward_micro_batch
+测试文件: test_code/test_forward_micro_batch.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_forward_micro_batch.py", line 13, in <module>
+    from prime.prime_dp_rm import DataParallelPRIMERewardModel
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_dp_rm.py", line 22, in <module>
+    from flash_attn.bert_padding import index_first_axis, pad_input, rearrange, unpad_input
+ModuleNotFoundError: No module named 'flash_attn'
+
+================================================================================
+日志结束

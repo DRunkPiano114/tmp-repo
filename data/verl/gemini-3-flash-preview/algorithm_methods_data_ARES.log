@@ -1,60 +1,81 @@
-2026-02-05 09:44:40,616 - INFO - 📖 加载数据: /Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/scripts/data/verl/algorithm_methods_data_ARES.jsonl
-2026-02-05 09:44:40,617 - INFO - ✅ 加载了 4 个样本
-2026-02-05 09:44:40,617 - INFO - 🔧 初始化 OpenRouter 客户端
-2026-02-05 09:44:40,617 - INFO -    模型: google/gemini-3-flash-preview
-2026-02-05 09:44:40,617 - INFO -    每个样本生成: 1 个候选
-2026-02-05 09:44:40,662 - INFO - 🚀 开始生成...
-2026-02-05 09:44:40,662 - INFO - 
-2026-02-05 09:44:40,662 - INFO - [1/4] 处理: compute_score
-2026-02-05 09:44:40,662 - INFO -   📤 发送请求 1/1
-2026-02-05 09:44:40,662 - INFO -      模型: google/gemini-3-flash-preview
-2026-02-05 09:44:40,662 - INFO -      消息数: 2
-2026-02-05 09:44:45,682 - INFO - Retrying request to /chat/completions in 0.480077 seconds
-2026-02-05 09:44:51,171 - INFO - Retrying request to /chat/completions in 0.949336 seconds
-2026-02-05 09:44:57,127 - ERROR -   ❌ 候选 1/1 生成失败: Request timed out.
-2026-02-05 09:44:57,127 - INFO -   📊 成功: 0/1
-2026-02-05 09:44:57,127 - INFO - 
-2026-02-05 09:44:57,127 - INFO - [2/4] 处理: RayPPOTrainer.update_difficulty_and_skip_gid_set
-2026-02-05 09:44:57,127 - INFO -   📤 发送请求 1/1
-2026-02-05 09:44:57,127 - INFO -      模型: google/gemini-3-flash-preview
-2026-02-05 09:44:57,127 - INFO -      消息数: 2
-2026-02-05 09:45:02,129 - INFO - Retrying request to /chat/completions in 0.479417 seconds
-2026-02-05 09:45:07,616 - INFO - Retrying request to /chat/completions in 0.773316 seconds
-2026-02-05 09:45:13,397 - ERROR -   ❌ 候选 1/1 生成失败: Request timed out.
-2026-02-05 09:45:13,397 - INFO -   📊 成功: 0/1
-2026-02-05 09:45:13,398 - INFO - 
-2026-02-05 09:45:13,398 - INFO - [3/4] 处理: TokenLevelAdaptiveKLController.update
-2026-02-05 09:45:13,398 - INFO -   📤 发送请求 1/1
-2026-02-05 09:45:13,398 - INFO -      模型: google/gemini-3-flash-preview
-2026-02-05 09:45:13,398 - INFO -      消息数: 2
-2026-02-05 09:45:18,402 - INFO - Retrying request to /chat/completions in 0.412936 seconds
-2026-02-05 09:45:23,822 - INFO - Retrying request to /chat/completions in 0.964559 seconds
-2026-02-05 09:45:29,794 - ERROR -   ❌ 候选 1/1 生成失败: Request timed out.
-2026-02-05 09:45:29,794 - INFO -   📊 成功: 0/1
-2026-02-05 09:45:29,794 - INFO - 
-2026-02-05 09:45:29,794 - INFO - [4/4] 处理: apply_kl_penalty
-2026-02-05 09:45:29,794 - INFO -   📤 发送请求 1/1
-2026-02-05 09:45:29,794 - INFO -      模型: google/gemini-3-flash-preview
-2026-02-05 09:45:29,794 - INFO -      消息数: 2
-2026-02-05 09:45:34,797 - INFO - Retrying request to /chat/completions in 0.387368 seconds
-2026-02-05 09:45:40,194 - INFO - Retrying request to /chat/completions in 0.919981 seconds
-2026-02-05 09:45:46,122 - ERROR -   ❌ 候选 1/1 生成失败: Request timed out.
-2026-02-05 09:45:46,122 - INFO -   📊 成功: 0/1
-2026-02-05 09:45:46,123 - INFO - 
-2026-02-05 09:45:46,123 - INFO - 💾 保存结果: /Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/scripts/data/verl/gemini-3-flash-preview/algorithm_methods_data_ARES_output.jsonl
-2026-02-05 09:45:46,124 - INFO - 
-2026-02-05 09:45:46,124 - INFO - ============================================================
-2026-02-05 09:45:46,124 - INFO - 📊 生成统计
-2026-02-05 09:45:46,124 - INFO - ============================================================
-2026-02-05 09:45:46,124 - INFO - 总样本数: 4
-2026-02-05 09:45:46,124 - INFO - 总生成数: 4
-2026-02-05 09:45:46,124 - INFO - ✅ 成功: 0
-2026-02-05 09:45:46,124 - INFO - ❌ 失败: 4
-2026-02-05 09:45:46,124 - INFO - 成功率: 0.0%
-2026-02-05 09:45:46,124 - INFO - 
-2026-02-05 09:45:46,124 - INFO - 🔢 Token 使用统计:
-2026-02-05 09:45:46,124 - INFO -   输入 tokens: 0
-2026-02-05 09:45:46,124 - INFO -   输出 tokens: 0
-2026-02-05 09:45:46,124 - INFO -   总计 tokens: 0
-2026-02-05 09:45:46,124 - INFO -   平均每样本: 0.0 tokens
-2026-02-05 09:45:46,124 - INFO - ============================================================
+2026-02-05 20:03:14,374 - INFO - 📖 加载数据: /Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/scripts/data/verl/algorithm_methods_data_ARES.jsonl
+2026-02-05 20:03:14,374 - INFO - ✅ 加载了 4 个样本
+2026-02-05 20:03:14,374 - INFO - 🔧 初始化 OpenRouter 客户端
+2026-02-05 20:03:14,374 - INFO -    模型: google/gemini-3-flash-preview
+2026-02-05 20:03:14,374 - INFO -    每个样本生成: 1 个候选
+2026-02-05 20:03:14,399 - INFO -    超时时间: 180.0 秒
+2026-02-05 20:03:14,399 - INFO - 🚀 开始生成...
+2026-02-05 20:03:14,399 - INFO - 
+2026-02-05 20:03:14,399 - INFO - [1/4] 处理: compute_score
+2026-02-05 20:03:14,399 - INFO -   📤 发送请求 1/1
+2026-02-05 20:03:14,399 - INFO -      模型: google/gemini-3-flash-preview
+2026-02-05 20:03:14,399 - INFO -      消息数: 2
+2026-02-05 20:03:24,297 - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-05 20:03:31,087 - INFO -   📥 收到响应
+2026-02-05 20:03:31,087 - INFO -      Response ID: gen-1770292995-JHVoXSTOIxlSbpTkZADG
+2026-02-05 20:03:31,087 - INFO -      Model: google/gemini-3-flash-preview
+2026-02-05 20:03:31,087 - INFO -      Choices: 1
+2026-02-05 20:03:31,087 - INFO -      Usage: input=931, output=1287, total=2218
+2026-02-05 20:03:31,087 - INFO -   ✅ 候选 1/1 生成成功 (长度: 4704)
+2026-02-05 20:03:31,087 - INFO -   📊 成功: 1/1
+2026-02-05 20:03:31,087 - INFO -   🔢 Token 使用: input=931, output=1287, total=2218
+2026-02-05 20:03:31,087 - INFO - 
+2026-02-05 20:03:31,087 - INFO - [2/4] 处理: RayPPOTrainer.update_difficulty_and_skip_gid_set
+2026-02-05 20:03:31,087 - INFO -   📤 发送请求 1/1
+2026-02-05 20:03:31,087 - INFO -      模型: google/gemini-3-flash-preview
+2026-02-05 20:03:31,087 - INFO -      消息数: 2
+2026-02-05 20:03:32,427 - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-05 20:03:38,955 - INFO -   📥 收到响应
+2026-02-05 20:03:38,955 - INFO -      Response ID: gen-1770293011-wKAFPQcLeuDeSkDv4Utp
+2026-02-05 20:03:38,955 - INFO -      Model: google/gemini-3-flash-preview
+2026-02-05 20:03:38,955 - INFO -      Choices: 1
+2026-02-05 20:03:38,955 - INFO -      Usage: input=707, output=1198, total=1905
+2026-02-05 20:03:38,955 - INFO -   ✅ 候选 1/1 生成成功 (长度: 4287)
+2026-02-05 20:03:38,955 - INFO -   📊 成功: 1/1
+2026-02-05 20:03:38,955 - INFO -   🔢 Token 使用: input=707, output=1198, total=1905
+2026-02-05 20:03:38,955 - INFO - 
+2026-02-05 20:03:38,955 - INFO - [3/4] 处理: TokenLevelAdaptiveKLController.update
+2026-02-05 20:03:38,955 - INFO -   📤 发送请求 1/1
+2026-02-05 20:03:38,955 - INFO -      模型: google/gemini-3-flash-preview
+2026-02-05 20:03:38,955 - INFO -      消息数: 2
+2026-02-05 20:03:40,013 - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-05 20:03:44,482 - INFO -   📥 收到响应
+2026-02-05 20:03:44,484 - INFO -      Response ID: gen-1770293019-EvTvGlK4oJugujGn0tPj
+2026-02-05 20:03:44,484 - INFO -      Model: google/gemini-3-flash-preview
+2026-02-05 20:03:44,484 - INFO -      Choices: 1
+2026-02-05 20:03:44,484 - INFO -      Usage: input=475, output=776, total=1251
+2026-02-05 20:03:44,484 - INFO -   ✅ 候选 1/1 生成成功 (长度: 3186)
+2026-02-05 20:03:44,484 - INFO -   📊 成功: 1/1
+2026-02-05 20:03:44,484 - INFO -   🔢 Token 使用: input=475, output=776, total=1251
+2026-02-05 20:03:44,484 - INFO - 
+2026-02-05 20:03:44,484 - INFO - [4/4] 处理: apply_kl_penalty
+2026-02-05 20:03:44,484 - INFO -   📤 发送请求 1/1
+2026-02-05 20:03:44,484 - INFO -      模型: google/gemini-3-flash-preview
+2026-02-05 20:03:44,484 - INFO -      消息数: 2
+2026-02-05 20:03:45,708 - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-05 20:03:51,050 - INFO -   📥 收到响应
+2026-02-05 20:03:51,050 - INFO -      Response ID: gen-1770293024-W0EMZbsasXUMlBKwzbDL
+2026-02-05 20:03:51,050 - INFO -      Model: google/gemini-3-flash-preview
+2026-02-05 20:03:51,050 - INFO -      Choices: 1
+2026-02-05 20:03:51,050 - INFO -      Usage: input=540, output=928, total=1468
+2026-02-05 20:03:51,050 - INFO -   ✅ 候选 1/1 生成成功 (长度: 3096)
+2026-02-05 20:03:51,050 - INFO -   📊 成功: 1/1
+2026-02-05 20:03:51,050 - INFO -   🔢 Token 使用: input=540, output=928, total=1468
+2026-02-05 20:03:51,050 - INFO - 
+2026-02-05 20:03:51,050 - INFO - 💾 保存结果: /Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/scripts/data/verl/gemini-3-flash-preview/algorithm_methods_data_ARES_output.jsonl
+2026-02-05 20:03:51,051 - INFO - 
+2026-02-05 20:03:51,051 - INFO - ============================================================
+2026-02-05 20:03:51,051 - INFO - 📊 生成统计
+2026-02-05 20:03:51,051 - INFO - ============================================================
+2026-02-05 20:03:51,051 - INFO - 总样本数: 4
+2026-02-05 20:03:51,052 - INFO - 总生成数: 4
+2026-02-05 20:03:51,052 - INFO - ✅ 成功: 4
+2026-02-05 20:03:51,052 - INFO - ❌ 失败: 0
+2026-02-05 20:03:51,052 - INFO - 成功率: 100.0%
+2026-02-05 20:03:51,052 - INFO - 
+2026-02-05 20:03:51,052 - INFO - 🔢 Token 使用统计:
+2026-02-05 20:03:51,052 - INFO -   输入 tokens: 2,653
+2026-02-05 20:03:51,052 - INFO -   输出 tokens: 4,189
+2026-02-05 20:03:51,052 - INFO -   总计 tokens: 6,842
+2026-02-05 20:03:51,052 - INFO -   平均每样本: 1710.5 tokens
+2026-02-05 20:03:51,052 - INFO - ============================================================

@@ -1,0 +1,223 @@
+================================================================================
+测试时间: 2026-02-05 20:07:14
+函数名: compute_detach_dpo_loss_rm
+测试文件: test_code/test_detach_dpo_loss.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+EEEEEEEFFEEEEFE
+======================================================================
+ERROR: test_bon_mode_acc (__main__.TestDetachDPOLoss.test_bon_mode_acc)
+Test BoN weight calculation for bon_mode='bon_acc'
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_detach_dpo_loss.py", line 167, in test_bon_mode_acc
+    loss = compute_detach_dpo_loss_rm(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 150, in compute_detach_dpo_loss_rm
+    loss_pos = -F.logsigmoid(beta * diff) * pos_mask.float() * weight
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+RuntimeError: The size of tensor a (4) must match the size of tensor b (8) at non-singleton dimension 1
+
+======================================================================
+ERROR: test_bon_mode_none (__main__.TestDetachDPOLoss.test_bon_mode_none)
+Test weight calculation for bon_mode='none'
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_detach_dpo_loss.py", line 118, in test_bon_mode_none
+    loss = compute_detach_dpo_loss_rm(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 150, in compute_detach_dpo_loss_rm
+    loss_pos = -F.logsigmoid(beta * diff) * pos_mask.float() * weight
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+RuntimeError: The size of tensor a (4) must match the size of tensor b (8) at non-singleton dimension 1
+
+======================================================================
+ERROR: test_bon_mode_rm (__main__.TestDetachDPOLoss.test_bon_mode_rm)
+Test BoN weight calculation for bon_mode='bon_rm'
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_detach_dpo_loss.py", line 142, in test_bon_mode_rm
+    loss = compute_detach_dpo_loss_rm(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 150, in compute_detach_dpo_loss_rm
+    loss_pos = -F.logsigmoid(beta * diff) * pos_mask.float() * weight
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+RuntimeError: The size of tensor a (4) must match the size of tensor b (8) at non-singleton dimension 1
+
+======================================================================
+ERROR: test_bon_weighting_input_output (__main__.TestDetachDPOLoss.test_bon_weighting_input_output)
+Test specific input-output for BoN weight calculation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_detach_dpo_loss.py", line 430, in test_bon_weighting_input_output
+    result = compute_detach_dpo_loss_rm(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 150, in compute_detach_dpo_loss_rm
+    loss_pos = -F.logsigmoid(beta * diff) * pos_mask.float() * weight
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+RuntimeError: The size of tensor a (2) must match the size of tensor b (6) at non-singleton dimension 1
+
+======================================================================
+ERROR: test_compute_detach_dpo_loss_rm_basic (__main__.TestDetachDPOLoss.test_compute_detach_dpo_loss_rm_basic) (bon_mode='none')
+Test basic functionality of detached DPO loss calculation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_detach_dpo_loss.py", line 60, in test_compute_detach_dpo_loss_rm_basic
+    loss = compute_detach_dpo_loss_rm(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 150, in compute_detach_dpo_loss_rm
+    loss_pos = -F.logsigmoid(beta * diff) * pos_mask.float() * weight
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+RuntimeError: The size of tensor a (4) must match the size of tensor b (8) at non-singleton dimension 1
+
+======================================================================
+ERROR: test_compute_detach_dpo_loss_rm_basic (__main__.TestDetachDPOLoss.test_compute_detach_dpo_loss_rm_basic) (bon_mode='bon_rm')
+Test basic functionality of detached DPO loss calculation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_detach_dpo_loss.py", line 60, in test_compute_detach_dpo_loss_rm_basic
+    loss = compute_detach_dpo_loss_rm(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 150, in compute_detach_dpo_loss_rm
+    loss_pos = -F.logsigmoid(beta * diff) * pos_mask.float() * weight
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+RuntimeError: The size of tensor a (4) must match the size of tensor b (8) at non-singleton dimension 1
+
+======================================================================
+ERROR: test_compute_detach_dpo_loss_rm_basic (__main__.TestDetachDPOLoss.test_compute_detach_dpo_loss_rm_basic) (bon_mode='bon_acc')
+Test basic functionality of detached DPO loss calculation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_detach_dpo_loss.py", line 60, in test_compute_detach_dpo_loss_rm_basic
+    loss = compute_detach_dpo_loss_rm(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 150, in compute_detach_dpo_loss_rm
+    loss_pos = -F.logsigmoid(beta * diff) * pos_mask.float() * weight
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+RuntimeError: The size of tensor a (4) must match the size of tensor b (8) at non-singleton dimension 1
+
+======================================================================
+ERROR: test_contrasting_samples_selection (__main__.TestDetachDPOLoss.test_contrasting_samples_selection)
+Test contrastive sample selection logic
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_detach_dpo_loss.py", line 230, in test_contrasting_samples_selection
+    loss = compute_detach_dpo_loss_rm(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 150, in compute_detach_dpo_loss_rm
+    loss_pos = -F.logsigmoid(beta * diff) * pos_mask.float() * weight
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+RuntimeError: The size of tensor a (4) must match the size of tensor b (8) at non-singleton dimension 1
+
+======================================================================
+ERROR: test_different_beta_values (__main__.TestDetachDPOLoss.test_different_beta_values)
+Test the impact of different beta parameters on detached DPO loss
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_detach_dpo_loss.py", line 194, in test_different_beta_values
+    loss = compute_detach_dpo_loss_rm(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 150, in compute_detach_dpo_loss_rm
+    loss_pos = -F.logsigmoid(beta * diff) * pos_mask.float() * weight
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+RuntimeError: The size of tensor a (2) must match the size of tensor b (4) at non-singleton dimension 1
+
+======================================================================
+ERROR: test_direction_calculation (__main__.TestDetachDPOLoss.test_direction_calculation)
+Test preference direction calculation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_detach_dpo_loss.py", line 258, in test_direction_calculation
+    loss_pos = compute_detach_dpo_loss_rm(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 150, in compute_detach_dpo_loss_rm
+    loss_pos = -F.logsigmoid(beta * diff) * pos_mask.float() * weight
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+RuntimeError: The size of tensor a (4) must match the size of tensor b (8) at non-singleton dimension 1
+
+======================================================================
+ERROR: test_dpo_loss_mathematical_properties (__main__.TestDetachDPOLoss.test_dpo_loss_mathematical_properties)
+Test mathematical properties of detached DPO loss
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_detach_dpo_loss.py", line 89, in test_dpo_loss_mathematical_properties
+    loss = compute_detach_dpo_loss_rm(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 150, in compute_detach_dpo_loss_rm
+    loss_pos = -F.logsigmoid(beta * diff) * pos_mask.float() * weight
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+RuntimeError: The size of tensor a (2) must match the size of tensor b (4) at non-singleton dimension 1
+
+======================================================================
+ERROR: test_input_output_samples (__main__.TestDetachDPOLoss.test_input_output_samples)
+Test specific input-output examples
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_detach_dpo_loss.py", line 295, in test_input_output_samples
+    result = compute_detach_dpo_loss_rm(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 150, in compute_detach_dpo_loss_rm
+    loss_pos = -F.logsigmoid(beta * diff) * pos_mask.float() * weight
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+RuntimeError: The size of tensor a (2) must match the size of tensor b (4) at non-singleton dimension 1
+
+======================================================================
+FAIL: test_compute_detach_dpo_loss_rm_basic (__main__.TestDetachDPOLoss.test_compute_detach_dpo_loss_rm_basic)
+Test basic functionality of detached DPO loss calculation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_detach_dpo_loss.py", line 73, in test_compute_detach_dpo_loss_rm_basic
+    torch.testing.assert_close(losses, expected_losses, atol=1e-30, rtol=1e-30)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1578, in assert_close
+    error_metas = not_close_error_metas(
+                  ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1293, in not_close_error_metas
+    raise error_meta.to_error() from None  # noqa: RSE102
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: The length of the sequences mismatch: 0 != 3
+
+======================================================================
+FAIL: test_contrast_sample_selection_input_output (__main__.TestDetachDPOLoss.test_contrast_sample_selection_input_output)
+Test specific input-output for contrastive sample selection
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_detach_dpo_loss.py", line 387, in test_contrast_sample_selection_input_output
+    torch.testing.assert_close(result, expected_result, atol=1e-30, rtol=1e-30)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Scalars are not close!
+
+Expected 0.5759393572807312 but got 0.0.
+Absolute difference: 0.5759393572807312 (up to 1e-30 allowed)
+Relative difference: 1.0 (up to 1e-30 allowed)
+
+======================================================================
+FAIL: test_edge_cases_input_output (__main__.TestDetachDPOLoss.test_edge_cases_input_output)
+Test specific input-output for edge cases
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_detach_dpo_loss.py", line 488, in test_edge_cases_input_output
+    torch.testing.assert_close(result, expected_result, atol=1e-30, rtol=1e-30)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Scalars are not close!
+
+Expected 0.554355263710022 but got 0.0.
+Absolute difference: 0.554355263710022 (up to 1e-30 allowed)
+Relative difference: 1.0 (up to 1e-30 allowed)
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.008s
+
+FAILED (failures=3, errors=12)
+
+================================================================================
+日志结束

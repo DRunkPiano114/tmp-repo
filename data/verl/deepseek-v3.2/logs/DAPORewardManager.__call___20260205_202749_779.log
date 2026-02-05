@@ -1,0 +1,139 @@
+================================================================================
+测试时间: 2026-02-05 20:27:49
+函数名: DAPORewardManager.__call__
+测试文件: test_code/test_dapo_reward_manager.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+EEEEEEEEE
+======================================================================
+ERROR: test_dapo_reward_manager_basic (__main__.TestDAPORewardManager.test_dapo_reward_manager_basic)
+Test basic functionality
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/DAPO/code/test_code/test_dapo_reward_manager.py", line 100, in test_dapo_reward_manager_basic
+    reward_tensor = reward_manager(data, return_dict=False)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/DAPO/code/test_code/../verl/workers/reward_manager/dapo.py", line 100, in __call__
+    ground_truths = non_tensor_batch["reward_model"]["ground_truth"]
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices
+
+======================================================================
+ERROR: test_dapo_reward_manager_different_data_sources (__main__.TestDAPORewardManager.test_dapo_reward_manager_different_data_sources)
+Test different data sources
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/DAPO/code/test_code/test_dapo_reward_manager.py", line 546, in test_dapo_reward_manager_different_data_sources
+    result = reward_manager(data, return_dict=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/DAPO/code/test_code/../verl/workers/reward_manager/dapo.py", line 100, in __call__
+    ground_truths = non_tensor_batch["reward_model"]["ground_truth"]
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices
+
+======================================================================
+ERROR: test_dapo_reward_manager_overlong_penalty_disabled (__main__.TestDAPORewardManager.test_dapo_reward_manager_overlong_penalty_disabled)
+Test when overlong penalty is disabled
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/DAPO/code/test_code/test_dapo_reward_manager.py", line 215, in test_dapo_reward_manager_overlong_penalty_disabled
+    result = reward_manager(data, return_dict=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/DAPO/code/test_code/../verl/workers/reward_manager/dapo.py", line 100, in __call__
+    ground_truths = non_tensor_batch["reward_model"]["ground_truth"]
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices
+
+======================================================================
+ERROR: test_dapo_reward_manager_overlong_penalty_enabled_full_exceed (__main__.TestDAPORewardManager.test_dapo_reward_manager_overlong_penalty_enabled_full_exceed)
+Test when overlong penalty is enabled and fully exceeds buffer
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/DAPO/code/test_code/test_dapo_reward_manager.py", line 378, in test_dapo_reward_manager_overlong_penalty_enabled_full_exceed
+    result = reward_manager(data, return_dict=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/DAPO/code/test_code/../verl/workers/reward_manager/dapo.py", line 100, in __call__
+    ground_truths = non_tensor_batch["reward_model"]["ground_truth"]
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices
+
+======================================================================
+ERROR: test_dapo_reward_manager_overlong_penalty_enabled_no_exceed (__main__.TestDAPORewardManager.test_dapo_reward_manager_overlong_penalty_enabled_no_exceed)
+Test when overlong penalty is enabled but expected_len is not exceeded
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/DAPO/code/test_code/test_dapo_reward_manager.py", line 263, in test_dapo_reward_manager_overlong_penalty_enabled_no_exceed
+    result = reward_manager(data, return_dict=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/DAPO/code/test_code/../verl/workers/reward_manager/dapo.py", line 100, in __call__
+    ground_truths = non_tensor_batch["reward_model"]["ground_truth"]
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices
+
+======================================================================
+ERROR: test_dapo_reward_manager_overlong_penalty_enabled_partial_exceed (__main__.TestDAPORewardManager.test_dapo_reward_manager_overlong_penalty_enabled_partial_exceed)
+Test when overlong penalty is enabled and partially exceeds expected_len
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/DAPO/code/test_code/test_dapo_reward_manager.py", line 319, in test_dapo_reward_manager_overlong_penalty_enabled_partial_exceed
+    result = reward_manager(data, return_dict=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/DAPO/code/test_code/../verl/workers/reward_manager/dapo.py", line 100, in __call__
+    ground_truths = non_tensor_batch["reward_model"]["ground_truth"]
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices
+
+======================================================================
+ERROR: test_dapo_reward_manager_overlong_penalty_with_log (__main__.TestDAPORewardManager.test_dapo_reward_manager_overlong_penalty_with_log)
+Test when overlong logging is enabled
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/DAPO/code/test_code/test_dapo_reward_manager.py", line 445, in test_dapo_reward_manager_overlong_penalty_with_log
+    result = reward_manager(data, return_dict=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/DAPO/code/test_code/../verl/workers/reward_manager/dapo.py", line 100, in __call__
+    ground_truths = non_tensor_batch["reward_model"]["ground_truth"]
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices
+
+======================================================================
+ERROR: test_dapo_reward_manager_return_dict (__main__.TestDAPORewardManager.test_dapo_reward_manager_return_dict)
+Test output when return_dict=True
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/DAPO/code/test_code/test_dapo_reward_manager.py", line 163, in test_dapo_reward_manager_return_dict
+    result = reward_manager(data, return_dict=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/DAPO/code/test_code/../verl/workers/reward_manager/dapo.py", line 100, in __call__
+    ground_truths = non_tensor_batch["reward_model"]["ground_truth"]
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices
+
+======================================================================
+ERROR: test_dapo_reward_manager_zero_score (__main__.TestDAPORewardManager.test_dapo_reward_manager_zero_score)
+Test case with incorrect answer (score=0)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/DAPO/code/test_code/test_dapo_reward_manager.py", line 497, in test_dapo_reward_manager_zero_score
+    result = reward_manager(data, return_dict=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/DAPO/code/test_code/../verl/workers/reward_manager/dapo.py", line 100, in __call__
+    ground_truths = non_tensor_batch["reward_model"]["ground_truth"]
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+IndexError: only integers, slices (`:`), ellipsis (`...`), numpy.newaxis (`None`) and integer or boolean arrays are valid indices
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.007s
+
+FAILED (errors=9)
+
+================================================================================
+日志结束

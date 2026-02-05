@@ -1,0 +1,197 @@
+================================================================================
+测试时间: 2026-02-05 20:35:41
+函数名: compute_rloo_advantage_return
+测试文件: test_code/test_rloo_advantage_return.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+EEEEEEEEEEEEEE
+======================================================================
+ERROR: test_accuracy_reward_allocation (__main__.TestRLOOAdvantageReturn.test_accuracy_reward_allocation)
+Test accuracy reward allocation to the last valid token position
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_rloo_advantage_return.py", line 630, in test_accuracy_reward_allocation
+    advantages, returns = compute_rloo_advantage_return(data, response_mask, n_samples, config)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 54, in compute_rloo_advantage_return
+    raise ValueError(f"response_mask must be shape [batch_size, seq_len]; got {response_mask.shape}")
+ValueError: response_mask must be shape [batch_size, seq_len]; got torch.Size([2, 6])
+
+======================================================================
+ERROR: test_compute_rloo_advantage_return_rm_only (__main__.TestRLOOAdvantageReturn.test_compute_rloo_advantage_return_rm_only)
+Test RLOO advantage computation using only rm_scores
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_rloo_advantage_return.py", line 84, in test_compute_rloo_advantage_return_rm_only
+    advantages, returns = compute_rloo_advantage_return(data, response_mask, n_samples, config)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 49, in compute_rloo_advantage_return
+    acc = torch.as_tensor(batch["acc"], dtype=torch.float32, device=device).reshape(-1)
+                          ~~~~~^^^^^^^
+KeyError: 'acc'
+
+======================================================================
+ERROR: test_compute_rloo_advantage_return_with_accuracy (__main__.TestRLOOAdvantageReturn.test_compute_rloo_advantage_return_with_accuracy)
+Test RLOO advantage computation using both rm_scores and accuracy
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_rloo_advantage_return.py", line 156, in test_compute_rloo_advantage_return_with_accuracy
+    advantages, returns = compute_rloo_advantage_return(data, response_mask, n_samples, config)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 54, in compute_rloo_advantage_return
+    raise ValueError(f"response_mask must be shape [batch_size, seq_len]; got {response_mask.shape}")
+ValueError: response_mask must be shape [batch_size, seq_len]; got torch.Size([4, 10])
+
+======================================================================
+ERROR: test_different_reward_coefficients (__main__.TestRLOOAdvantageReturn.test_different_reward_coefficients)
+Test the impact of different reward coefficients
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_rloo_advantage_return.py", line 370, in test_different_reward_coefficients
+    advantages, returns = compute_rloo_advantage_return(data, response_mask, n_samples, config)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 54, in compute_rloo_advantage_return
+    raise ValueError(f"response_mask must be shape [batch_size, seq_len]; got {response_mask.shape}")
+ValueError: response_mask must be shape [batch_size, seq_len]; got torch.Size([4, 10])
+
+======================================================================
+ERROR: test_input_output_samples_accuracy_reward (__main__.TestRLOOAdvantageReturn.test_input_output_samples_accuracy_reward)
+Test specific input/output samples for accuracy reward allocation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_rloo_advantage_return.py", line 874, in test_input_output_samples_accuracy_reward
+    advantages, returns = compute_rloo_advantage_return(data, response_mask, n_samples, config)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 54, in compute_rloo_advantage_return
+    raise ValueError(f"response_mask must be shape [batch_size, seq_len]; got {response_mask.shape}")
+ValueError: response_mask must be shape [batch_size, seq_len]; got torch.Size([4, 4])
+
+======================================================================
+ERROR: test_input_output_samples_multi_source_fusion (__main__.TestRLOOAdvantageReturn.test_input_output_samples_multi_source_fusion)
+Test specific input/output samples for multi-source reward fusion
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_rloo_advantage_return.py", line 929, in test_input_output_samples_multi_source_fusion
+    advantages, returns = compute_rloo_advantage_return(data, response_mask, n_samples, config)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 54, in compute_rloo_advantage_return
+    raise ValueError(f"response_mask must be shape [batch_size, seq_len]; got {response_mask.shape}")
+ValueError: response_mask must be shape [batch_size, seq_len]; got torch.Size([4, 3])
+
+======================================================================
+ERROR: test_input_output_samples_rm_only (__main__.TestRLOOAdvantageReturn.test_input_output_samples_rm_only)
+Test specific input/output samples using only RM reward
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_rloo_advantage_return.py", line 793, in test_input_output_samples_rm_only
+    advantages, returns = compute_rloo_advantage_return(data, response_mask, n_samples, config)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 49, in compute_rloo_advantage_return
+    acc = torch.as_tensor(batch["acc"], dtype=torch.float32, device=device).reshape(-1)
+                          ~~~~~^^^^^^^
+KeyError: 'acc'
+
+======================================================================
+ERROR: test_leave_one_out_baseline (__main__.TestRLOOAdvantageReturn.test_leave_one_out_baseline)
+Test the concept of Leave-One-Out baseline estimation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_rloo_advantage_return.py", line 569, in test_leave_one_out_baseline
+    advantages, returns = compute_rloo_advantage_return(data, response_mask, n_samples, config)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 49, in compute_rloo_advantage_return
+    acc = torch.as_tensor(batch["acc"], dtype=torch.float32, device=device).reshape(-1)
+                          ~~~~~^^^^^^^
+KeyError: 'acc'
+
+======================================================================
+ERROR: test_multi_source_reward_fusion (__main__.TestRLOOAdvantageReturn.test_multi_source_reward_fusion)
+Test multi-source reward fusion functionality
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_rloo_advantage_return.py", line 284, in test_multi_source_reward_fusion
+    advantages, returns = compute_rloo_advantage_return(data, response_mask, n_samples, config)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 54, in compute_rloo_advantage_return
+    raise ValueError(f"response_mask must be shape [batch_size, seq_len]; got {response_mask.shape}")
+ValueError: response_mask must be shape [batch_size, seq_len]; got torch.Size([4, 10])
+
+======================================================================
+ERROR: test_rloo_baseline_calculation_input_output (__main__.TestRLOOAdvantageReturn.test_rloo_baseline_calculation_input_output)
+Test specific input/output samples for RLOO baseline calculation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_rloo_advantage_return.py", line 1007, in test_rloo_baseline_calculation_input_output
+    advantages, returns = compute_rloo_advantage_return(data, response_mask, n_samples, config)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 49, in compute_rloo_advantage_return
+    acc = torch.as_tensor(batch["acc"], dtype=torch.float32, device=device).reshape(-1)
+                          ~~~~~^^^^^^^
+KeyError: 'acc'
+
+======================================================================
+ERROR: test_rloo_mathematical_correctness (__main__.TestRLOOAdvantageReturn.test_rloo_mathematical_correctness)
+Test mathematical correctness of RLOO algorithm
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_rloo_advantage_return.py", line 226, in test_rloo_mathematical_correctness
+    advantages, returns = compute_rloo_advantage_return(data, response_mask, n_samples, config)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 49, in compute_rloo_advantage_return
+    acc = torch.as_tensor(batch["acc"], dtype=torch.float32, device=device).reshape(-1)
+                          ~~~~~^^^^^^^
+KeyError: 'acc'
+
+======================================================================
+ERROR: test_sample_grouping_logic (__main__.TestRLOOAdvantageReturn.test_sample_grouping_logic)
+Test sample grouping logic
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_rloo_advantage_return.py", line 757, in test_sample_grouping_logic
+    advantages, returns = compute_rloo_advantage_return(data, response_mask, n_samples, config)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 49, in compute_rloo_advantage_return
+    acc = torch.as_tensor(batch["acc"], dtype=torch.float32, device=device).reshape(-1)
+                          ~~~~~^^^^^^^
+KeyError: 'acc'
+
+======================================================================
+ERROR: test_whitening_process (__main__.TestRLOOAdvantageReturn.test_whitening_process)
+Test correctness of whitening process
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_rloo_advantage_return.py", line 672, in test_whitening_process
+    advantages, returns = compute_rloo_advantage_return(data, response_mask, n_samples, config)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 49, in compute_rloo_advantage_return
+    acc = torch.as_tensor(batch["acc"], dtype=torch.float32, device=device).reshape(-1)
+                          ~~~~~^^^^^^^
+KeyError: 'acc'
+
+======================================================================
+ERROR: test_zero_coefficient_input_output (__main__.TestRLOOAdvantageReturn.test_zero_coefficient_input_output)
+Test specific input/output samples for zero coefficient case
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_rloo_advantage_return.py", line 1081, in test_zero_coefficient_input_output
+    advantages1, returns1 = compute_rloo_advantage_return(data, response_mask, n_samples, config1)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 54, in compute_rloo_advantage_return
+    raise ValueError(f"response_mask must be shape [batch_size, seq_len]; got {response_mask.shape}")
+ValueError: response_mask must be shape [batch_size, seq_len]; got torch.Size([4, 3])
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.005s
+
+FAILED (errors=14)
+
+================================================================================
+日志结束

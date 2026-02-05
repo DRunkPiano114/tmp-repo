@@ -1,10 +1,10 @@
 {
   "total_functions": 5,
   "total_tests": 5,
-  "total_passed": 0,
-  "overall_success_rate": 0.0,
+  "total_passed": 1,
+  "overall_success_rate": 0.2,
   "pass_at_k": {
-    "pass@1": 0.0
+    "pass@1": 0.2
   },
-  "avg_pass_ratio": 0.0
+  "avg_pass_ratio": 0.2
 }

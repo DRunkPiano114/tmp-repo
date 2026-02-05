@@ -1,0 +1,24 @@
+================================================================================
+测试时间: 2026-02-05 20:18:07
+函数名: TokenLevelAdaptiveKLController.update
+测试文件: test_code/test_kl_controller.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_kl_controller.py", line 10, in <module>
+    from verl.trainer.core_algos import TokenLevelAdaptiveKLController
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/../verl/trainer/core_algos.py", line 80
+    def __init__(self, target_kl: float, beta: float = ., lambda_init: float = .):
+                                                       ^
+SyntaxError: invalid syntax
+
+================================================================================
+日志结束

@@ -1,0 +1,103 @@
+================================================================================
+测试时间: 2026-02-05 20:24:24
+函数名: compute_return
+测试文件: test_code/test_compute_return.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+tensor([[ 9.0893,  5.4624,  3.8025, -1.0500, -4.0000],
+        [ 7.1439,  4.4672,  2.7550, -1.1000, -3.0000]])
+
+【STDERR】
+--------------------------------------------------------------------------------
+.FFFF..F.E
+======================================================================
+ERROR: test_method_parameter_switching (__main__.TestComputeReturnIntegration.test_method_parameter_switching)
+Test method parameter switching functionality
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/PURE/code/test_code/test_compute_return.py", line 379, in test_method_parameter_switching
+    compute_return(token_rewards, eos_mask, method='invalid')
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/PURE/code/test_code/../verl/trainer/ppo/core_algos.py", line 141, in compute_return
+    raise ValueError("Unsupported method: choose 'sum' or 'min'")
+ValueError: Unsupported method: choose 'sum' or 'min'
+
+======================================================================
+FAIL: test_compute_return_input_output_samples_min (__main__.TestComputeReturn.test_compute_return_input_output_samples_min)
+Test specific input/output examples for min method
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/PURE/code/test_code/test_compute_return.py", line 218, in test_compute_return_input_output_samples_min
+    torch.testing.assert_close(returns, expected)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Tensor-likes are not close!
+
+Mismatched elements: 2 / 4 (50.0%)
+Greatest absolute difference: 5.0 at index (0, 2) (up to 1e-05 allowed)
+Greatest relative difference: 1.6666666269302368 at index (0, 2) (up to 1.3e-06 allowed)
+
+======================================================================
+FAIL: test_compute_return_input_output_samples_sum (__main__.TestComputeReturn.test_compute_return_input_output_samples_sum)
+Test specific input/output examples for sum method
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/PURE/code/test_code/test_compute_return.py", line 202, in test_compute_return_input_output_samples_sum
+    torch.testing.assert_close(returns_3, expected_3)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Tensor-likes are not close!
+
+Mismatched elements: 2 / 4 (50.0%)
+Greatest absolute difference: 3.359999656677246 at index (0, 1) (up to 1e-05 allowed)
+Greatest relative difference: 1.119999885559082 at index (0, 1) (up to 1.3e-06 allowed)
+
+======================================================================
+FAIL: test_compute_return_min_method_basic (__main__.TestComputeReturn.test_compute_return_min_method_basic)
+Test basic functionality of min method
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/PURE/code/test_code/test_compute_return.py", line 104, in test_compute_return_min_method_basic
+    torch.testing.assert_close(returns[0], expected_returns_seq1)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Tensor-likes are not close!
+
+Mismatched elements: 2 / 4 (50.0%)
+Greatest absolute difference: 2.0 at index (0,) (up to 1e-05 allowed)
+Greatest relative difference: 2.0 at index (0,) (up to 1.3e-06 allowed)
+
+======================================================================
+FAIL: test_compute_return_multiple_sequences (__main__.TestComputeReturn.test_compute_return_multiple_sequences)
+Test multi-sequence batch processing
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/PURE/code/test_code/test_compute_return.py", line 337, in test_compute_return_multiple_sequences
+    torch.testing.assert_close(returns_min[0], expected_min_seq1)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Tensor-likes are not close!
+
+Mismatched elements: 1 / 4 (25.0%)
+Greatest absolute difference: 1.0 at index (1,) (up to 1e-05 allowed)
+Greatest relative difference: 1.0 at index (1,) (up to 1.3e-06 allowed)
+
+======================================================================
+FAIL: test_compute_return_with_eos_mask (__main__.TestComputeReturn.test_compute_return_with_eos_mask)
+Test the effect of eos_mask on calculation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/PURE/code/test_code/test_compute_return.py", line 143, in test_compute_return_with_eos_mask
+    self.assertAlmostEqual(returns_sum[0, 2].item(), 3.0, places=5)
+AssertionError: 9.399999618530273 != 3.0 within 5 places (6.399999618530273 difference)
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.008s
+
+FAILED (failures=5, errors=1)
+
+================================================================================
+日志结束

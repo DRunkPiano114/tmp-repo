@@ -1,0 +1,24 @@
+================================================================================
+测试时间: 2026-02-05 17:10:38
+函数名: compute_dpo_abs_accuracy
+测试文件: test_code/test_dpo_abs_accuracy.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 34, in <module>
+    from prime.prime_core_algos import compute_dpo_abs_accuracy
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/../recipe/prime/prime_core_algos.py", line 167
+    predicted_labels = (token_level_scores > .).float()
+                                             ^
+SyntaxError: invalid syntax
+
+================================================================================
+日志结束

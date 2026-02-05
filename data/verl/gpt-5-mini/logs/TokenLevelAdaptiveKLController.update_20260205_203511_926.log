@@ -1,0 +1,121 @@
+================================================================================
+测试时间: 2026-02-05 20:35:11
+函数名: TokenLevelAdaptiveKLController.update
+测试文件: test_code/test_kl_controller.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+[1.01, 1.0, 1.005, 0.9999999999999999, 1.0025, 1.0]
+
+【STDERR】
+--------------------------------------------------------------------------------
+.FFFFF.F.FFF.FF
+======================================================================
+FAIL: test_different_targets_for_different_difficulties (__main__.TestTokenLevelAdaptiveKLController.test_different_targets_for_different_difficulties)
+Test different KL targets for different difficulties
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_kl_controller.py", line 256, in test_different_targets_for_different_difficulties
+    self.assertAlmostEqual(controller.lambdas["easy"], expected_lambda_easy, delta=1e-4)
+AssertionError: 1.0 != 1.0005 within 0.0001 delta (0.0004999999999999449 difference)
+
+======================================================================
+FAIL: test_dual_ascent_convergence (__main__.TestTokenLevelAdaptiveKLController.test_dual_ascent_convergence)
+Test dual ascent convergence
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_kl_controller.py", line 218, in test_dual_ascent_convergence
+    self.assertAlmostEqual(lambda_history[i], expected_lambda_history[i], delta=1e-4)
+AssertionError: 1.01 != 1.0002 within 0.0001 delta (0.009800000000000031 difference)
+
+======================================================================
+FAIL: test_kl_coef_update (__main__.TestTokenLevelAdaptiveKLController.test_kl_coef_update)
+Test KL coefficient update
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_kl_controller.py", line 195, in test_kl_coef_update
+    self.assertAlmostEqual(controller.kl_coefs["easy"], expected_kl_coef_easy, delta=1e-4)
+AssertionError: 1.0 != 0.10005 within 0.0001 delta (0.89995 difference)
+
+======================================================================
+FAIL: test_lambda_non_negative_constraint (__main__.TestTokenLevelAdaptiveKLController.test_lambda_non_negative_constraint)
+Test lambda non-negative constraint
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_kl_controller.py", line 169, in test_lambda_non_negative_constraint
+    self.assertAlmostEqual(controller.lambdas["easy"], expected_lambda_easy, delta=1e-4)
+AssertionError: 0.0 != 0.95 within 0.0001 delta (0.95 difference)
+
+======================================================================
+FAIL: test_learning_rate_effect (__main__.TestTokenLevelAdaptiveKLController.test_learning_rate_effect)
+Test effect of learning rate on updates
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_kl_controller.py", line 310, in test_learning_rate_effect
+    self.assertAlmostEqual(lambda_change, expected_change, delta=0.001)
+AssertionError: 0.050000000000000044 != 0.0015000000000000002 within 0.001 delta (0.04850000000000004 difference)
+
+======================================================================
+FAIL: test_update_kl_above_target (__main__.TestTokenLevelAdaptiveKLController.test_update_kl_above_target)
+Test update when KL is above target
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_kl_controller.py", line 95, in test_update_kl_above_target
+    self.assertAlmostEqual(controller.lambdas["easy"], expected_lambda_easy, delta=1e-4)
+AssertionError: 0.99 != 1.0003 within 0.0001 delta (0.010299999999999976 difference)
+
+======================================================================
+FAIL: test_update_kl_below_target (__main__.TestTokenLevelAdaptiveKLController.test_update_kl_below_target)
+Test update when KL is below target
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_kl_controller.py", line 68, in test_update_kl_below_target
+    self.assertAlmostEqual(controller.lambdas["easy"], expected_lambda_easy, delta=1e-4)
+AssertionError: 0.965 != 0.9998 within 0.0001 delta (0.03480000000000005 difference)
+
+======================================================================
+FAIL: test_update_multiple_buckets (__main__.TestTokenLevelAdaptiveKLController.test_update_multiple_buckets)
+Test updating multiple difficulty buckets simultaneously
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_kl_controller.py", line 149, in test_update_multiple_buckets
+    self.assertAlmostEqual(controller.lambdas["easy"], expected_lambda_easy, delta=1e-4)
+AssertionError: 0.9966666666666667 != 1.0003 within 0.0001 delta (0.0036333333333332662 difference)
+
+======================================================================
+FAIL: test_difficulty_aware_kl_budget (__main__.TestTokenLevelAdaptiveKLControllerIntegration.test_difficulty_aware_kl_budget)
+Test difficulty-aware KL budget allocation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_kl_controller.py", line 395, in test_difficulty_aware_kl_budget
+    self.assertAlmostEqual(easy_change, expected_easy_change, delta=1e-4)
+AssertionError: 0.0 != 0.0004999999999999449 within 0.0001 delta (0.0004999999999999449 difference)
+
+======================================================================
+FAIL: test_oscillating_kl_values (__main__.TestTokenLevelAdaptiveKLControllerIntegration.test_oscillating_kl_values)
+Test oscillating KL values
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_kl_controller.py", line 446, in test_oscillating_kl_values
+    self.assertAlmostEqual(lambda_values[i], expected_lambda_values[i], delta=1e-4)
+AssertionError: 1.01 != 1.0002 within 0.0001 delta (0.009800000000000031 difference)
+
+======================================================================
+FAIL: test_realistic_training_scenario (__main__.TestTokenLevelAdaptiveKLControllerIntegration.test_realistic_training_scenario)
+Test realistic training scenario
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/ARES/code/test_code/test_kl_controller.py", line 352, in test_realistic_training_scenario
+    self.assertAlmostEqual(lambda_history[bucket][i], expected_lambda_history[bucket][i], delta=1e-4)
+AssertionError: 0.9933333333333333 != 1.0001 within 0.0001 delta (0.006766666666666699 difference)
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.001s
+
+FAILED (failures=11)
+
+================================================================================
+日志结束

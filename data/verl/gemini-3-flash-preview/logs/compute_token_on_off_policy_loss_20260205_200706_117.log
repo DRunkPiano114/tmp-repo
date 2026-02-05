@@ -1,0 +1,204 @@
+================================================================================
+测试时间: 2026-02-05 20:07:06
+函数名: compute_token_on_off_policy_loss
+测试文件: test_code/test_compute_token_on_off_policy_loss.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+EEEEEEEEEEEEEE
+======================================================================
+ERROR: test_basic_off_policy_loss (__main__.TestComputeTokenOnOffPolicyLoss.test_basic_off_policy_loss)
+Test basic off-policy loss computation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_token_on_off_policy_loss.py", line 79, in test_basic_off_policy_loss
+    result = compute_token_on_off_policy_loss(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/../luffy/verl/verl/mix_src/mix_core_alg.py", line 105, in compute_token_on_off_policy_loss
+    on_policy_mask = (~prefix_mask) & eos_mask
+                     ~~~~~~~~~~~~~~~^~~~~~~~~~
+NotImplementedError: "bitwise_and_cpu" not implemented for 'Float'
+
+======================================================================
+ERROR: test_basic_on_policy_loss (__main__.TestComputeTokenOnOffPolicyLoss.test_basic_on_policy_loss)
+Test basic on-policy PPO loss computation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_token_on_off_policy_loss.py", line 39, in test_basic_on_policy_loss
+    result = compute_token_on_off_policy_loss(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/../luffy/verl/verl/mix_src/mix_core_alg.py", line 105, in compute_token_on_off_policy_loss
+    on_policy_mask = (~prefix_mask) & eos_mask
+                     ~~~~~~~~~~~~~~~^~~~~~~~~~
+NotImplementedError: "bitwise_and_cpu" not implemented for 'Float'
+
+======================================================================
+ERROR: test_cliprange_parameter (__main__.TestComputeTokenOnOffPolicyLoss.test_cliprange_parameter)
+Test cliprange parameter's effect on PPO clipping
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_token_on_off_policy_loss.py", line 163, in test_cliprange_parameter
+    result_small_clip = compute_token_on_off_policy_loss(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/../luffy/verl/verl/mix_src/mix_core_alg.py", line 105, in compute_token_on_off_policy_loss
+    on_policy_mask = (~prefix_mask) & eos_mask
+                     ~~~~~~~~~~~~~~~^~~~~~~~~~
+NotImplementedError: "bitwise_and_cpu" not implemented for 'Float'
+
+======================================================================
+ERROR: test_eos_mask_application (__main__.TestComputeTokenOnOffPolicyLoss.test_eos_mask_application)
+Test eos_mask application
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_token_on_off_policy_loss.py", line 379, in test_eos_mask_application
+    result = compute_token_on_off_policy_loss(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/../luffy/verl/verl/mix_src/mix_core_alg.py", line 105, in compute_token_on_off_policy_loss
+    on_policy_mask = (~prefix_mask) & eos_mask
+                     ~~~~~~~~~~~~~~~^~~~~~~~~~
+NotImplementedError: "bitwise_and_cpu" not implemented for 'Float'
+
+======================================================================
+ERROR: test_loss_remove_clip_parameter (__main__.TestComputeTokenOnOffPolicyLoss.test_loss_remove_clip_parameter)
+Test loss_remove_clip parameter: remove clip operation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_token_on_off_policy_loss.py", line 472, in test_loss_remove_clip_parameter
+    result_with_clip = compute_token_on_off_policy_loss(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/../luffy/verl/verl/mix_src/mix_core_alg.py", line 105, in compute_token_on_off_policy_loss
+    on_policy_mask = (~prefix_mask) & eos_mask
+                     ~~~~~~~~~~~~~~~^~~~~~~~~~
+NotImplementedError: "bitwise_and_cpu" not implemented for 'Float'
+
+======================================================================
+ERROR: test_mixed_on_off_policy_loss (__main__.TestComputeTokenOnOffPolicyLoss.test_mixed_on_off_policy_loss)
+Test mixed on-policy and off-policy loss
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_token_on_off_policy_loss.py", line 121, in test_mixed_on_off_policy_loss
+    result = compute_token_on_off_policy_loss(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/../luffy/verl/verl/mix_src/mix_core_alg.py", line 105, in compute_token_on_off_policy_loss
+    on_policy_mask = (~prefix_mask) & eos_mask
+                     ~~~~~~~~~~~~~~~^~~~~~~~~~
+NotImplementedError: "bitwise_and_cpu" not implemented for 'Float'
+
+======================================================================
+ERROR: test_off_max_clip_parameter (__main__.TestComputeTokenOnOffPolicyLoss.test_off_max_clip_parameter)
+Test off_max_clip parameter: limit off-policy ratio upper bound
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_token_on_off_policy_loss.py", line 330, in test_off_max_clip_parameter
+    result = compute_token_on_off_policy_loss(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/../luffy/verl/verl/mix_src/mix_core_alg.py", line 105, in compute_token_on_off_policy_loss
+    on_policy_mask = (~prefix_mask) & eos_mask
+                     ~~~~~~~~~~~~~~~^~~~~~~~~~
+NotImplementedError: "bitwise_and_cpu" not implemented for 'Float'
+
+======================================================================
+ERROR: test_off_min_clip_parameter (__main__.TestComputeTokenOnOffPolicyLoss.test_off_min_clip_parameter)
+Test off_min_clip parameter: limit off-policy ratio lower bound
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_token_on_off_policy_loss.py", line 353, in test_off_min_clip_parameter
+    result = compute_token_on_off_policy_loss(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/../luffy/verl/verl/mix_src/mix_core_alg.py", line 105, in compute_token_on_off_policy_loss
+    on_policy_mask = (~prefix_mask) & eos_mask
+                     ~~~~~~~~~~~~~~~^~~~~~~~~~
+NotImplementedError: "bitwise_and_cpu" not implemented for 'Float'
+
+======================================================================
+ERROR: test_off_policy_reshape_methods (__main__.TestComputeTokenOnOffPolicyLoss.test_off_policy_reshape_methods)
+Test different off_policy_reshape methods
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_token_on_off_policy_loss.py", line 205, in test_off_policy_reshape_methods
+    result = compute_token_on_off_policy_loss(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/../luffy/verl/verl/mix_src/mix_core_alg.py", line 105, in compute_token_on_off_policy_loss
+    on_policy_mask = (~prefix_mask) & eos_mask
+                     ~~~~~~~~~~~~~~~^~~~~~~~~~
+NotImplementedError: "bitwise_and_cpu" not implemented for 'Float'
+
+======================================================================
+ERROR: test_on_policy_reshape_methods (__main__.TestComputeTokenOnOffPolicyLoss.test_on_policy_reshape_methods)
+Test different on_policy_reshape methods
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_token_on_off_policy_loss.py", line 283, in test_on_policy_reshape_methods
+    result = compute_token_on_off_policy_loss(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/../luffy/verl/verl/mix_src/mix_core_alg.py", line 105, in compute_token_on_off_policy_loss
+    on_policy_mask = (~prefix_mask) & eos_mask
+                     ~~~~~~~~~~~~~~~^~~~~~~~~~
+NotImplementedError: "bitwise_and_cpu" not implemented for 'Float'
+
+======================================================================
+ERROR: test_ppo_kl_computation (__main__.TestComputeTokenOnOffPolicyLoss.test_ppo_kl_computation)
+Test PPO KL divergence computation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_token_on_off_policy_loss.py", line 405, in test_ppo_kl_computation
+    result = compute_token_on_off_policy_loss(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/../luffy/verl/verl/mix_src/mix_core_alg.py", line 105, in compute_token_on_off_policy_loss
+    on_policy_mask = (~prefix_mask) & eos_mask
+                     ~~~~~~~~~~~~~~~^~~~~~~~~~
+NotImplementedError: "bitwise_and_cpu" not implemented for 'Float'
+
+======================================================================
+ERROR: test_target_probs_parameter (__main__.TestComputeTokenOnOffPolicyLoss.test_target_probs_parameter)
+Test target_probs parameter: explicit behavior policy
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_token_on_off_policy_loss.py", line 435, in test_target_probs_parameter
+    result = compute_token_on_off_policy_loss(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/../luffy/verl/verl/mix_src/mix_core_alg.py", line 105, in compute_token_on_off_policy_loss
+    on_policy_mask = (~prefix_mask) & eos_mask
+                     ~~~~~~~~~~~~~~~^~~~~~~~~~
+NotImplementedError: "bitwise_and_cpu" not implemented for 'Float'
+
+======================================================================
+ERROR: test_policy_shaping_comparison (__main__.TestComputeTokenOnOffPolicyLossIntegration.test_policy_shaping_comparison)
+Test comparison of different policy shaping methods
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_token_on_off_policy_loss.py", line 591, in test_policy_shaping_comparison
+    result = compute_token_on_off_policy_loss(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/../luffy/verl/verl/mix_src/mix_core_alg.py", line 105, in compute_token_on_off_policy_loss
+    on_policy_mask = (~prefix_mask) & eos_mask
+                     ~~~~~~~~~~~~~~~^~~~~~~~~~
+NotImplementedError: "bitwise_and_cpu" not implemented for 'Float'
+
+======================================================================
+ERROR: test_realistic_training_scenario (__main__.TestComputeTokenOnOffPolicyLossIntegration.test_realistic_training_scenario)
+Test realistic training scenario: mixed on-policy and off-policy samples
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_token_on_off_policy_loss.py", line 528, in test_realistic_training_scenario
+    result = compute_token_on_off_policy_loss(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/../luffy/verl/verl/mix_src/mix_core_alg.py", line 105, in compute_token_on_off_policy_loss
+    on_policy_mask = (~prefix_mask) & eos_mask
+                     ~~~~~~~~~~~~~~~^~~~~~~~~~
+NotImplementedError: "bitwise_and_cpu" not implemented for 'Float'
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.009s
+
+FAILED (errors=14)
+
+================================================================================
+日志结束

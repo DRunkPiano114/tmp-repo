@@ -1,60 +1,81 @@
-2026-02-05 09:35:16,443 - INFO - 📖 加载数据: /Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/scripts/data/verl/algorithm_methods_data_ARES.jsonl
-2026-02-05 09:35:16,443 - INFO - ✅ 加载了 4 个样本
-2026-02-05 09:35:16,443 - INFO - 🔧 初始化 OpenRouter 客户端
-2026-02-05 09:35:16,443 - INFO -    模型: deepseek/deepseek-v3.2
-2026-02-05 09:35:16,443 - INFO -    每个样本生成: 1 个候选
-2026-02-05 09:35:16,484 - INFO - 🚀 开始生成...
-2026-02-05 09:35:16,484 - INFO - 
-2026-02-05 09:35:16,484 - INFO - [1/4] 处理: compute_score
-2026-02-05 09:35:16,484 - INFO -   📤 发送请求 1/1
-2026-02-05 09:35:16,484 - INFO -      模型: deepseek/deepseek-v3.2
-2026-02-05 09:35:16,484 - INFO -      消息数: 2
-2026-02-05 09:35:21,502 - INFO - Retrying request to /chat/completions in 0.459503 seconds
-2026-02-05 09:35:26,969 - INFO - Retrying request to /chat/completions in 0.802312 seconds
-2026-02-05 09:35:32,778 - ERROR -   ❌ 候选 1/1 生成失败: Request timed out.
-2026-02-05 09:35:32,778 - INFO -   📊 成功: 0/1
-2026-02-05 09:35:32,778 - INFO - 
-2026-02-05 09:35:32,778 - INFO - [2/4] 处理: RayPPOTrainer.update_difficulty_and_skip_gid_set
-2026-02-05 09:35:32,778 - INFO -   📤 发送请求 1/1
-2026-02-05 09:35:32,778 - INFO -      模型: deepseek/deepseek-v3.2
-2026-02-05 09:35:32,778 - INFO -      消息数: 2
-2026-02-05 09:35:37,782 - INFO - Retrying request to /chat/completions in 0.495659 seconds
-2026-02-05 09:35:43,283 - INFO - Retrying request to /chat/completions in 0.946200 seconds
-2026-02-05 09:35:49,234 - ERROR -   ❌ 候选 1/1 生成失败: Request timed out.
-2026-02-05 09:35:49,234 - INFO -   📊 成功: 0/1
-2026-02-05 09:35:49,234 - INFO - 
-2026-02-05 09:35:49,234 - INFO - [3/4] 处理: TokenLevelAdaptiveKLController.update
-2026-02-05 09:35:49,234 - INFO -   📤 发送请求 1/1
-2026-02-05 09:35:49,234 - INFO -      模型: deepseek/deepseek-v3.2
-2026-02-05 09:35:49,234 - INFO -      消息数: 2
-2026-02-05 09:35:54,237 - INFO - Retrying request to /chat/completions in 0.439603 seconds
-2026-02-05 09:35:59,683 - INFO - Retrying request to /chat/completions in 0.976781 seconds
-2026-02-05 09:36:05,666 - ERROR -   ❌ 候选 1/1 生成失败: Request timed out.
-2026-02-05 09:36:05,666 - INFO -   📊 成功: 0/1
-2026-02-05 09:36:05,666 - INFO - 
-2026-02-05 09:36:05,666 - INFO - [4/4] 处理: apply_kl_penalty
-2026-02-05 09:36:05,666 - INFO -   📤 发送请求 1/1
-2026-02-05 09:36:05,666 - INFO -      模型: deepseek/deepseek-v3.2
-2026-02-05 09:36:05,666 - INFO -      消息数: 2
-2026-02-05 09:36:10,668 - INFO - Retrying request to /chat/completions in 0.385649 seconds
-2026-02-05 09:36:16,061 - INFO - Retrying request to /chat/completions in 0.825723 seconds
-2026-02-05 09:36:21,895 - ERROR -   ❌ 候选 1/1 生成失败: Request timed out.
-2026-02-05 09:36:21,895 - INFO -   📊 成功: 0/1
-2026-02-05 09:36:21,895 - INFO - 
-2026-02-05 09:36:21,895 - INFO - 💾 保存结果: /Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/scripts/data/verl/deepseek-v3.2/algorithm_methods_data_ARES_output.jsonl
-2026-02-05 09:36:21,897 - INFO - 
-2026-02-05 09:36:21,897 - INFO - ============================================================
-2026-02-05 09:36:21,897 - INFO - 📊 生成统计
-2026-02-05 09:36:21,897 - INFO - ============================================================
-2026-02-05 09:36:21,897 - INFO - 总样本数: 4
-2026-02-05 09:36:21,897 - INFO - 总生成数: 4
-2026-02-05 09:36:21,897 - INFO - ✅ 成功: 0
-2026-02-05 09:36:21,897 - INFO - ❌ 失败: 4
-2026-02-05 09:36:21,897 - INFO - 成功率: 0.0%
-2026-02-05 09:36:21,897 - INFO - 
-2026-02-05 09:36:21,897 - INFO - 🔢 Token 使用统计:
-2026-02-05 09:36:21,897 - INFO -   输入 tokens: 0
-2026-02-05 09:36:21,897 - INFO -   输出 tokens: 0
-2026-02-05 09:36:21,897 - INFO -   总计 tokens: 0
-2026-02-05 09:36:21,897 - INFO -   平均每样本: 0.0 tokens
-2026-02-05 09:36:21,897 - INFO - ============================================================
+2026-02-05 20:02:46,663 - INFO - 📖 加载数据: /Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/scripts/data/verl/algorithm_methods_data_ARES.jsonl
+2026-02-05 20:02:46,663 - INFO - ✅ 加载了 4 个样本
+2026-02-05 20:02:46,663 - INFO - 🔧 初始化 OpenRouter 客户端
+2026-02-05 20:02:46,663 - INFO -    模型: deepseek/deepseek-v3.2
+2026-02-05 20:02:46,663 - INFO -    每个样本生成: 1 个候选
+2026-02-05 20:02:46,689 - INFO -    超时时间: 180.0 秒
+2026-02-05 20:02:46,689 - INFO - 🚀 开始生成...
+2026-02-05 20:02:46,689 - INFO - 
+2026-02-05 20:02:46,689 - INFO - [1/4] 处理: compute_score
+2026-02-05 20:02:46,689 - INFO -   📤 发送请求 1/1
+2026-02-05 20:02:46,689 - INFO -      模型: deepseek/deepseek-v3.2
+2026-02-05 20:02:46,689 - INFO -      消息数: 2
+2026-02-05 20:02:49,648 - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-05 20:03:53,027 - INFO -   📥 收到响应
+2026-02-05 20:03:53,027 - INFO -      Response ID: gen-1770292967-DPePdjoSgdsskJN6bbug
+2026-02-05 20:03:53,027 - INFO -      Model: deepseek/deepseek-v3.2
+2026-02-05 20:03:53,027 - INFO -      Choices: 1
+2026-02-05 20:03:53,027 - INFO -      Usage: input=909, output=2056, total=2965
+2026-02-05 20:03:53,027 - INFO -   ✅ 候选 1/1 生成成功 (长度: 9225)
+2026-02-05 20:03:53,027 - INFO -   📊 成功: 1/1
+2026-02-05 20:03:53,027 - INFO -   🔢 Token 使用: input=909, output=2056, total=2965
+2026-02-05 20:03:53,027 - INFO - 
+2026-02-05 20:03:53,027 - INFO - [2/4] 处理: RayPPOTrainer.update_difficulty_and_skip_gid_set
+2026-02-05 20:03:53,027 - INFO -   📤 发送请求 1/1
+2026-02-05 20:03:53,027 - INFO -      模型: deepseek/deepseek-v3.2
+2026-02-05 20:03:53,027 - INFO -      消息数: 2
+2026-02-05 20:03:54,679 - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-05 20:05:07,898 - INFO -   📥 收到响应
+2026-02-05 20:05:07,898 - INFO -      Response ID: gen-1770293033-AQ5W6sTgFRcEkXQ5FA62
+2026-02-05 20:05:07,898 - INFO -      Model: deepseek/deepseek-v3.2
+2026-02-05 20:05:07,898 - INFO -      Choices: 1
+2026-02-05 20:05:07,898 - INFO -      Usage: input=675, output=1712, total=2387
+2026-02-05 20:05:07,898 - INFO -   ✅ 候选 1/1 生成成功 (长度: 7319)
+2026-02-05 20:05:07,898 - INFO -   📊 成功: 1/1
+2026-02-05 20:05:07,898 - INFO -   🔢 Token 使用: input=675, output=1712, total=2387
+2026-02-05 20:05:07,898 - INFO - 
+2026-02-05 20:05:07,898 - INFO - [3/4] 处理: TokenLevelAdaptiveKLController.update
+2026-02-05 20:05:07,898 - INFO -   📤 发送请求 1/1
+2026-02-05 20:05:07,898 - INFO -      模型: deepseek/deepseek-v3.2
+2026-02-05 20:05:07,898 - INFO -      消息数: 2
+2026-02-05 20:05:09,143 - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-05 20:05:44,485 - INFO -   📥 收到响应
+2026-02-05 20:05:44,486 - INFO -      Response ID: gen-1770293108-UKwyrFm70CdLMvIOWPSA
+2026-02-05 20:05:44,486 - INFO -      Model: deepseek/deepseek-v3.2
+2026-02-05 20:05:44,486 - INFO -      Choices: 1
+2026-02-05 20:05:44,486 - INFO -      Usage: input=462, output=605, total=1067
+2026-02-05 20:05:44,486 - INFO -   ✅ 候选 1/1 生成成功 (长度: 2477)
+2026-02-05 20:05:44,486 - INFO -   📊 成功: 1/1
+2026-02-05 20:05:44,486 - INFO -   🔢 Token 使用: input=462, output=605, total=1067
+2026-02-05 20:05:44,486 - INFO - 
+2026-02-05 20:05:44,486 - INFO - [4/4] 处理: apply_kl_penalty
+2026-02-05 20:05:44,486 - INFO -   📤 发送请求 1/1
+2026-02-05 20:05:44,486 - INFO -      模型: deepseek/deepseek-v3.2
+2026-02-05 20:05:44,486 - INFO -      消息数: 2
+2026-02-05 20:05:47,895 - INFO - HTTP Request: POST https://openrouter.ai/api/v1/chat/completions "HTTP/1.1 200 OK"
+2026-02-05 20:06:15,963 - INFO -   📥 收到响应
+2026-02-05 20:06:15,963 - INFO -      Response ID: gen-1770293144-JpHSzMbjnFiCoFvopMXh
+2026-02-05 20:06:15,963 - INFO -      Model: deepseek/deepseek-v3.2
+2026-02-05 20:06:15,963 - INFO -      Choices: 1
+2026-02-05 20:06:15,963 - INFO -      Usage: input=510, output=901, total=1411
+2026-02-05 20:06:15,963 - INFO -   ✅ 候选 1/1 生成成功 (长度: 3552)
+2026-02-05 20:06:15,964 - INFO -   📊 成功: 1/1
+2026-02-05 20:06:15,964 - INFO -   🔢 Token 使用: input=510, output=901, total=1411
+2026-02-05 20:06:15,964 - INFO - 
+2026-02-05 20:06:15,964 - INFO - 💾 保存结果: /Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/scripts/data/verl/deepseek-v3.2/algorithm_methods_data_ARES_output.jsonl
+2026-02-05 20:06:15,966 - INFO - 
+2026-02-05 20:06:15,966 - INFO - ============================================================
+2026-02-05 20:06:15,966 - INFO - 📊 生成统计
+2026-02-05 20:06:15,966 - INFO - ============================================================
+2026-02-05 20:06:15,966 - INFO - 总样本数: 4
+2026-02-05 20:06:15,966 - INFO - 总生成数: 4
+2026-02-05 20:06:15,966 - INFO - ✅ 成功: 4
+2026-02-05 20:06:15,966 - INFO - ❌ 失败: 0
+2026-02-05 20:06:15,966 - INFO - 成功率: 100.0%
+2026-02-05 20:06:15,966 - INFO - 
+2026-02-05 20:06:15,966 - INFO - 🔢 Token 使用统计:
+2026-02-05 20:06:15,966 - INFO -   输入 tokens: 2,556
+2026-02-05 20:06:15,966 - INFO -   输出 tokens: 5,274
+2026-02-05 20:06:15,966 - INFO -   总计 tokens: 7,830
+2026-02-05 20:06:15,966 - INFO -   平均每样本: 1957.5 tokens
+2026-02-05 20:06:15,966 - INFO - ============================================================

@@ -1,0 +1,161 @@
+================================================================================
+测试时间: 2026-02-05 20:07:15
+函数名: compute_dpo_abs_accuracy
+测试文件: test_code/test_dpo_abs_accuracy.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+FF.FFFF.FFFFF
+======================================================================
+FAIL: test_batch_computation_input_output (__main__.TestDPOAbsAccuracy.test_batch_computation_input_output)
+Test specific input-output for batch computation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 432, in test_batch_computation_input_output
+    self.assertAlmostEqual(result.item(), expected_accuracy, places=30)
+AssertionError: 4.0 != 0.6666666865348816 within 30 places (3.3333333134651184 difference)
+
+======================================================================
+FAIL: test_binary_classification_logic (__main__.TestDPOAbsAccuracy.test_binary_classification_logic)
+Test correctness of binary classification logic
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 131, in test_binary_classification_logic
+    torch.testing.assert_close(accuracy, expected_accuracy, atol=1e-30, rtol=1e-30)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Scalars are not close!
+
+Expected 0.6666666865348816 but got 3.0.
+Absolute difference: 2.3333333134651184 (up to 1e-30 allowed)
+Relative difference: 3.4999998658895533 (up to 1e-30 allowed)
+
+======================================================================
+FAIL: test_consistency_with_different_seeds (__main__.TestDPOAbsAccuracy.test_consistency_with_different_seeds)
+Test consistency with different random seeds
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 254, in test_consistency_with_different_seeds
+    torch.testing.assert_close(accuracies, expected_accuracies, atol=1e-30, rtol=1e-30)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Scalars are not close!
+
+Expected 1.0 but got 3.0.
+Absolute difference: 2.0 (up to 1e-30 allowed)
+Relative difference: 2.0 (up to 1e-30 allowed)
+
+The failure occurred for item [0]
+
+======================================================================
+FAIL: test_different_n_samples (__main__.TestDPOAbsAccuracy.test_different_n_samples)
+Test impact of different n_samples parameters
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 155, in test_different_n_samples
+    torch.testing.assert_close(accuracies, expected_accuracies, atol=1e-30, rtol=1e-30)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Scalars are not close!
+
+Expected 0.5 but got 2.0.
+Absolute difference: 1.5 (up to 1e-30 allowed)
+Relative difference: 3.0 (up to 1e-30 allowed)
+
+The failure occurred for item [0]
+
+======================================================================
+FAIL: test_input_output_samples (__main__.TestDPOAbsAccuracy.test_input_output_samples)
+Test specific input-output examples
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 278, in test_input_output_samples
+    self.assertAlmostEqual(result.item(), expected_accuracy, places=5)
+AssertionError: 2.0 != 1.0 within 5 places (1.0 difference)
+
+======================================================================
+FAIL: test_mask_effect_input_output (__main__.TestDPOAbsAccuracy.test_mask_effect_input_output)
+Test specific input-output for mask effect
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 405, in test_mask_effect_input_output
+    self.assertAlmostEqual(result_partial.item(), expected_partial, places=30)
+AssertionError: 2.0 != 1.0 within 30 places (1.0 difference)
+
+======================================================================
+FAIL: test_perfect_prediction (__main__.TestDPOAbsAccuracy.test_perfect_prediction)
+Test perfect prediction case
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 86, in test_perfect_prediction
+    torch.testing.assert_close(accuracy, expected_accuracy, atol=1e-30, rtol=1e-30)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Scalars are not close!
+
+Expected 1.0 but got 2.0.
+Absolute difference: 1.0 (up to 1e-30 allowed)
+Relative difference: 1.0 (up to 1e-30 allowed)
+
+======================================================================
+FAIL: test_response_mask_impact (__main__.TestDPOAbsAccuracy.test_response_mask_impact)
+Test impact of response_mask on absolute accuracy
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 184, in test_response_mask_impact
+    torch.testing.assert_close(accuracy_full, expected_accuracy_full, atol=1e-30, rtol=1e-30)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Scalars are not close!
+
+Expected 0.5 but got 1.0.
+Absolute difference: 0.5 (up to 1e-30 allowed)
+Relative difference: 1.0 (up to 1e-30 allowed)
+
+======================================================================
+FAIL: test_score_aggregation_correctness (__main__.TestDPOAbsAccuracy.test_score_aggregation_correctness)
+Test correctness of score aggregation
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 225, in test_score_aggregation_correctness
+    self.assertAlmostEqual(accuracy.item(), 1.0, places=5)
+AssertionError: 2.0 != 1.0 within 5 places (1.0 difference)
+
+======================================================================
+FAIL: test_zero_boundary_cases (__main__.TestDPOAbsAccuracy.test_zero_boundary_cases)
+Test specific input-output for zero boundary cases
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 346, in test_zero_boundary_cases
+    self.assertAlmostEqual(result.item(), expected_accuracy, places=30)
+AssertionError: 2.0 != 0.0 within 30 places (2.0 difference)
+
+======================================================================
+FAIL: test_zero_scores_edge_case (__main__.TestDPOAbsAccuracy.test_zero_scores_edge_case)
+Test edge case with zero scores
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/prime/code/test_code/test_dpo_abs_accuracy.py", line 205, in test_zero_scores_edge_case
+    torch.testing.assert_close(accuracy, expected_accuracy, atol=1e-30, rtol=1e-30)
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/venv_verl/lib/python3.11/site-packages/torch/testing/_comparison.py", line 1600, in assert_close
+    raise error_metas[0].to_error(msg)
+AssertionError: Scalars are not close!
+
+Expected 0.0 but got 1.0.
+Absolute difference: 1.0 (up to 1e-30 allowed)
+Relative difference: inf (up to 1e-30 allowed)
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.004s
+
+FAILED (failures=11)
+
+================================================================================
+日志结束

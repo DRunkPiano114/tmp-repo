@@ -1,0 +1,25 @@
+================================================================================
+测试时间: 2026-02-05 18:15:22
+函数名: agg_loss
+测试文件: test_code/test_agg_loss.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/DAPO/code/test_code/test_agg_loss.py", line 10, in <module>
+    from verl.trainer.ppo.core_algos import agg_loss
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/DAPO/code/test_code/../verl/__init__.py", line 23, in <module>
+    from .protocol import DataProto
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/DAPO/code/test_code/../verl/protocol.py", line 29, in <module>
+    import ray
+ModuleNotFoundError: No module named 'ray'
+
+================================================================================
+日志结束

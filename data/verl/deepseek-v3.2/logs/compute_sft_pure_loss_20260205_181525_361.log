@@ -1,0 +1,25 @@
+================================================================================
+测试时间: 2026-02-05 18:15:25
+函数名: compute_sft_pure_loss
+测试文件: test_code/test_compute_sft_pure_loss.py
+测试框架: unittest
+返回码: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(无输出)
+
+【STDERR】
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/test_compute_sft_pure_loss.py", line 10, in <module>
+    from verl.mix_src.mix_core_alg import compute_sft_pure_loss
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/../luffy/verl/verl/__init__.py", line 22, in <module>
+    from .protocol import DataProto
+  File "/Users/paulwu/Desktop/KOCO-bench/KOCO-bench-en/domain_code_generation/verl/test_examples/LUFFY/code/test_code/../luffy/verl/verl/protocol.py", line 26, in <module>
+    import tensordict
+ModuleNotFoundError: No module named 'tensordict'
+
+================================================================================
+日志结束
