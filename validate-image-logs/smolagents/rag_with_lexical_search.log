@@ -1,0 +1,23 @@
+================================================================================
+Test time: 2026-02-19 18:24:56
+Function name: rag_with_lexical_search
+Test file: test_code/test_rag_with_lexical_search.py
+Test framework: unittest
+Return code: 1
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+(no output)
+
+【STDERR】
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/project/smolagents/test_examples/examples/code/test_code/test_rag_with_lexical_search.py", line 10, in <module>
+    import rag
+  File "/workspace/project/smolagents/test_examples/examples/code/rag.py", line 5, in <module>
+    from langchain.docstore.document import Document
+ModuleNotFoundError: No module named 'langchain'
+
+================================================================================
+Log end

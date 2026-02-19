@@ -1,0 +1,41 @@
+================================================================================
+Test time: 2026-02-19 18:23:56
+Function name: get_tensor_shapes_adjust_fn
+Test file: test_code/test_get_tensor_shapes_adjust_fn.py
+Test framework: unittest
+Return code: 0
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+
+==========
+== CUDA ==
+==========
+
+CUDA Version 12.1.1
+
+Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.
+
+WARNING: The NVIDIA Driver was not detected.  GPU functionality will not be available.
+   Use the NVIDIA Container Toolkit to start this container with GPU support; see
+   https://docs.nvidia.com/datacenter/cloud-native/ .
+
+Warning: Unable to import implementation code: No module named 'dateutil'
+
+【STDERR】
+--------------------------------------------------------------------------------
+ssssssssssssss
+----------------------------------------------------------------------
+Ran 14 tests in 0.000s
+
+OK (skipped=14)
+
+================================================================================
+Log end

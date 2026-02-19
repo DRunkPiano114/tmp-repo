@@ -1,0 +1,32 @@
+================================================================================
+Test time: 2026-02-19 18:24:23
+Function name: build_prompt_to_generate_training_examples
+Test file: test_code/test_build_prompt_to_generate_training_examples.py
+Test framework: pytest
+Return code: 0
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+============================= test session starts ==============================
+platform linux -- Python 3.10.19, pytest-9.0.2, pluggy-1.6.0 -- /usr/local/bin/python3
+cachedir: .pytest_cache
+rootdir: /workspace/project/smolagents/test_examples/ToolBrain/code
+configfile: pyproject.toml
+plugins: anyio-4.12.1, langsmith-0.7.3, asyncio-1.3.0
+asyncio: mode=strict, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 4 items
+
+test_code/test_build_prompt_to_generate_training_examples.py::test_build_prompt_basic_sections_and_includes_tools_description PASSED [ 25%]
+test_code/test_build_prompt_to_generate_training_examples.py::test_build_prompt_max_words_floor_to_10 PASSED [ 50%]
+test_code/test_build_prompt_to_generate_training_examples.py::test_build_prompt_includes_guidance_example_when_provided PASSED [ 75%]
+test_code/test_build_prompt_to_generate_training_examples.py::test_build_prompt_contains_gold_answer_requirement PASSED [100%]
+
+============================== 4 passed in 0.21s ===============================
+
+【STDERR】
+--------------------------------------------------------------------------------
+(no errors)
+
+================================================================================
+Log end

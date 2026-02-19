@@ -1,0 +1,69 @@
+================================================================================
+Test time: 2026-02-19 18:24:53
+Function name: plan_customization
+Test file: test_code/test_plan_customization.py
+Test framework: unittest
+Return code: 0
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+
+🛑 Agent interrupted after plan creation...
+
+============================================================
+🤖 AGENT PLAN CREATED
+============================================================
+Original Plan
+============================================================
+✅ Plan approved! Continuing execution...
+
+🛑 Agent interrupted after plan creation...
+
+============================================================
+🤖 AGENT PLAN CREATED
+============================================================
+Original Plan
+============================================================
+❌ Execution cancelled by user.
+
+🛑 Agent interrupted after plan creation...
+
+============================================================
+🤖 AGENT PLAN CREATED
+============================================================
+Original Plan
+============================================================
+
+Plan updated!
+
+============================================================
+🤖 AGENT PLAN CREATED
+============================================================
+Modified Plan
+============================================================
+✅ Continuing with modified plan...
+🚀 Starting Plan Customization Example
+============================================================
+
+📋 Task: Search for recent developments in artificial intelligence and provide a summary
+    of the top 3 most significant breakthroughs in 2024. Include the source of each breakthrough.
+
+🤖 Agent starting execution...
+
+✅ Task completed successfully!
+
+📄 Final Result:
+----------------------------------------
+Final agent result.
+
+【STDERR】
+--------------------------------------------------------------------------------
+....
+----------------------------------------------------------------------
+Ran 4 tests in 0.004s
+
+OK
+
+================================================================================
+Log end

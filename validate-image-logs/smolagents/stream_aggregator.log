@@ -1,0 +1,33 @@
+================================================================================
+Test time: 2026-02-19 18:24:02
+Function name: stream_aggregator
+Test file: test_code/test_stream_aggregator.py
+Test framework: pytest
+Return code: 0
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+============================= test session starts ==============================
+platform linux -- Python 3.10.19, pytest-9.0.2, pluggy-1.6.0 -- /usr/local/bin/python3
+cachedir: .pytest_cache
+rootdir: /workspace/project/smolagents/test_examples/DeepSearchAgents/code
+configfile: pyproject.toml
+plugins: anyio-4.12.1, langsmith-0.7.3, asyncio-1.3.0
+asyncio: mode=auto, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 5 items
+
+test_code/test_stream_aggregator.py::test_aggregate_stream_basic PASSED  [ 20%]
+test_code/test_stream_aggregator.py::test_aggregate_stream_error_handling PASSED [ 40%]
+test_code/test_stream_aggregator.py::test_model_stream_wrapper_fallback_non_streaming PASSED [ 60%]
+test_code/test_stream_aggregator.py::test_model_stream_wrapper_streaming_path PASSED [ 80%]
+test_code/test_stream_aggregator.py::test_aggregator_reset_and_add_chunk PASSED [100%]
+
+============================== 5 passed in 1.04s ===============================
+
+【STDERR】
+--------------------------------------------------------------------------------
+(no errors)
+
+================================================================================
+Log end

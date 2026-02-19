@@ -1,0 +1,36 @@
+================================================================================
+Test time: 2026-02-19 18:24:50
+Function name: multi_model_agent_execution
+Test file: test_code/test_multi_model_agent_execution.py
+Test framework: unittest
+Return code: 0
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+Chose model: 'inference_client'
+ToolCallingAgent: The weather is UNGODLY with torrential rains and temperatures below -10°C
+CodeAgent: The weather is UNGODLY with torrential rains and temperatures below -10°C
+Chose model: 'transformers'
+ToolCallingAgent: The weather is UNGODLY with torrential rains and temperatures below -10°C
+CodeAgent: The weather is UNGODLY with torrential rains and temperatures below -10°C
+Chose model: 'ollama'
+ToolCallingAgent: The weather is UNGODLY with torrential rains and temperatures below -10°C
+CodeAgent: The weather is UNGODLY with torrential rains and temperatures below -10°C
+Chose model: 'litellm'
+ToolCallingAgent: The weather is UNGODLY with torrential rains and temperatures below -10°C
+CodeAgent: The weather is UNGODLY with torrential rains and temperatures below -10°C
+Chose model: 'openai'
+ToolCallingAgent: The weather is UNGODLY with torrential rains and temperatures below -10°C
+CodeAgent: The weather is UNGODLY with torrential rains and temperatures below -10°C
+
+【STDERR】
+--------------------------------------------------------------------------------
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.007s
+
+OK
+
+================================================================================
+Log end

@@ -1,0 +1,32 @@
+================================================================================
+Test time: 2026-02-19 18:25:17
+Function name: system_prompt_utils
+Test file: test_code/test_system_prompt_utils.py
+Test framework: pytest
+Return code: 0
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+============================= test session starts ==============================
+platform linux -- Python 3.10.19, pytest-9.0.2, pluggy-1.6.0 -- /usr/local/bin/python3
+cachedir: .pytest_cache
+rootdir: /workspace/project/smolagents/test_examples/smolcc/code
+configfile: pyproject.toml
+plugins: anyio-4.12.1, langsmith-0.7.3, asyncio-1.3.0
+asyncio: mode=strict, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 4 items
+
+test_code/test_system_prompt_utils.py::test_get_directory_structure_ignores_patterns PASSED [ 25%]
+test_code/test_system_prompt_utils.py::test_is_git_repo_true_and_false PASSED [ 50%]
+test_code/test_system_prompt_utils.py::test_get_git_status_composes_text PASSED [ 75%]
+test_code/test_system_prompt_utils.py::test_get_system_prompt_fills_placeholders_and_appends_git_status PASSED [100%]
+
+============================== 4 passed in 0.55s ===============================
+
+【STDERR】
+--------------------------------------------------------------------------------
+(no errors)
+
+================================================================================
+Log end

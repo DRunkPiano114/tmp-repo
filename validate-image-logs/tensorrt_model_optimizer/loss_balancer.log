@@ -1,0 +1,42 @@
+================================================================================
+Test time: 2026-02-19 18:24:37
+Function name: loss_balancer
+Test file: test_code/test_loss_balancer.py
+Test framework: unittest
+Return code: 0
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+
+==========
+== CUDA ==
+==========
+
+CUDA Version 12.1.1
+
+Container image Copyright (c) 2016-2023, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+A copy of this license is made available in this container at /NGC-DL-CONTAINER-LICENSE for your convenience.
+
+WARNING: The NVIDIA Driver was not detected.  GPU functionality will not be available.
+   Use the NVIDIA Container Toolkit to start this container with GPU support; see
+   https://docs.nvidia.com/datacenter/cloud-native/ .
+
+Warning: Unable to import implementation code: No module named 'transformers'
+
+【STDERR】
+--------------------------------------------------------------------------------
+W0219 18:24:30.480000 1 torch/utils/cpp_extension.py:118] No CUDA runtime is found, using CUDA_HOME='/usr/local/cuda'
+sssssssssssssss
+----------------------------------------------------------------------
+Ran 15 tests in 0.000s
+
+OK (skipped=15)
+
+================================================================================
+Log end

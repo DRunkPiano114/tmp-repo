@@ -1,0 +1,31 @@
+================================================================================
+Test time: 2026-02-19 18:23:40
+Function name: agent_step_callback_token_stats
+Test file: test_code/test_agent_step_callback_token_stats.py
+Test framework: pytest
+Return code: 0
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+============================= test session starts ==============================
+platform linux -- Python 3.10.19, pytest-9.0.2, pluggy-1.6.0 -- /usr/local/bin/python3
+cachedir: .pytest_cache
+rootdir: /workspace/project/smolagents/test_examples/DeepSearchAgents/code
+configfile: pyproject.toml
+plugins: anyio-4.12.1, langsmith-0.7.3, asyncio-1.3.0
+asyncio: mode=auto, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 3 items
+
+test_code/test_agent_step_callback_token_stats.py::test_extract_token_stats_with_dict_token_usage PASSED [ 33%]
+test_code/test_agent_step_callback_token_stats.py::test_extract_token_stats_with_TokenUsage_class PASSED [ 66%]
+test_code/test_agent_step_callback_token_stats.py::test_extract_token_stats_accumulates_over_multiple_calls PASSED [100%]
+
+============================== 3 passed in 1.07s ===============================
+
+【STDERR】
+--------------------------------------------------------------------------------
+(no errors)
+
+================================================================================
+Log end

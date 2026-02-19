@@ -1,0 +1,23 @@
+================================================================================
+Test time: 2026-02-19 18:24:48
+Function name: multi_agent_coordination
+Test file: test_code/test_multi_agent_coordination.py
+Test framework: unittest
+Return code: 0
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+Here is the token usage for the manager agent {'total_tokens': 100}
+Here are the timing informations for the manager agent: {'total_time': 5.0}
+
+【STDERR】
+--------------------------------------------------------------------------------
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.004s
+
+OK
+
+================================================================================
+Log end

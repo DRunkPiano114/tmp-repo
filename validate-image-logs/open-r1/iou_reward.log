@@ -1,0 +1,104 @@
+================================================================================
+Test time: 2026-02-19 18:26:01
+Function name: iou_reward
+Test file: test_code/test_iou_reward.py
+Test framework: unittest
+Return code: 0
+================================================================================
+
+【STDOUT】
+--------------------------------------------------------------------------------
+
+=============
+== PyTorch ==
+=============
+
+NVIDIA Release 24.08 (build 107063150)
+PyTorch Version 2.5.0a0+872d972
+Container image Copyright (c) 2024, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
+Copyright (c) 2014-2024 Facebook Inc.
+Copyright (c) 2011-2014 Idiap Research Institute (Ronan Collobert)
+Copyright (c) 2012-2014 Deepmind Technologies    (Koray Kavukcuoglu)
+Copyright (c) 2011-2012 NEC Laboratories America (Koray Kavukcuoglu)
+Copyright (c) 2011-2013 NYU                      (Clement Farabet)
+Copyright (c) 2006-2010 NEC Laboratories America (Ronan Collobert, Leon Bottou, Iain Melvin, Jason Weston)
+Copyright (c) 2006      Idiap Research Institute (Samy Bengio)
+Copyright (c) 2001-2004 Idiap Research Institute (Ronan Collobert, Samy Bengio, Johnny Mariethoz)
+Copyright (c) 2015      Google Inc.
+Copyright (c) 2015      Yangqing Jia
+Copyright (c) 2013-2016 The Caffe contributors
+All rights reserved.
+
+Various files include modifications (c) NVIDIA CORPORATION & AFFILIATES.  All rights reserved.
+
+This container image and its contents are governed by the NVIDIA Deep Learning Container License.
+By pulling and using the container, you accept the terms and conditions of this license:
+https://developer.nvidia.com/ngc/nvidia-deep-learning-container-license
+
+WARNING: The NVIDIA Driver was not detected.  GPU functionality will not be available.
+   Use the NVIDIA Container Toolkit to start this container with GPU support; see
+   https://docs.nvidia.com/datacenter/cloud-native/ .
+
+NOTE: The SHMEM allocation limit is set to the default of 64MB.  This may be
+   insufficient for PyTorch.  NVIDIA recommends the use of the following flags:
+   docker run --gpus all --ipc=host --ulimit memlock=-1 --ulimit stack=67108864 ...
+
+
+【STDERR】
+--------------------------------------------------------------------------------
+/workspace/project/open-r1/test_examples/VLM-R1/code/test_code/../src/open-r1-multimodal/src/open_r1/vlm_modules/qwen_module.py:140: ResourceWarning: unclosed file <_io.BufferedReader name='/tmp/tmpv9o5aa1d.jpg'>
+  image = Image.open(image_path)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/workspace/project/open-r1/test_examples/VLM-R1/code/test_code/test_iou_reward.py:181: ResourceWarning: unclosed file <_io.BufferedReader name='/tmp/tmpv9o5aa1d.jpg'>
+  rewards = Qwen2VLModule.iou_reward(completions, solution, **kwargs)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+./workspace/project/open-r1/test_examples/VLM-R1/code/test_code/test_iou_reward.py:117: ResourceWarning: unclosed file <_io.BufferedReader name='/tmp/tmpjyaeysru.jpg'>
+  rewards = Qwen2VLModule.iou_reward(completions, solution, **kwargs)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+./workspace/project/open-r1/test_examples/VLM-R1/code/test_code/test_iou_reward.py:296: ResourceWarning: unclosed file <_io.BufferedReader name='/tmp/tmpgcba9qn3.jpg'>
+  rewards = Qwen2VLModule.iou_reward(completions, solution, **kwargs)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+./workspace/project/open-r1/test_examples/VLM-R1/code/test_code/test_iou_reward.py:205: ResourceWarning: unclosed file <_io.BufferedReader name='/tmp/tmp7ni3sshc.jpg'>
+  rewards = Qwen2VLModule.iou_reward(completions, solution, **kwargs)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+./workspace/project/open-r1/test_examples/VLM-R1/code/test_code/test_iou_reward.py:156: ResourceWarning: unclosed file <_io.BufferedReader name='/tmp/tmp9ti44jz6.jpg'>
+  rewards = Qwen2VLModule.iou_reward(completions, solution, **kwargs)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+./workspace/project/open-r1/test_examples/VLM-R1/code/test_code/test_iou_reward.py:227: ResourceWarning: unclosed file <_io.BufferedReader name='/tmp/tmpc891cj07.jpg'>
+  rewards = Qwen2VLModule.iou_reward(completions, solution, **kwargs)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+./workspace/project/open-r1/test_examples/VLM-R1/code/test_code/test_iou_reward.py:137: ResourceWarning: unclosed file <_io.BufferedReader name='/tmp/tmpvfqumbx5.jpg'>
+  rewards = Qwen2VLModule.iou_reward(completions, solution, **kwargs)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+./workspace/project/open-r1/test_examples/VLM-R1/code/test_code/test_iou_reward.py:95: ResourceWarning: unclosed file <_io.BufferedReader name='/tmp/tmpo_nyd46a.jpg'>
+  rewards = Qwen2VLModule.iou_reward(completions, solution, **kwargs)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+./workspace/project/open-r1/test_examples/VLM-R1/code/test_code/test_iou_reward.py:74: ResourceWarning: unclosed file <_io.BufferedReader name='/tmp/tmpd5y9b99y.jpg'>
+  rewards = Qwen2VLModule.iou_reward(completions, solution, **kwargs)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+./workspace/project/open-r1/test_examples/VLM-R1/code/test_code/test_iou_reward.py:52: ResourceWarning: unclosed file <_io.BufferedReader name='/tmp/tmpguv9p32m.jpg'>
+  rewards = Qwen2VLModule.iou_reward(completions, solution, **kwargs)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+./workspace/project/open-r1/test_examples/VLM-R1/code/test_code/test_iou_reward.py:247: ResourceWarning: unclosed file <_io.BufferedReader name='/tmp/tmpoo1m6gp_.jpg'>
+  rewards = Qwen2VLModule.iou_reward(completions, solution, **kwargs)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+./workspace/project/open-r1/test_examples/VLM-R1/code/test_code/test_iou_reward.py:267: ResourceWarning: unclosed file <_io.BufferedReader name='/tmp/tmp4ite_264.jpg'>
+  rewards = Qwen2VLModule.iou_reward(completions, solution, **kwargs)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+./workspace/project/open-r1/test_examples/VLM-R1/code/test_code/../src/open-r1-multimodal/src/open_r1/vlm_modules/qwen_module.py:140: ResourceWarning: unclosed file <_io.BufferedReader name='/tmp/tmpa9fz__l0.jpg'>
+  image = Image.open(image_path)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/workspace/project/open-r1/test_examples/VLM-R1/code/test_code/test_iou_reward.py:365: ResourceWarning: unclosed file <_io.BufferedReader name='/tmp/tmpa9fz__l0.jpg'>
+  rewards = Qwen2VLModule.iou_reward(completions, solution, **kwargs)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+./workspace/project/open-r1/test_examples/VLM-R1/code/test_code/test_iou_reward.py:337: ResourceWarning: unclosed file <_io.BufferedReader name='/tmp/tmp0a8reo57.jpg'>
+  rewards = Qwen2VLModule.iou_reward(completions, solution, **kwargs)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+.
+----------------------------------------------------------------------
+Ran 14 tests in 0.051s
+
+OK
+
+================================================================================
+Log end
